@@ -1,0 +1,26 @@
+---
+description: Git commit message conventions
+alwaysApply: true
+---
+
+# Git Commit Messages
+
+- Always start the subject line with a relevant [gitmoji](https://gitmoji.dev/)
+- Follow the **50/72 rule**:
+  - Subject line: max 50 characters (including the emoji)
+  - Body lines: wrap at 72 characters
+- Separate subject from body with a blank line
+
+## Examples
+
+```
+✨ Add Mixpanel analytics integration
+
+Set up SDK init, user identification on auth
+state changes, and event tracking for sign-in,
+errors, purchases, and conversions.
+```
+
+```
+🐛 Fix auth redirect loop on login
+```
