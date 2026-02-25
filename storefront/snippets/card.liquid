@@ -2,16 +2,14 @@
 
 {%- assign media = false %}
 
-{%- if item.media.size > 1 -%}
+{%- if override_image -%}
+  {%- assign media = override_image -%}
+{%- elsif item.media.size > 1 and type == 'product' -%}
   {%- assign media = item.media -%}
-{%- else -%}
-  {%- if override_image -%}
-    {%- assign media = override_image -%}
-  {%- elsif item.featured_media -%}
-    {%- assign media = item.featured_media -%}
-  {%- elsif item.image -%}
-    {%- assign media = item.image -%}
-  {%- endif -%}
+{%- elsif item.featured_media -%}
+  {%- assign media = item.featured_media -%}
+{%- elsif item.image -%}
+  {%- assign media = item.image -%}
 {%- endif -%}
 
 {%- capture sizes -%}
@@ -55,7 +53,7 @@
       {% endif %}
 
       <div class="card__image-container">
-        {%- if media.size > 1 -%}
+        {%- if media.size > 1 and type == 'product'-%}
           <ul class="slider grid grid--1-col slider--desktop slider--mobile" aria-label="Product images">
             {%- for media in item.media -%}
               <li class="grid__item slider__slide">
