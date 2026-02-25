@@ -1903,6 +1903,10 @@ button.shopify-payment-button__button--unbranded,
   justify-content: space-between;
 }
 
+.utility-bar--no-links {
+  justify-content: center;
+}
+
 .utility-bar__container {
   padding-top: 10px;
   padding-bottom: 10px;

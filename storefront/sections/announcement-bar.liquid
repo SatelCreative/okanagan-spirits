@@ -2,7 +2,14 @@
   class="color-{{ section.settings.color_scheme }} gradient"
 >
   <div class="full-width section-{{ section.id }}-padding">
-    <div class="utility-bar">
+    <div 
+      class="
+        utility-bar
+        {% if section.blocks.size == 0 %}
+          utility-bar--no-links
+        {% endif %}
+      "
+    >
       <div class="utility-bar__container">
         {%- if section.settings.link != blank -%}
           <a
