@@ -36,7 +36,8 @@
                 item: article,
                 type: "article",
                 show_date: section.settings.show_date,
-                show_author: section.settings.show_author
+                show_author: section.settings.show_author,
+                overlap_text_on_images: section.settings.overlap_text_on_images
               %}
             </li>
           {%- endfor -%}
@@ -228,6 +229,16 @@
         }
       ],
       "default": "left"
+    },
+    {
+      "type": "header",
+      "content": "Blog Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "overlap_text_on_images",
+      "label": "Overlap text on images",
+      "default": false
     },
     {
       "type": "blog",

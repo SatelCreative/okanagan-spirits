@@ -26,6 +26,7 @@
 
 <card-component class="
     card
+    {% if overlap_text_on_images %}card--overlap{% endif %}
     {% if small %}card--small{% endif %}
     {% if horizontal %}card--horizontal{% endif %}
     {% if color_scheme %}color-{{ color_scheme }}{% endif %}

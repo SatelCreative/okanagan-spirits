@@ -13,6 +13,17 @@
   box-shadow: var(--card-shadow);
 }
 
+.card--overlap .card__details {
+  position: absolute;
+  display: flex;
+  height: 100%;
+  margin-top: 0;
+  padding: 12px;
+  background: rgba(var(--color-background), 0.2);
+  justify-content: end;
+  pointer-events: none;
+}
+
 .card--horizontal {
   display: grid;
   grid-template-columns: 75px 1fr;
