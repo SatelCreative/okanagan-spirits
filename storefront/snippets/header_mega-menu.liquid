@@ -175,6 +175,7 @@
                               slider
                               {% if block.settings.desktop_format == 'slider' %}slider--desktop{% endif %}
                             "
+                            style="width: {{ block.settings.image_container_width }}%"
                           >
                             {%- for i in (1..4) -%}
                               {% assign image = 'image_' | append: i %}

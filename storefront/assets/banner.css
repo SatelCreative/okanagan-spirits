@@ -1,0 +1,232 @@
+.banner {
+  position: relative;
+}
+
+.banner__media {
+  display: flex;
+}
+
+.banner__media > a {
+  width: 100%;
+}
+
+@media screen and (max-width: 749px) {
+  .banner__media--stacked {
+    flex-direction: column;
+  }
+}
+
+.banner__media::after {
+  pointer-events: none;
+  content: '';
+  position: absolute;
+  top: 0;
+  background: rgb(var(--color-background));
+  opacity: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.banner__content {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  width: auto;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+
+  pointer-events: none;
+}
+
+@media screen and (max-width: 749px) {
+  .banner__content--mobile-below {
+    width: 100%;
+    position: relative;
+  }
+
+  .banner__content--mobile-below .banner__box {
+    width: 100%;
+    max-width: calc(var(--page-width) + (var(--page-padding) * 2));
+    margin: 0 auto;
+    padding: 16px var(--page-padding);
+  }
+
+  .banner__content--mobile-top {
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .banner__content--mobile-top .banner__box {
+    margin-top: 2rem;
+  }
+
+  .banner__content--mobile-middle {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .banner__content--mobile-bottom {
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .banner__content--mobile-bottom .banner__box {
+    margin-bottom: 2rem;
+  }
+
+  .banner__box--transparent-mobile {
+    background: transparent !important;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .banner__content--no-padding {
+    padding: 0 !important;
+  }
+
+  .banner__content:not(.banner__content--mobile-below) {
+    padding: 4rem;
+  }
+
+  .banner__content--below {
+    width: 100%;
+    position: relative;
+  }
+
+  .banner__content--below .banner__box {
+    width: 100%;
+    margin: 0 auto;
+    max-width: calc(var(--page-width) + (var(--page-padding) * 2));
+    padding: 16px var(--page-padding);
+  }
+
+  .banner__content--top-left {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .banner__content--top-center {
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .banner__content--top-right {
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+
+  .banner__content--middle-left {
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .banner__content--middle-center {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .banner__content--middle-right {
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .banner__content--bottom-left {
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+
+  .banner__content--bottom-center {
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .banner__content--bottom-right {
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+
+  .banner__box--transparent {
+    background: transparent !important;
+  }
+}
+
+.banner__box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  width: 100%;
+  padding: 2rem;
+
+  pointer-events: auto;
+}
+
+.banner__box * {
+  margin: 0;
+}
+
+.banner__box > *:first-child {
+  margin-top: 0rem;
+}
+
+.banner__box > *:last-child {
+  margin-bottom: 0rem;
+}
+
+.banner__buttons {
+  display: flex;
+  gap: var(--column-spacing);
+  align-items: center;
+}
+
+@media screen and (max-width: 749px) {
+  .banner__box { 
+    max-width: calc(100% - 2rem);
+  }
+
+  .banner__box--left-mobile {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .banner__box--center-mobile {
+    text-align: center;
+    align-items: center;
+  }
+
+  .banner__box--right-mobile {
+    text-align: right;
+    align-items: flex-end;
+  }
+
+  .banner__buttons {
+    flex-direction: column;
+    gap: var(--column-spacing);
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .banner__buttons > * {
+    width: auto;
+  }
+
+  .banner__box--left {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .banner__box--center {
+    text-align: center;
+    align-items: center;
+  }
+
+  .banner__box--right {
+    text-align: right;
+    align-items: flex-end;
+  }
+}

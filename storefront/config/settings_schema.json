@@ -1403,5 +1403,20 @@
         "label": "Collection"
       }
     ]
+  },
+  {
+    "name": "Currency Format",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Cart and checkout prices always show currency code. Example: $1.00 USD."
+      },
+      {
+        "type": "checkbox",
+        "id": "currency_code_enabled",
+        "label": "Enable currency code",
+        "default": true
+      }
+    ]
   }
 ]

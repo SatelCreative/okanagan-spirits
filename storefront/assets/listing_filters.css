@@ -146,7 +146,6 @@
   display: flex;
   gap: 0.5rem;
   align-items: center;
-  margin-left: auto;
 }
 
 .facet__sort-container {

@@ -21,6 +21,10 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "recharge_subscriptions_subscription_widget_v2_jeTwGc": {
+          "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget-v2/371eed76-0b44-4869-9813-730372ea378e",
+          "settings": {}
+        },
         "title": {
           "type": "title",
           "settings": {
@@ -155,6 +159,7 @@
         }
       },
       "block_order": [
+        "recharge_subscriptions_subscription_widget_v2_jeTwGc",
         "title",
         "text_qBQ9Dz",
         "text_4BQpzW",

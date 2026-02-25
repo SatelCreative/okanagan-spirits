@@ -9,22 +9,13 @@
  */
 {
   "sections": {
-    "contact_form_zfnTji": {
-      "type": "contact-form",
-      "name": "t:sections.contact-form.presets.name",
+    "page_RPfLw9": {
+      "type": "page",
+      "name": "t:sections.page.presets.name",
       "settings": {
-        "color_scheme": "",
-        "layout": "page-width",
-        "title": "Contact Us",
-        "header_is_h1": true,
-        "visually_hide_header": false,
+        "page": "",
         "heading_size": "h2",
-        "description": "",
-        "text_style": "body",
-        "mobile_text_style": "body--mobile",
-        "heading_alignment": "center",
-        "social_title": "Stay in the know",
-        "show_social": false,
+        "color_scheme": "",
         "padding_top": 2,
         "padding_bottom": 2,
         "margin_bottom": 0
@@ -32,6 +23,6 @@
     }
   },
   "order": [
-    "contact_form_zfnTji"
+    "page_RPfLw9"
   ]
 }

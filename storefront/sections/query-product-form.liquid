@@ -1,0 +1,38 @@
+{%- assign form_id = "bundle_gifts-" | append: "uid" | append: "-Form" -%}
+<product-form
+  data-section-id="{{ form_id }}"
+  data-bundle-gifts="true"
+>
+  {%-
+    form 'product',
+    product,
+    id: form_id,
+    class: 'form',
+    novalidate: 'novalidate',
+    data-type: 'add-to-cart-form'
+  -%}
+    <input
+      type="hidden"
+      name="id"
+      value="{{ product.selected_or_first_available_variant.id }}"
+      {%
+        if product.selected_or_first_available_variant.available == false
+        or product.selected_or_first_available_variant == nil
+      %}
+        disabled
+      {% endif %}
+      class="product-variant-id"
+    >
+
+    <button
+      id="ProductSubmitButton-{{ form_id }}"
+      type="submit"
+      name="add"
+      class="button bundle__add-to-cart btn"
+    >
+      Add Bundle to Cart
+      <span class="visually-hidden">{{ 'products.product.add_to_cart' | t }}</span>
+      {%- render 'loading-spinner' -%}
+    </button>
+  {%- endform -%}
+</product-form>

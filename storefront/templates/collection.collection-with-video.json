@@ -1,0 +1,101 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner_BLppLK": {
+      "type": "banner",
+      "blocks": {
+        "media_kxknRw": {
+          "type": "media",
+          "settings": {
+            "color_scheme_box": "",
+            "transparent_box_desktop": false,
+            "transparent_box_mobile": false,
+            "image_link": "",
+            "image_overlay_opacity": 0,
+            "video_description": "",
+            "enable_video_autoplay": true,
+            "desktop_content_position": "middle-center",
+            "desktop_content_alignment": "center",
+            "mobile_content_position": "middle",
+            "mobile_content_alignment": "center",
+            "heading": "",
+            "heading_size": "h2--desktop",
+            "heading_size_mobile": "h2--mobile",
+            "heading_letter_spacing": "",
+            "heading_shadow": "",
+            "heading_italic": false,
+            "is_h1": false,
+            "visually_hidden": false,
+            "text": "",
+            "text_style": "body--desktop",
+            "mobile_text_style": "body--mobile",
+            "button_label_1": "",
+            "button_link_1": "",
+            "button_bold_1": false,
+            "button_style_1": "button",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_bold_2": false,
+            "button_style_2": "button"
+          }
+        }
+      },
+      "block_order": [
+        "media_kxknRw"
+      ],
+      "name": "Media Banners",
+      "settings": {
+        "color_scheme": "",
+        "layout": "screen-width",
+        "layout_mobile": "screen-width",
+        "title": "",
+        "header_is_h1": false,
+        "visually_hide_header": false,
+        "heading_size": "h2",
+        "description": "",
+        "text_style": "body",
+        "mobile_text_style": "body--mobile",
+        "heading_alignment": "left",
+        "aspect_ratio": "adapt",
+        "aspect_ratio_mobile": "adapt",
+        "stack_images_on_mobile": true,
+        "slider_show_dots": true,
+        "slider_show_arrows": false,
+        "accessibility_info": "",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_bottom": 0
+      }
+    },
+    "product-grid": {
+      "type": "main-listing",
+      "settings": {
+        "color_scheme": "",
+        "layout": "page-width",
+        "enable_filters": true,
+        "enable_desktop_filters": false,
+        "enable_sorting": true,
+        "show_more": false,
+        "products_per_page": 24,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "padding_top": 2,
+        "padding_bottom": 2
+      }
+    }
+  },
+  "order": [
+    "banner_BLppLK",
+    "product-grid"
+  ]
+}

@@ -27,6 +27,10 @@
 
   assign money_price = price | money
 
+  if settings.currency_code_enabled
+    assign money_price = price | money_with_currency
+  endif
+
   if target == product and product.price_varies
     assign money_price = 'products.product.price.from_price_html' | t: price: money_price
   endif
@@ -49,7 +53,11 @@
       <div class="price__regular gray">
         <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
         <s class="price-item">
-          {{ compare_at_price | money | replace: '.00', '' }}
+          {% if settings.currency_code_enabled %}
+            {{ compare_at_price | money_with_currency | replace: '.00', '' }}
+          {% else %}
+            {{ compare_at_price | money | replace: '.00', '' }}
+          {% endif %}
         </s>
       </div>
     {%- endif -%}

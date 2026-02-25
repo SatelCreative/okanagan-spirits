@@ -1,5 +1,4 @@
 {%- style -%}
-  /* Once all sections are migrated to the new padding system, this can be removed */
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top }}rem;
     padding-bottom: {{ section.settings.padding_bottom }}rem;
@@ -10,15 +9,7 @@
       margin-bottom: {{ section.settings.margin_bottom }}rem;
     }
   {% endif %}
-  /* End of old padding system */
-
-  #shopify-section-{{ section.id }} {
-    --section-padding-top: {{ section.settings.padding_top }}rem;
-    --section-padding-bottom: {{ section.settings.padding_bottom }}rem;
-    --section-margin-bottom: {{ section.settings.margin_bottom }}rem;
-  }
 {%- endstyle -%}
-
 
 {%- comment -%}
   Include these settings to support `section_padding`

@@ -21,15 +21,13 @@
         class="mobile-facets__submenu"
       >
         <ul class="filters__list list--unstyled" role="list">
-          {%- assign sort_by = results.sort_by | default: results.default_sort_by -%}
-
           {%- for option in results.sort_options -%}
             <li class="mobile-facets__item">
               <label
                 for="Filter-SortBy-{{ forloop.index }}"
                 class="
                   filter__label
-                  {%- if option.value == sort_by %}active{% endif %}
+                  {%- if option.value == results.sort_by %} active{% endif %}
                 "
               >
                 <input
@@ -38,7 +36,7 @@
                   name="sort_by"
                   value="{{ option.value }}"
                   id="Filter-SortBy-{{ forloop.index }}"
-                  {% if option.value == sort_by %}
+                  {% if option.value == results.sort_by %}
                     checked
                   {% endif %}
                 >
@@ -142,16 +140,12 @@
   </form>
 {%- endcapture -%}
 
-<div
-  class="filters__container {{ class }}"
->
+<div class="filters__container">
   {%- if type == 'drawer' -%}
-    <menu-drawer
-      class="
+    <menu-drawer class="
         filters__drawer
         {% if section.settings.enable_desktop_filters and false %}hidden--desktop{% endif %}
-      "
-    >
+      ">
       <details id="FacetsDetails" class="filters__details">
         <summary class="filters__toggle">
           <span class="hidden--mobile">{{ 'products.filters.filter_button' | t }}</span>

@@ -15,19 +15,6 @@
     data-section-id="{{ section.id }}"
     class="listing {{ section.settings.layout }}"
   >
-    <listing-form class="facet__search hidden">    
-      <form id="FiltersSearchForm">          
-        <input
-          name="q"
-          class="field__input"
-          id="SearchInput"
-          aria-describedby="a11y-refresh-page-message"
-          placeholder="{{ 'general.search.search' | t }}"
-          value="{{ search.terms | escape }}"
-        >
-      </form>
-    </listing-form>
-    
     {%- paginate search.results by section.settings.products_per_page -%}
       {%- liquid
         assign listing = collection

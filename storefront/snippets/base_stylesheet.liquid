@@ -26,6 +26,11 @@
     .color-{{ scheme.id }} {
       --color-foreground: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
       --color-background: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
+      {% if scheme.settings.background_gradient != empty %}
+        --gradient-background: {{ scheme.settings.background_gradient }};
+      {% else %}
+        --gradient-background: {{ scheme.settings.background }};
+      {% endif %}
 
       --color-button: {{ scheme.settings.button.red }},{{ scheme.settings.button.green }},{{ scheme.settings.button.blue }};
       --color-button-opacity: {{ scheme.settings.button.alpha }};
@@ -49,13 +54,7 @@
       --color-link-hover: {{ scheme.settings.links_hover.red }},{{ scheme.settings.links_hover.green }},{{ scheme.settings.links_hover.blue }};
 
       color: rgb(var(--color-foreground));
-      background-color: rgb(var(--color-background));      
-
-      {% if scheme.settings.background_gradient != empty %}
-        background: {{ scheme.settings.background_gradient }};
-      {% else %}
-        box-shadow: rgb(var(--color-background)) 0px -1px 0px 0px inset;
-      {% endif %}
+      background-color: rgb(var(--color-background));
     }
 
     .color-{{ scheme.id }}-text {

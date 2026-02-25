@@ -48,13 +48,7 @@
           {%- if section.settings.enable_filters or section.settings.enable_sorting -%}
             <aside class="filters__wrapper">
               {%- if has_filters and section.settings.enable_filters -%}
-                {%- assign class = "" -%}
-
-                {% if section.settings.enable_desktop_filters %}
-                  {%- assign class = "hidden--desktop" -%}
-                {% endif %}
-
-                {%- render 'listing_filters', type: 'drawer', results: listing, paginate: paginate, class: class -%}
+                {%- render 'listing_filters', type: 'drawer', results: listing, paginate: paginate -%}
               {%- endif -%}
 
               {%- if section.settings.enable_sorting -%}

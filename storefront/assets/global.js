@@ -388,24 +388,6 @@ if (typeof window.Shopify == 'undefined') {
   window.Shopify = {};
 }
 
-/**
- * General query function for the Storefront API. Accepts any query supported by Shopify.
- * https://shopify.dev/api/storefront/reference
- *
- * @param   {String} query  A graphQL query, you can test your query here: https://shopify.dev/graphiql/storefront-graphiql
- * @returns {JSON}          The JSON value returned by Shopify
- */
-function graphQL(query) {
-  return fetch(`https://${Shopify.shop}/api/2022-01/graphql.json`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/graphql',
-      'X-Shopify-Storefront-Access-Token': window.theme.storefront_api_token,
-    },
-    body: query,
-  }).then((res) => res.json());
-}
-
 Shopify.bind = function (fn, scope) {
   return function () {
     return fn.apply(scope, arguments);
@@ -794,9 +776,9 @@ class SliderComponent extends HTMLElement {
   }
 
   connectedCallback() {
-    const manualInit = this.dataset.manualInit == 'true';
+    const waitForInit = this.dataset.waitForInit == 'true';
 
-    if (!manualInit) {
+    if (!waitForInit) {
       this.init();
     }
   }
@@ -817,8 +799,7 @@ class SliderComponent extends HTMLElement {
     if (this.buttons) {
       this.prevButton = this.buttons.querySelector('button[name="prev"]');
       this.nextButton = this.buttons.querySelector('button[name="next"]');
-      this.pauseButton = this.buttons.querySelector('.slider-button__toggle');
-      this.dots = this.buttons.querySelector('.slider-counter');
+      this.dots = this.buttons.querySelector('.slider-counter--dots');
 
       if (this.prevButton) {
         this.prevButton.addEventListener(
@@ -832,10 +813,6 @@ class SliderComponent extends HTMLElement {
           'click',
           this.onButtonClick.bind(this)
         );
-      }
-
-      if (!this.autoplay && this.pauseButton) {
-        this.pauseButton.remove();
       }
     }
 
@@ -874,15 +851,16 @@ class SliderComponent extends HTMLElement {
     /*
      * Only check for visible slides since some may be hidden based on screen sizes.
      */
-    this.sliderItems = this.slider.querySelectorAll(':scope > li');
-
-    if(this.sliderItems.length == 0) {
-      return;
-    }
+    this.sliderItems = this.slider.querySelectorAll(':scope > [id^="Slide-"]');
 
     this.sliderItemsToShow = Array.from(this.sliderItems).filter(
       (element) => element.clientWidth > 0
     );
+
+    /*
+     * If there are less than 2 visible slides, return.
+     */
+    if (this.sliderItemsToShow.length < 2) return;
 
     this.sliderItemsToShow.forEach((slide, index) => {
       slide.setAttribute('data-slide-index', index);

@@ -1,0 +1,9 @@
+.subheader {
+  display: flex;
+  gap: 1rem;
+}
+
+.subheader__language {
+  display: flex;
+  gap: 0.25rem;
+}

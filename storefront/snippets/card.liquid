@@ -35,30 +35,23 @@
   {%- capture image -%}
     <div class="card__image-wrapper">
       {% if settings.card_badge %}
-        {%- if item.compare_at_price > item.price -%}
-          <span class="badge badge--text special">
-            {%- assign save_percent = item.compare_at_price | minus: item.price | times: 100 | divided_by: item.compare_at_price | round: 0 -%}
-            {{ 'products.product.save_percent' | t: percent: save_percent }}
+        {%- if item.available == false -%}
+          <span class="badge badge--text h6 special">
+            {{ 'products.product.inventory_out_of_stock' | t }}
+          </span>
+        {%- endif -%}
+
+        {%- if item.metafields.custom.image_badge != blank -%}
+          <span class="badge badge--image h6 special">
+            {{ item.metafields.custom.image_badge }}
           </span>
         {%- endif -%}
 
         {%- if item.metafields.custom.text_badge != blank -%}
-          <span class="badge badge--text special">
+          <span class="badge badge--text h6 special">
             {{ item.metafields.custom.text_badge }}
           </span>
         {%- endif -%}
-
-        {%- if item.available == false -%}
-          <span class="badge badge--text special">
-            {{ 'products.product.inventory_out_of_stock' | t }}
-          </span>
-        {%- endif -%}        
-
-        {%- if item.metafields.custom.image_badge != blank -%}
-          <span class="badge badge--image special">
-            {{ item.metafields.custom.image_badge }}
-          </span>
-        {%- endif -%}        
       {% endif %}
 
       <div class="card__image-container">
@@ -207,12 +200,14 @@
       {%- endif -%}
     {%- endif -%}
 
-    {%- if settings.settings.card_short_description and item.metafields.custom.short_description != blank -%}
-      <div class="card__description-container">
-        <div class="card__description body body--small">
-          {{ item.metafields.custom.short_description }}
+    {%- if item.metafields.custom.short_description != blank -%}
+      {%- if settings.card_short_description -%}
+        <div class="card__description-container">
+          <div class="card__description body body--small">
+            {{ item.metafields.custom.short_description }}
+          </div>
         </div>
-      </div>
+      {%- endif -%}
     {%- endif -%}
 
     {% if settings.card_price and item.price != blank %}

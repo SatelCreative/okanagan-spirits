@@ -8,16 +8,6 @@
  * ------------------------------------------------------------
  */
 {
-  "slider": {
-    "name": "Slider",
-    "load_slide": "Load slide",
-    "previous_slideshow": "Previous slide",
-    "next_slideshow": "Next slide",
-    "pause_slideshow": "Pause slideshow",
-    "play_slideshow": "Play slideshow",
-    "carousel": "Carousel",
-    "slide": "Slide",
-  },
   "general": {
     "breadcrumbs": {
       "home": "Home"
@@ -218,7 +208,6 @@
       "filter_and_sort": "Filter and sort",
       "filter_by_label": "Filter:",
       "filter_button": "Filters",
-      "filter_sort_button": "Filters & Sort",
       "filters_selected": {
         "one": "{{ count }} selected",
         "other": "{{ count }} selected"

@@ -21,7 +21,7 @@
 {%- endstyle -%}
 
 {%- capture logo_image -%}
-  <a href="{{ routes.root_url }}" class="link link--text hidden--mobile">
+  <a href="{{ routes.root_url }}" class="link link--text focus-inset hidden--mobile">
     {%- if settings.logo_svg != blank -%}
       {{ settings.logo_svg }}
     {%- elsif settings.logo != blank -%}
@@ -47,7 +47,7 @@
     {%- endif -%}
   </a>
 
-  <a href="{{ routes.root_url }}" class="link link--text hidden--desktop">
+  <a href="{{ routes.root_url }}" class="link link--text focus-inset hidden--desktop">
     {%- if settings.logo_svg_mobile != blank -%}
       {{ settings.logo_svg_mobile }}
     {%- elsif settings.logo_mobile != blank -%}
@@ -370,6 +370,34 @@
       "content": "Layout settings"
     },
     {
+      "type": "range",
+      "id": "icon_size",
+      "default": 24,
+      "min": 0,
+      "max": 36,
+      "step": 1,
+      "unit": "px",
+      "label": "Icon size"
+    },
+    {
+      "type": "checkbox",
+      "id": "icons_image",
+      "label": "Display icons image",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "icons_text",
+      "label": "Display icons text",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "button_icons",
+      "label": "Display icons as buttons",
+      "default": false
+    },
+    {
       "type": "select",
       "id": "layout",
       "label": "Layout",
@@ -490,39 +518,6 @@
     },
     {
       "type": "header",
-      "content": "Icons settings"
-    },
-    {
-      "type": "checkbox",
-      "id": "icons_image",
-      "label": "Display icons image",
-      "default": true
-    },
-    {
-      "visible_if": "{{ section.settings.icons_image == true }}",
-      "type": "range",
-      "id": "icon_size",
-      "default": 24,
-      "min": 0,
-      "max": 36,
-      "step": 1,
-      "unit": "px",
-      "label": "Icon size"
-    },    
-    {
-      "type": "checkbox",
-      "id": "icons_text",
-      "label": "Display icons text",
-      "default": false
-    },
-    {
-      "type": "checkbox",
-      "id": "button_icons",
-      "label": "Display icons as buttons",
-      "default": false
-    },
-    {
-      "type": "header",
       "content": "Menu settings"
     },
     {
@@ -534,10 +529,6 @@
       "content": "If a link in your linked list is equal to exactly `#`, it will be treated as a label instead of a link."
     },
     {
-      "type": "header",
-      "content": "Menu image settings"
-    },
-    {
       "type": "paragraph",
       "content": "The following settings are used for the base landing of the drawer navigation."
     },
@@ -546,6 +537,15 @@
       "id": "menu_image_stack",
       "label": "Stack menu images",
       "default": false
+    },
+    {
+      "type": "range",
+      "id": "menu_image_container_width",
+      "label": "Menu image container width",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 100
     },
     {
       "type": "select",
@@ -570,10 +570,6 @@
         }
       ],
       "default": "square"
-    },
-    {
-      "type": "header",
-      "content": "Menu image 1"
     },
     {
       "type": "image_picker",
@@ -605,10 +601,6 @@
       "type": "url",
       "id": "menu_link_url_1",
       "label": "Menu link url 1"
-    },
-    {
-      "type": "header",
-      "content": "Menu image 1"
     },
     {
       "type": "image_picker",
@@ -944,6 +936,15 @@
             }
           ],
           "default": "grid"
+        },
+        {
+          "type": "range",
+          "id": "image_container_width",
+          "label": "Image container width",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "default": 100
         },
         {
           "type": "select",

@@ -11,7 +11,7 @@
   ">
   <details id="Details-menu-drawer-container" class="menu-drawer-container">
     <summary
-      class="header__icon header__icon--menu link"
+      class="header__icon header__icon--menu link focus-inset"
       aria-label="{{ 'sections.header.menu' | t }}"
     >
       {% render 'icon-hamburger' %}
@@ -140,6 +140,7 @@
                                   slider
                                   {% if block.settings.mobile_format == 'slider' %}slider--mobile{% endif %}
                                 "
+                                style="width: {{ block.settings.image_container_width }}%"
                               >
                                 {%- for i in (1..4) -%}
                                   {% assign image = 'image_' | append: i %}
@@ -241,6 +242,7 @@
                     slider
                     {% if block.settings.mobile_format == 'slider' %}slider--mobile{% endif %}
                   "
+                  style="width: {{ section.settings.menu_image_container_width }}%"
                 >
                   {%- for i in (1..2) -%}
                     {% assign image = 'menu_image_' | append: i %}

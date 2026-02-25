@@ -1,0 +1,10 @@
+.collection__view-all {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.collection__view-all > * {
+  width: auto;
+}

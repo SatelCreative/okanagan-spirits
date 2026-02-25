@@ -1,0 +1,171 @@
+{{ 'subheader.css' | asset_url | stylesheet_tag }}
+
+{%- render 'section_padding' %}
+
+<div class="color-{{ section.settings.color_scheme }}">
+  <div class="{{ section.settings.width }} section-{{ section.id }}-padding">
+    <ul class="subheader list--unstyled {{ section.settings.alignment }}">
+      {%- for block in section.blocks -%}
+        <li class="subheader__item subheader__item--{{ block.type | handle }}">
+          {%- if block.type == 'link' -%}
+            <a class="link" href="{{ block.settings.link }}">
+              {{ block.settings.title }}
+            </a>
+          {%- elsif block.type == 'location_toggles' -%}
+            {%- if localization.available_languages.size > 1 -%}
+              {%- form 'localization' -%}
+                <input type="hidden" name="language_code" value="{{ localization.language.iso_code }}">
+
+                <language-form class="subheader__language">
+                  {%- for language in localization.available_languages -%}
+                    <a
+                      class="link"
+                      href="#"
+                      {% if language.iso_code == localization.language.iso_code %}
+                        aria-current="true"
+                      {% endif %}
+                      hreflang="{{ language.iso_code }}"
+                      lang="{{ language.iso_code }}"
+                      data-value="{{ language.iso_code }}"
+                    >
+                      {{- language.iso_code | upcase | strip -}}
+                    </a>
+                    {%- unless forloop.last -%}
+                      /
+                    {%- endunless -%}
+                  {%- endfor -%}
+                </language-form>
+              {%- endform -%}
+            {%- endif -%}
+          {%- endif -%}
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Subheader",
+  "class": "section-header",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "select",
+      "id": "width",
+      "label": "Section width",
+      "options": [
+        {
+          "value": "screen-width",
+          "label": "Screen width"
+        },
+        {
+          "value": "page-width",
+          "label": "Page width"
+        },
+        {
+          "value": "large-width",
+          "label": "Large width"
+        },
+        {
+          "value": "full-width",
+          "label": "Full width"
+        }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.all.alignment.left"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.all.alignment.center"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.all.alignment.right"
+        }
+      ],
+      "default": "right",
+      "label": "Alignment"
+    },
+    {
+      "type": "header",
+      "content": "Section Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 2,
+      "step": 0.1,
+      "unit": "rem",
+      "label": "Padding top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 2,
+      "step": 0.1,
+      "unit": "rem",
+      "label": "Padding bottom",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 4,
+      "step": 0.5,
+      "unit": "rem",
+      "label": "Section margin",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "link",
+      "name": "Link",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    },
+    {
+      "type": "location_toggles",
+      "name": "Location Toggles",
+      "settings": []
+    }
+  ],
+  "enabled_on": {
+    "groups": [
+      "header"
+    ]
+  },
+  "presets": [
+    {
+      "name": "Subheader"
+    }
+  ]
+}
+{% endschema %}
