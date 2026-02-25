@@ -292,7 +292,12 @@ h6,
 }
 
 p {
-  margin: 0.5rem 0 1rem 0;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+p:first-child {
+  margin-top: 0;
 }
 
 .body {
@@ -3436,4 +3441,81 @@ slider-component.slider--full {
 
 .slider-button--vertical svg {
   transform: rotate(90deg);
+}
+
+
+/** Age Gate **/
+body.verification-required {
+  overflow: hidden;
+}
+
+.age-gate {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(239, 239, 239);
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.age-gate ~ * {
+  display: none;
+}
+
+.age-gate__modal {
+  color: rgb(var(--color-foreground));
+  background: rgb(var(--color-background));
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  padding: 45px 65px;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  flex-shrink: 0;
+
+  max-width: 650px;
+  width: calc(100dvh - 2rem);
+  max-height: 90dvh;
+  overflow: auto;
+}
+
+.age-gate__content,
+.age-gate__denied-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: center;
+}
+
+.age-gate__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.age-gate__action {
+  padding: 16px 24px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  border: 1px solid;
+}
+
+.age-gate__action input {
+  margin: 0;
+}
+
+.age-gate__footer {
+  padding-top: 25px;
+  border-top: 1px solid;
+}
+
+.age-gate__title {
+  margin: 0;
 }
