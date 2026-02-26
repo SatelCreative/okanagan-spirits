@@ -1,0 +1,136 @@
+{%- render 'section_padding' %}
+
+{%- assign widths = '400, 800, 1200, 1600, 2000, 2400, 2800, 3200, 3840' -%}
+
+{%- capture sizes -%}
+  {%- if section.settings.layout == "large-width" -%}
+    (min-width: {{ settings.large_width }}px) {{ settings.large_width }}px,
+  {%- elsif section.settings.layout == "page-width" -%}
+    (min-width: {{ settings.page_width }}px) {{ settings.page_width }}px,
+  {%- endif -%}
+  100vw
+{%- endcapture %}
+
+{% if article.metafields.custom.featured_products != blank %}
+  <div
+    id="{{ section.id }}"
+    class="section-{{ section.id }}-padding"
+  >
+    <div class="recipe-product__container page-width">
+
+      <slider-component>
+        <ul
+          class="grid slider slider--mobile slider--desktop grid--1-col"
+          id="Slider-{{ section.id }}"
+        >
+          {% for product in article.metafields.custom.featured_products.value %}
+            <li
+              id="Slide-{{ section.id }}-{{ forloop.index }}"
+              class="grid__item slider__slide"
+            >
+              <div class='recipe-product'>
+                <div class="recipe-product__content">
+                  <div class='fancy-title'>
+                    {{ 'recipe.featured_product' | t }}
+                  </div>
+
+                  <div class='recipe-product__title'>
+                    {{ product.title }}
+                  </div>
+
+                  <div class='recipe-product__description'>
+                    {{ product.description }}
+                  </div>
+
+                  <div class='recipe-product__price'>
+                    {{ product.price | money }}  
+                  </div>
+
+                  <div class='recipe-product__form'>
+                    {% render "buy-buttons", product: product, fancy: true %}
+                  </div>
+                </div>
+
+                {% if product.featured_image != blank %}
+                  <div class="recipe-product__image">
+                    <div
+                      class="media media--adapt"
+                      style="padding-bottom: {{ 1 | divided_by: product.featured_image.aspect_ratio | times: 100 }}%;"
+                    >
+                      {%- assign image_height = product.featured_image.width | divided_by: product.featured_image.aspect_ratio -%}
+                      {{
+                        product.featured_image
+                        | image_url: width: 3840
+                        | image_tag:
+                          width: product.featured_image.width,
+                          height: image_height,
+                          sizes: sizes,
+                          widths: widths,
+                          fetchpriority: 'high',
+                          lazy: true
+                      }}
+                    </div>
+                  </div>
+                {% endif %}
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+
+        {%- render 'slider_controls', section: section -%}
+      </slider-component>
+    </div>
+  </div>
+{% endif %}
+
+
+
+{% schema %}
+{
+  "name": "Recipe Product",
+  "enabled_on": {
+    "templates": ["article"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 4,
+      "step": 0.5,
+      "unit": "rem",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 4,
+      "step": 0.5,
+      "unit": "rem",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 4,
+      "step": 0.5,
+      "unit": "rem",
+      "label": "Section margin",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Recipe Product"
+    }
+  ]
+}
+{% endschema %}

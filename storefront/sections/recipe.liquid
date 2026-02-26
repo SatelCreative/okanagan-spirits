@@ -1,0 +1,227 @@
+{{ 'recipe.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'recipe.js' | asset_url }}" defer="defer"></script>
+
+{%- render 'section_padding' %}
+
+{%- assign widths = '400, 800, 1200, 1600, 2000, 2400, 2800, 3200, 3840' -%}
+
+{%- capture sizes -%}
+  {%- if section.settings.layout == "large-width" -%}
+    (min-width: {{ settings.large_width }}px) {{ settings.large_width }}px,
+  {%- elsif section.settings.layout == "page-width" -%}
+    (min-width: {{ settings.page_width }}px) {{ settings.page_width }}px,
+  {%- endif -%}
+  100vw
+{%- endcapture %}
+
+<div
+  id="{{ section.id }}"
+  class="section-{{ section.id }}-padding"
+>
+  <div class="recipe-container page-width">
+    {% if article.image != blank %}
+      <div class="recipe-image">
+        <div
+          class="media media--adapt"
+          style="padding-bottom: {{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;"
+        >
+          {%- assign image_height = article.image.width | divided_by: image.aspect_ratio -%}
+          {{
+            article.image
+            | image_url: width: 3840
+            | image_tag:
+              width: article.image.width,
+              height: image_height,
+              sizes: sizes,
+              widths: widths,
+              fetchpriority: 'high',
+              lazy: true
+          }}
+        </div>
+      </div>
+    {% endif %}
+
+    <div class='recipe-content'>
+      <div class='fancy-title'>
+        {{ article.metafields.custom.main_category }}
+      </div>
+
+      <h1 class='recipe-title'>
+        {{ article.title }}
+      </h1>
+
+      <div class='recipe-description'>
+        {{ article.content }}
+      </div>
+
+      <div class='recipe-actions'>
+        <div class='recipe-servings'>
+          <label class='recipe-servings__label' for='RecipeServings'>
+            {{ 'recipe.servings' | t }}
+          </label>
+
+          <quantity-input class="recipe-servings__quantity">    
+            <button class="recipe-servings__button" name="minus">
+              <span class="visually-hidden">
+                {{- 'recipe.decrease_servings' | t -}}
+              </span>
+              {% render 'icon-minus' %}
+            </button>
+            <input
+              class="recipe-servings__input"
+              type="text"
+              name="{{ 'recipe.servings' | t }}"
+              value="1"
+              min="1"
+              id="RecipeServings"
+            >
+            <button class="recipe-servings__button" name="plus" type="button">
+              <span class="visually-hidden">
+                {{- 'recipe.increase_servings' | t -}}
+              </span>
+              {% render 'icon-plus' %}
+            </button>
+          </quantity-input>
+        </div>
+
+        <div class='recipe-buttons'>
+          <button class='recipe-button recipe-button--print'>
+            {% render 'icon-print' %}
+            {{- 'recipe.print' | t -}}
+          </button>
+
+          <button class='recipe-button recipe-button--share'>
+            {% render 'icon-share' %}
+            {{- 'recipe.share' | t -}}
+          </button>
+
+          <button class='recipe-button recipe-button--full-screen'>
+            {% render 'icon-full_screen' %}
+            {{- 'recipe.full_screen' | t -}}
+          </button>
+        </div>
+      </div>
+
+      <div class='recipe-details'>
+        <div class='recipe-detail'>
+          <span class='recipe-detail__value'>
+            {{ article.metafields.custom.prep_time }}
+          </span>
+          <span class='recipe-detail__label'>
+            {{ 'recipe.minutes' | t }}
+          </span>
+        </div>
+
+        <div class='recipe-detail'>
+          <span class='recipe-detail__value'>
+            1
+          </span>
+          <span class='recipe-detail__label'>
+            {{ 'recipe.servings' | t }}
+          </span>
+        </div>
+
+        <div class='recipe-detail'>
+          <span class='recipe-detail__value'>
+            {{ article.metafields.custom.difficulty }}
+          </span>
+          <span class='recipe-detail__label'>
+            {{ 'recipe.difficulty' | t }}
+          </span>
+        </div>
+      </div>
+
+      <div class='recipe-table'>
+        <h2 class='recipe-table__title'>
+          {{ 'recipe.ingredients' | t }}
+        </h2>
+
+        <ul class='recipe-table__list'>
+          {% for ingredient in article.metafields.custom.ingredient_list.value %}
+
+            {% assign x_index = forloop.index %}
+
+            {% for measurement in article.metafields.custom.ingredient_measurements.value %}
+              {% assign y_index = forloop.index %}
+
+              {% if x_index == y_index %}
+                <li class='recipe-table__item'>
+                  <span class='recipe-table__item-label'>{{ ingredient }}</span>
+                  <span class='recipe-table__item-value'>{{ measurement }}</span>
+                </li>
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class='recipe-table'>
+        <h2 class='recipe-table__title'>
+          {{ 'recipe.instructions' | t }}
+        </h2>
+
+        <ol class='recipe-table__list'>
+          {% for instruction in article.metafields.custom.instructions.value %}
+            <li class='recipe-table__item recipe-table__item--instruction' data-index='{{ forloop.index }}'>
+              {{ instruction }}
+            </li>
+          {% endfor %}
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="application/ld+json">
+  {{ article | structured_data }}
+</script>
+
+{% schema %}
+{
+  "name": "Recipe Page",
+  "enabled_on": {
+    "templates": ["article"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 4,
+      "step": 0.5,
+      "unit": "rem",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 4,
+      "step": 0.5,
+      "unit": "rem",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 4,
+      "step": 0.5,
+      "unit": "rem",
+      "label": "Section margin",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Recipe Page"
+    }
+  ]
+}
+{% endschema %}

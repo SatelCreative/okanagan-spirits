@@ -81,7 +81,13 @@
             id="ProductSubmitButton-{{ section_id }}"
             type="submit"
             name="add"
-            class="product-form__submit button {% if show_dynamic_checkout %}button--secondary{% endif %} button--outline {% if small %}button--small{% endif %}"
+            class="
+              product-form__submit button 
+              {% if show_dynamic_checkout %}button--secondary{% endif %}
+              button--outline
+              {% if small %}button--small{% endif %}
+              {% if fancy %}button--fancy{% endif %}
+            "
             {%
               if product.selected_or_first_available_variant.available == false
               or product.selected_or_first_available_variant == nil

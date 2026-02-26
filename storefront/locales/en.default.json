@@ -8,6 +8,20 @@
  * ------------------------------------------------------------
  */
 {
+  "recipe": {
+    "prep_time": "Prep time",
+    "minutes": "minutes",
+    "servings": "Servings",
+    "decrease_servings": "Decrease servings",
+    "increase_servings": "Increase servings",
+    "difficulty": "Level",
+    "ingredients": "Ingredients",
+    "instructions": "Instructions",
+    "print": "Print",
+    "share": "Share",
+    "full_screen": "Full screen",
+    "featured_product": "Featured Product"
+  },
   "general": {
     "breadcrumbs": {
       "home": "Home"

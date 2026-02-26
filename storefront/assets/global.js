@@ -308,16 +308,32 @@ class QuantityInput extends HTMLElement {
     const previousValue = this.input.value;
 
     if (event.target.name === 'plus') {
+      const step = this.input.type === 'text' ? 1 : this.input.step;
+
       if (
-        parseInt(this.input.dataset.min) > parseInt(this.input.step) &&
+        parseInt(this.input.dataset.min) > step &&
         this.input.value == 0
       ) {
         this.input.value = this.input.dataset.min;
       } else {
-        this.input.stepUp();
+        if(this.input.type === 'text') {
+          this.input.value = parseInt(this.input.value) + 1;
+        } else {
+          this.input.stepUp();
+        }
       }
     } else {
-      this.input.stepDown();
+      const step = this.input.type === 'text' ? 1 : this.input.step;
+
+      if(parseInt(this.input.value) < (step + 1)) {
+        this.input.value = step;
+      } else {
+        if(this.input.type === 'text') {
+          this.input.value = parseInt(this.input.value) - 1;
+        } else {
+          this.input.stepDown();
+        }
+      }
     }
 
     if (previousValue !== this.input.value)

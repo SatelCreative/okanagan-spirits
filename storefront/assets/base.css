@@ -1521,6 +1521,12 @@ button.shopify-payment-button__button--unbranded,
   width: auto;
 }
 
+.button--fancy {
+  background: linear-gradient(101.53deg, rgba(250, 244, 175, 0.7) -3.74%, rgba(250, 244, 175, 0) 69.1%), #e4b43b;
+  border: 1px solid #e4b43b;
+  color: rgb(26,22,18);
+}
+
 .button.loading {
   color: transparent !important;
   position: relative;
@@ -3518,4 +3524,35 @@ body.verification-required {
 
 .age-gate__title {
   margin: 0;
+}
+
+
+
+/** Fancy Title **/
+.fancy-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: rgb(var(--color-highlight));
+  font-size: var(--font-body-small);
+  font-weight: 600;
+  line-height: 1.33333;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+}
+
+.fancy-title:before {
+  content: "";
+  width: 48px;
+  height: 1px;
+  display: inline-block;
+  background-color: rgb(var(--color-highlight));
+}
+
+.fancy-title:after {
+  content: "";
+  width: 48px;
+  height: 1px;
+  display: inline-block;
+  background-color: rgb(var(--color-highlight));
 }
