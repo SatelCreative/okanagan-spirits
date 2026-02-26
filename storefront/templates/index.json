@@ -291,6 +291,7 @@
         "text_style": "body",
         "mobile_text_style": "body--mobile",
         "heading_alignment": "center",
+        "overlap_text_on_images": true,
         "blog": "recipes",
         "post_limit": 8,
         "columns_desktop": 4,
