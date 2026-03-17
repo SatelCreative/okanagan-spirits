@@ -9,6 +9,15 @@
       margin-bottom: {{ section.settings.margin_bottom }}rem;
     }
   {% endif %}
+
+  {% if section.settings.background_image != blank %}
+    #{{ section.id }} {
+      background-image: url({{ section.settings.background_image | image_url: width: 1920 }});
+      background-size: auto;
+      background-repeat: repeat;
+      background-position: center;
+    }
+  {% endif %}
 {%- endstyle -%}
 
 {%- comment -%}

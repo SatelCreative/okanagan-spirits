@@ -283,13 +283,13 @@
     ],
     "url": {{ request.origin | append: page.url | json }},
     "address": {
-  	"@type": "PostalAddress",
-  	"streetAddress": "7811 Lemona Ave",
-  	"addressLocality": "Van Nuys",
-  	"addressRegion": "California",
-  	"postalCode": "91405",
-  	"addressCountry": "United States"
-  }
+      "@type": "PostalAddress",
+      "streetAddress": "{{ shop.address.address1 }}",
+      "addressLocality": "{{ shop.address.city }}",
+      "addressRegion": "{{ shop.address.province }}",
+      "postalCode": "{{ shop.address.zip }}",
+      "addressCountry": "{{ shop.address.country }}"
+    }
   }
 </script>
 
@@ -304,24 +304,19 @@
        "image": {{ settings.logo | image_url: width: 500 | prepend: "https:" | json }},
      {% endif %}
   	"description": {{ shop.description | json }},
-  	"telephone": "+8188732828",
-  	"priceRange": "1-999USD",
+  	"telephone": "+{{ shop.address.phone }}",
+  	"priceRange": "1-9999USD",
   	"address": {
   		"@type": "PostalAddress",
-  		"streetAddress": "7811 Lemona Ave",
-  		"addressLocality": "Van Nuys",
-  		"addressRegion": "California",
-  		"postalCode": "91405",
-  		"addressCountry": "United States"
-  	},
-  	"geo": {
-  		"@type": "GeoCoordinates",
-  		"latitude": "34.194370",
-  		"longitude": "-118.601150"
+  		"streetAddress": "{{ shop.address.address1 }}",
+      "addressLocality": "{{ shop.address.city }}",
+      "addressRegion": "{{ shop.address.province }}",
+      "postalCode": "{{ shop.address.zip }}",
+      "addressCountry": "{{ shop.address.country }}"
   	},
   	"contactPoint": {
   		"@type": "ContactPoint",
-  		"telephone": "+8188732828",
+  		"telephone": "+{{ shop.address.phone }}",
   		"contactType": "sales"
   	}
   }
