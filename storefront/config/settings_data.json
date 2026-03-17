@@ -12,13 +12,13 @@
     "logo": "shopify://shop_images/OKS-Circle-Logo-GOLD-GRADIENT.webp",
     "logo_mobile": "shopify://shop_images/OKS-Circle-Logo-GOLD-GRADIENT.webp",
     "logo_svg": "",
-    "logo_width": 120,
-    "logo_width_mobile": 100,
+    "logo_width": 90,
+    "logo_width_mobile": 40,
     "favicon": "shopify://shop_images/OKS-Circle-Logo-GOLD-GRADIENT.webp",
     "page_width": 1400,
     "animations_reveal_on_scroll": true,
     "color_sale": "#e4b43b",
-    "color_highlight": "#FFFFFF",
+    "color_highlight": "#e4b43b",
     "color_success": "#4b9306",
     "color_warning": "#c78400",
     "color_error": "#e43b3b",
@@ -41,13 +41,14 @@
     "mobile_h4": "14px",
     "desktop_h5": "14px",
     "desktop_h6": "13px",
-    "body_weight": "500",
+    "body_weight": "400",
+    "body_letter_spacing": "-0.15px",
     "desktop_body": "14px",
     "desktop_body_large": "16px",
     "mobile_body": "14px",
     "mobile_body_large": "16px",
     "button_size": "16px",
-    "button_weight": "500",
+    "button_weight": "400",
     "button_transform": "normal",
     "link_decoration": "none",
     "enable_quickview": false,
@@ -70,9 +71,9 @@
     "inputs_border_opacity": 100,
     "inputs_radius": 3,
     "inputs_shadow": false,
-    "media_border_thickness": 0,
+    "media_border_thickness": 2,
     "media_border_opacity": 0,
-    "media_radius": 0,
+    "media_radius": 8,
     "dialog_border_thickness": 0,
     "dialog_corner_radius": 8,
     "social_facebook_link": "https://www.facebook.com/okanaganspirits",
@@ -174,6 +175,15 @@
           "cart_main_container_selector": "",
           "cart_other_container_selectors": ""
         }
+      },
+      "12622292715052272319": {
+        "type": "shopify://apps/magical-fees/blocks/magical-mandatory-fees/8c765569-e503-4260-ade8-582a0959d5a2",
+        "disabled": false,
+        "settings": {
+          "fees_required_message": "",
+          "fees_consent_description": "",
+          "hide_dynamic_checkout": false
+        }
       }
     },
     "color_schemes": {
@@ -229,15 +239,15 @@
           "button_label": "#1a1612",
           "button_hover": "#e4b43b",
           "button_border_hover": "#e4b43b",
-          "button_label_hover": "#FFFFFF",
+          "button_label_hover": "#ffffff",
           "button_secondary": "rgba(0,0,0,0)",
           "button_secondary_border": "#e4b43b",
           "button_secondary_label": "#e4b43b",
           "button_secondary_hover": "#e4b43b",
           "button_secondary_border_hover": "#e4b43b",
           "button_secondary_label_hover": "#ffffff",
-          "links": "#e4b43b",
-          "links_hover": "#ffffff"
+          "links": "#595b61",
+          "links_hover": "#e4b43b"
         }
       }
     }

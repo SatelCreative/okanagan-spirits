@@ -7,13 +7,15 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "main": {
       "type": "recipe",
+      "settings": {}
     },
     "product": {
       "type": "recipe_product",
+      "settings": {}
     }
   },
   "order": [

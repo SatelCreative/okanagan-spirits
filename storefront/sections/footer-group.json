@@ -14,6 +14,14 @@
     "footer": {
       "type": "footer",
       "blocks": {
+        "link_list_nmYabb": {
+          "type": "link_list",
+          "settings": {
+            "heading": "",
+            "show_social": false,
+            "menu": "footer"
+          }
+        },
         "link_list_6KGefj": {
           "type": "link_list",
           "settings": {
@@ -48,6 +56,7 @@
         }
       },
       "block_order": [
+        "link_list_nmYabb",
         "link_list_6KGefj",
         "link_list_ctbkxM",
         "link_list_jTmJGP",
