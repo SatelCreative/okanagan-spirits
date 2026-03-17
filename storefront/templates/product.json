@@ -199,98 +199,20 @@
         "margin_bottom": 0
       }
     },
-    "multicolumn_riEUL9": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_UPMhAV": {
-          "type": "column",
-          "settings": {
-            "color_scheme": "scheme-2",
-            "image_overlay_opacity": 0,
-            "show_overlay_on_hover": false,
-            "title": "",
-            "heading_size": "h3",
-            "heading_size_mobile": "h3--mobile",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "text_style": "body",
-            "text_style_mobile": "body--mobile",
-            "link_label": "",
-            "link": "",
-            "show_link_as_button": false,
-            "card_padding": 0.5
-          }
-        },
-        "column_YU7q6w": {
-          "type": "column",
-          "settings": {
-            "color_scheme": "scheme-2",
-            "image_overlay_opacity": 0,
-            "show_overlay_on_hover": false,
-            "title": "",
-            "heading_size": "h3",
-            "heading_size_mobile": "h3--mobile",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "text_style": "body",
-            "text_style_mobile": "body--mobile",
-            "link_label": "",
-            "link": "",
-            "show_link_as_button": false,
-            "card_padding": 0.5
-          }
-        },
-        "column_YVeGRB": {
-          "type": "column",
-          "settings": {
-            "color_scheme": "scheme-2",
-            "image_overlay_opacity": 0,
-            "show_overlay_on_hover": false,
-            "title": "",
-            "heading_size": "h3",
-            "heading_size_mobile": "h3--mobile",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "text_style": "body",
-            "text_style_mobile": "body--mobile",
-            "link_label": "",
-            "link": "",
-            "show_link_as_button": false,
-            "card_padding": 0.5
-          }
-        }
-      },
-      "block_order": [
-        "column_UPMhAV",
-        "column_YU7q6w",
-        "column_YVeGRB"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
+    "product_mashbill_76mfef": {
+      "type": "product_mashbill",
+      "name": "Product Mashbill",
       "settings": {
-        "color_scheme": "scheme-2",
+        "color_scheme": "",
         "layout": "page-width",
-        "enable_desktop_slider": false,
-        "full_width": false,
-        "title": "",
+        "title": "GRAIN COMPOSITION",
         "header_is_h1": false,
         "visually_hide_header": false,
         "heading_size": "h2",
         "description": "",
         "text_style": "body",
         "mobile_text_style": "body--mobile",
-        "heading_alignment": "left",
-        "cta_text": "",
-        "cta_link": "",
-        "override_grid_gap": false,
-        "spacing_grid_horizontal": 8,
-        "spacing_grid_horizontal_mobile": 8,
-        "overlap": false,
-        "aspect_ratio": "landscape",
-        "override_image_size": false,
-        "image_width": 72,
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "columns_mobile": 1,
-        "swipe_on_mobile": false,
-        "slider_show_dots": true,
-        "slider_show_arrows": false,
+        "heading_alignment": "center",
         "padding_top": 2,
         "padding_bottom": 2,
         "margin_bottom": 0
@@ -324,7 +246,7 @@
   "order": [
     "product_breadcrumbs_9xPfwD",
     "main",
-    "multicolumn_riEUL9",
+    "product_mashbill_76mfef",
     "related_products_acXrrg"
   ]
 }
