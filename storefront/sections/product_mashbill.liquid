@@ -1,0 +1,276 @@
+{% if product.metafields.custom.mashbill_ingredients
+  and product.metafields.custom.mashbill_ingredients.value.size > 0
+%}
+  {{ 'product_mashbill.css' | asset_url | stylesheet_tag }}
+
+  {%- render 'section_padding' %}
+
+  <div
+    id="{{ section.id }}"
+    class="color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding isolate  gradient"
+  >
+    <div class="testimonials-container {{ section.settings.layout }}">
+      {%- render 'section_header' -%}
+
+      <div class="mashbill-container">
+        <div class="mashbill-grid">
+          {% for ingredient in product.metafields.custom.mashbill_ingredients.value %}
+            <div class="mashbill-item">
+              <div class="mashbill-icon">
+                {% case ingredient.icon_handle %}
+                  {% when 'corn' -%}
+                    {%- render 'icon-mash-corn' %}
+                  {% when 'barley' -%}
+                    {%- render 'icon-mash-barley' %}
+                  {% when 'rye' -%}
+                    {%- render 'icon-mash-rye' %}
+                  {% when 'wheat' -%}
+                    {%- render 'icon-mash-wheat' %}
+                  {% when 'fruit' -%}
+                    {%- render 'icon-mash-fruit' %}
+                  {% when 'apple' -%}
+                    {%- render 'icon-mash-apple' %}
+                  {% when 'pear' -%}
+                    {%- render 'icon-mash-pear' %}
+                  {% when 'plum' -%}
+                    {%- render 'icon-mash-plum' %}
+                  {% when 'raspberry' -%}
+                    {%- render 'icon-mash-raspberry' %}
+                  {% when 'cherry' -%}
+                    {%- render 'icon-mash-cherry' %}
+                  {% when 'grape' -%}
+                    {%- render 'icon-mash-grape' %}
+                  {% when 'blend' -%}
+                    {%- render 'icon-mash-blend' %}
+                  {% else -%}
+                    {%- render 'icon-mash-generic' %}
+                {% endcase %}
+              </div>
+
+              <div class="mashbill-grain">{{ ingredient.grain }}</div>
+              
+              <div class="mashbill-circle">
+                <svg viewBox="0 0 120 120">
+                  <circle
+                    cx="60"
+                    cy="60"
+                    r="45"
+                    pathLength="100"
+                    stroke-width="12"
+                    stroke-dasharray="{{ ingredient.percentage }} 100"
+                    fill="none"
+                    class="mashbill-ring"
+                  ></circle>
+                </svg>
+                <div class="mashbill-value">{{ ingredient.percentage }}%</div>
+              </div>              
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Product Mashbill",
+  "tag": "section",
+  "class": "section",
+  "enabled_on": {
+    "templates": ["product"]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "info": "t:sections.all.colors.has_cards_info",
+      "default": "scheme-1"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout",
+      "options": [
+        {
+          "value": "screen-width",
+          "label": "Screen width"
+        },
+        {
+          "value": "page-width",
+          "label": "Page width"
+        },
+        {
+          "value": "large-width",
+          "label": "Large width"
+        },
+        {
+          "value": "full-width",
+          "label": "Full width"
+        }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "header",
+      "content": "Section Header"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "visible_if": "{{ section.settings.title != blank }}",
+      "type": "checkbox",
+      "id": "header_is_h1",
+      "label": "Header is H1",
+      "default": false
+    },
+    {
+      "visible_if": "{{ section.settings.title != blank }}",
+      "type": "checkbox",
+      "id": "visually_hide_header",
+      "label": "Visually hide header",
+      "default": false
+    },
+    {
+      "visible_if": "{{ section.settings.title != blank }}",
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h5",
+          "label": "X-Small"
+        },
+        {
+          "value": "h4",
+          "label": "Small"
+        },
+        {
+          "value": "h3",
+          "label": "Medium"
+        },
+        {
+          "value": "h2",
+          "label": "Large"
+        },
+        {
+          "value": "h1",
+          "label": "X-Large"
+        }
+      ],
+      "default": "h2",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "visible_if": "{{ section.settings.description != blank }}",
+      "type": "select",
+      "id": "text_style",
+      "options": [
+        {
+          "value": "body--small",
+          "label": "Small"
+        },
+        {
+          "value": "body",
+          "label": "Regular"
+        },
+        {
+          "value": "body--large",
+          "label": "Large"
+        }
+      ],
+      "default": "body",
+      "label": "Text style"
+    },
+    {
+      "visible_if": "{{ section.settings.description != blank }}",
+      "type": "select",
+      "id": "mobile_text_style",
+      "options": [
+        {
+          "value": "body--small-mobile",
+          "label": "Small"
+        },
+        {
+          "value": "body--mobile",
+          "label": "Regular"
+        },
+        {
+          "value": "body--large-mobile",
+          "label": "Large"
+        }
+      ],
+      "default": "body--mobile",
+      "label": "Mobile text style"
+    },
+    {
+      "visible_if": "{{ section.settings.title != blank or section.settings.description != blank }}",
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "Heading Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.collapsible_content.settings.heading_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.collapsible_content.settings.heading_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.collapsible_content.settings.heading_alignment.options__3.label"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "header",
+      "content": "Section Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 4,
+      "step": 0.5,
+      "unit": "rem",
+      "label": "Padding top",
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 4,
+      "step": 0.5,
+      "unit": "rem",
+      "label": "Padding bottom",
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 4,
+      "step": 0.5,
+      "unit": "rem",
+      "label": "Section margin",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Mashbill"
+    }
+  ]
+}
+{% endschema %}
