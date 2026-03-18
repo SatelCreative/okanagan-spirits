@@ -14,14 +14,6 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "link_list_nmYabb": {
-          "type": "link_list",
-          "settings": {
-            "heading": "",
-            "show_social": false,
-            "menu": "footer"
-          }
-        },
         "link_list_6KGefj": {
           "type": "link_list",
           "settings": {
@@ -56,17 +48,14 @@
         }
       },
       "block_order": [
-        "link_list_nmYabb",
         "link_list_6KGefj",
         "link_list_ctbkxM",
         "link_list_jTmJGP",
         "link_list_49DFRM"
       ],
-      "custom_css": [
-        ".list-social .list-social__item svg {background: linear-gradient( 101.53deg, rgba(250, 244, 175, 0.7) -3.74%, rgba(250, 244, 175, 0) 69.1% ), #e4b43b; color: #000; border-radius: 100%; padding: 4px; width: 30px; height: auto;}"
-      ],
+      "custom_css": [],
       "settings": {
-        "color_scheme": "scheme-be262358-57ed-451e-b0f4-c952a25cb250",
+        "color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
         "content": "",
         "copywrite": "©2026 Okanagan Spirits. All Rights Reserved.",
         "subfooter_menu": "footer-policies"

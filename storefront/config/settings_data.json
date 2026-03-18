@@ -24,9 +24,9 @@
     "color_error": "#e43b3b",
     "custom_fonts": "@font-face {\n  font-family: 'Market Deco';\n  font-style: normal;\n  font-weight: 600;\n  src: url('https://cdn.shopify.com/s/files/1/0968/1525/1742/files/Market_Deco.ttf?v=1770180183') format('truetype');\n}",
     "custom_fonts_preload": "<link rel=\"preload\" href=\"https://cdn.shopify.com/s/files/1/0968/1525/1742/files/Market_Deco.ttf?v=1770180183\" as=\"font\" crossorigin>",
-    "type_header_font": "dm_sans_n4",
+    "type_header_font": "cormorant_n6",
     "type_header_font_custom": "Market Deco",
-    "type_body_font": "poppins_n5",
+    "type_body_font": "poppins_n4",
     "type_body_font_custom": "",
     "type_special_font": "poppins_n5",
     "type_special_font_custom": "",
@@ -48,7 +48,7 @@
     "mobile_body": "14px",
     "mobile_body_large": "16px",
     "button_size": "16px",
-    "button_weight": "400",
+    "button_weight": "500",
     "button_transform": "normal",
     "link_decoration": "none",
     "enable_quickview": false,
@@ -249,13 +249,73 @@
           "links": "#595b61",
           "links_hover": "#e4b43b"
         }
+      },
+      "scheme-f18d1889-243b-47e2-91a6-9a0d01cbbf4a": {
+        "settings": {
+          "background": "#1a1612",
+          "background_gradient": "linear-gradient(117deg, rgba(11, 11, 11, 0.6) 14%, rgba(142, 107, 47, 0.14) 83%)",
+          "text": "#f5f3ed",
+          "button": "rgba(0,0,0,0)",
+          "button_border": "#e4b43b",
+          "button_label": "#e4b43b",
+          "button_hover": "rgba(0,0,0,0)",
+          "button_border_hover": "#e4b43b",
+          "button_label_hover": "#e4b43b",
+          "button_secondary": "#e4b43b",
+          "button_secondary_border": "#e4b43b",
+          "button_secondary_label": "#1a1612",
+          "button_secondary_hover": "#e4b43b",
+          "button_secondary_border_hover": "#e4b43b",
+          "button_secondary_label_hover": "#1a1612",
+          "links": "#e4b43b",
+          "links_hover": "#ffffff"
+        }
+      },
+      "scheme-a4419e2a-db44-4cde-9d3a-1f1544200114": {
+        "settings": {
+          "background": "#8e6b2f",
+          "background_gradient": "",
+          "text": "#FFFFFF",
+          "button": "rgba(0,0,0,0)",
+          "button_border": "#FFFFFF",
+          "button_label": "#FFFFFF",
+          "button_hover": "rgba(0,0,0,0)",
+          "button_border_hover": "#1a1612",
+          "button_label_hover": "#1a1612",
+          "button_secondary": "rgba(0,0,0,0)",
+          "button_secondary_border": "#0b0b0b",
+          "button_secondary_label": "#0b0b0b",
+          "button_secondary_hover": "rgba(0,0,0,0)",
+          "button_secondary_border_hover": "#1a1612",
+          "button_secondary_label_hover": "#1a1612",
+          "links": "#FFFFFF",
+          "links_hover": "#2A2A2A"
+        }
+      },
+      "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7": {
+        "settings": {
+          "background": "#1a1612",
+          "background_gradient": "",
+          "text": "#e4b43b",
+          "button": "rgba(0,0,0,0)",
+          "button_border": "#e4b43b",
+          "button_label": "#e4b43b",
+          "button_hover": "rgba(0,0,0,0)",
+          "button_border_hover": "#cda235",
+          "button_label_hover": "#cda235",
+          "button_secondary": "#cda235",
+          "button_secondary_border": "#cda235",
+          "button_secondary_label": "#1a1612",
+          "button_secondary_hover": "#cda235",
+          "button_secondary_border_hover": "#cda235",
+          "button_secondary_label_hover": "#1a1612",
+          "links": "#cda235",
+          "links_hover": "#ffffff"
+        }
       }
     }
   },
   "platform_customizations": {
-    "custom_css": [
-      ".button {font-family: \"market deco\"; font-size: 17px;}",
-      ".button--secondary {background: linear-gradient( 101.53deg, rgba(250, 244, 175, 0.7) -3.74%, rgba(250, 244, 175, 0) 69.1% ), #e4b43b; border: 1px solid #e4b43b;}"
-    ]
+    "custom_css": []
   }
 }

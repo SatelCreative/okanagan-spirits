@@ -15,7 +15,7 @@
       "type": "announcement-bar",
       "custom_css": [],
       "settings": {
-        "color_scheme": "scheme-57527f1c-0784-4a52-a6e0-17c25b03e995",
+        "color_scheme": "scheme-f18d1889-243b-47e2-91a6-9a0d01cbbf4a",
         "text": "FREE CANADIAN SHIPPING ON ORDERS $150+",
         "link": ""
       }
@@ -148,7 +148,7 @@
         ".bold {font-family: \"market deco\" !important; font-size: 17px;}"
       ],
       "settings": {
-        "color_scheme": "scheme-be262358-57ed-451e-b0f4-c952a25cb250",
+        "color_scheme": "scheme-1",
         "menu_color_scheme": "scheme-57527f1c-0784-4a52-a6e0-17c25b03e995",
         "icon_size": 24,
         "icons_image": true,
