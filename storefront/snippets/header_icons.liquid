@@ -12,7 +12,7 @@
           {% if section.settings.button_icons %}
             header__button button
           {% else %}
-            header__icon link body body--small focus-inset
+            header__icon body body--small focus-inset
           {% endif %}
         "
       >
@@ -27,7 +27,6 @@
           >
         {%- endif -%}
         <span class="
-          {% unless section.settings.button_icons %}body body--small{% endunless %}
           {% if block.settings.show_as_text %}
           {% elsif section.settings.icons_text == false %}
             visually-hidden
@@ -53,7 +52,7 @@
         {% if section.settings.button_icons %}
           header__button button
         {% else %}
-          header__icon link focus-inset
+          header__icon focus-inset
         {% endif %}
       "
     >
@@ -61,7 +60,7 @@
         {% render 'icon-account' %}
       {%- endif -%}
 
-      <span class="{% unless section.settings.button_icons %}body body--small{% endunless %} {% unless section.settings.icons_text %}visually-hidden{% endunless %}">
+      <span class="{% unless section.settings.icons_text %}visually-hidden{% endunless %}">
         {%- liquid
           if customer
             echo 'customer.account_fallback' | t
@@ -88,7 +87,7 @@
     {%- if section.settings.icons_image -%}
       {%- render 'icon-cart' -%}
     {%- endif -%}
-    <span class="{% unless section.settings.button_icons %}body body--small{% endunless %} {% unless section.settings.icons_text %}visually-hidden{% endunless %}">
+    <span class="{% unless section.settings.icons_text %}visually-hidden{% endunless %}">
       {{- 'sections.cart.cart' | t -}}
     </span>
     <div class="cart-count-bubble {% if section.settings.icons_text %}body body--small{% endif %}">

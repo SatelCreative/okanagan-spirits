@@ -7,16 +7,6 @@
 
   .header {
     --icon-size: {{ section.settings.icon_size }}px;
-
-    padding-top: {{ section.settings.padding_top }}rem;
-    padding-bottom: {{ section.settings.padding_bottom }}rem;
-  }
-
-  @media screen and (max-width: 749px) {
-    .header {
-      padding-top: 12px;
-      padding-bottom: 12px;
-    }
   }
 {%- endstyle -%}
 
@@ -643,30 +633,6 @@
       "id": "show_customer_accounts",
       "label": "Show customer accounts",
       "default": true
-    },
-    {
-      "type": "header",
-      "content": "t:sections.all.padding.section_padding_heading"
-    },
-    {
-      "type": "range",
-      "id": "padding_top",
-      "min": 0,
-      "max": 3,
-      "step": 0.1,
-      "unit": "rem",
-      "label": "t:sections.all.padding.padding_top",
-      "default": 1.5
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom",
-      "min": 0,
-      "max": 3,
-      "step": 0.1,
-      "unit": "rem",
-      "label": "t:sections.all.padding.padding_bottom",
-      "default": 1.5
     }
   ],
   "blocks": [
@@ -801,76 +767,6 @@
           "type": "link_list",
           "id": "menu",
           "label": "Menu"
-        },
-        {
-          "type": "select",
-          "id": "parent_style",
-          "label": "Column heading style",
-          "options": [
-            {
-              "value": "body body--small medium",
-              "label": "Small medium"
-            },
-            {
-              "value": "body body--small bold",
-              "label": "Small bold"
-            },
-            {
-              "value": "body medium",
-              "label": "Regular medium"
-            },
-            {
-              "value": "body bold",
-              "label": "Regular bold"
-            },
-            {
-              "value": "h6",
-              "label": "h6"
-            },
-            {
-              "value": "h5",
-              "label": "h5"
-            },
-            {
-              "value": "h4",
-              "label": "h4"
-            },
-            {
-              "value": "h3",
-              "label": "h3"
-            },
-            {
-              "value": "h2",
-              "label": "h2"
-            }
-          ],
-          "default": "body bold"
-        },
-        {
-          "type": "checkbox",
-          "id": "parent_underline",
-          "label": "Underline headings",
-          "default": true
-        },
-        {
-          "type": "select",
-          "id": "child_style",
-          "label": "Link style",
-          "options": [
-            {
-              "value": "body body--small",
-              "label": "Small"
-            },
-            {
-              "value": "body",
-              "label": "Normal"
-            },
-            {
-              "value": "body body--large",
-              "label": "Large"
-            }
-          ],
-          "default": "body"
         },
         {
           "type": "textarea",

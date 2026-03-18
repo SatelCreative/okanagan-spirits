@@ -17,7 +17,7 @@
         {% if section.settings.button_icons %}
           header__button button
         {% else %}
-          header__icon link focus-inset
+          header__icon focus-inset
         {% endif %}
       "
     >
@@ -25,7 +25,7 @@
         {% render 'icon-search' %}
       {%- endif -%}
 
-      <span class="{% unless section.settings.button_icons %}body body--small{% endunless %} {% unless section.settings.icons_text %}visually-hidden{% endunless %}">
+      <span class="{% unless section.settings.icons_text %}visually-hidden{% endunless %}">
         {{ 'general.search.search' | t }}
       </span>
     </summary>

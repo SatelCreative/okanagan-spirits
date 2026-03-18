@@ -18,7 +18,7 @@
     "page_width": 1400,
     "animations_reveal_on_scroll": true,
     "color_sale": "#e4b43b",
-    "color_highlight": "#e4b43b",
+    "color_highlight": "#c6a75c",
     "color_success": "#4b9306",
     "color_warning": "#c78400",
     "color_error": "#e43b3b",
@@ -275,10 +275,10 @@
         "settings": {
           "background": "#8e6b2f",
           "background_gradient": "",
-          "text": "#FFFFFF",
+          "text": "#ffffff",
           "button": "rgba(0,0,0,0)",
-          "button_border": "#FFFFFF",
-          "button_label": "#FFFFFF",
+          "button_border": "#ffffff",
+          "button_label": "#ffffff",
           "button_hover": "rgba(0,0,0,0)",
           "button_border_hover": "#1a1612",
           "button_label_hover": "#1a1612",
@@ -288,8 +288,8 @@
           "button_secondary_hover": "rgba(0,0,0,0)",
           "button_secondary_border_hover": "#1a1612",
           "button_secondary_label_hover": "#1a1612",
-          "links": "#FFFFFF",
-          "links_hover": "#2A2A2A"
+          "links": "#ffffff",
+          "links_hover": "#2a2a2a"
         }
       },
       "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7": {

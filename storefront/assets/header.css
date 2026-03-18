@@ -38,8 +38,13 @@
   display: flex;
   flex-flow: wrap;
   align-items: center;
-  gap: 1rem;
-  row-gap: 2rem;
+  gap: 40px;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  border-top: 1px solid rgba(var(--color-highlight), 0.30);
+  border-bottom: 1px solid rgba(var(--color-highlight), 0.30);
 }
 
 @media screen and (min-width: 750px) {
@@ -231,22 +236,27 @@ details-disclosure > details {
 }
 
 @media screen and (min-width: 750px) {
+  header-menu,
   .header__menu {
     display: flex;
     justify-content: flex-start;
-    padding: 0 var(--row-spacing);
+    align-items: center;
+    height: stretch;
   }
 }
 
 .header__menu .list-menu {
   display: flex;
-  gap: calc(var(--column-spacing) * 2);
+  gap: 32px;
   flex-wrap: wrap;
+  align-items: center;
+  height: stretch;
 }
 
-.header__menu-item .body:hover {
-  color:#E4B43B;
-  text-decoration: underline 1px solid #E4B43B;
+.header__menu .list-menu > li {
+  display: flex;
+  align-items: center;
+  height: stretch;
 }
 
 .header__menu-item {
@@ -259,6 +269,11 @@ details-disclosure > details {
   font-size: 15px;
 }
 
+.header__menu-item * {
+  font-family: 'Cinzel' !important;
+  letter-spacing: 2.4px;
+}
+
 .header__menu-item svg {
   height: auto;
   pointer-events: none;
@@ -268,6 +283,8 @@ details-disclosure > details {
 }
 
 .mega-menu {
+  display: flex;
+  height: 100%;
   position: static;
 }
 
@@ -275,19 +292,17 @@ details-disclosure > details {
   background-color: rgb(var(--color-background));
   left: 0;
   overflow-y: auto;
-  padding-bottom: calc(var(--row-spacing) * 2);
+  padding-bottom: 40px;
   /*padding-top: calc(var(--row-spacing) * 2);*/
   position: absolute;
   right: 0;
   top: 100%;
-  border-width: var(--dialog-border-width);
-  border-style: solid;
-  border-color: rgba(var(--color-foreground), var(--dialog-border-opacity));
-  border-bottom-right-radius: var(--dialog-corner-radius);
-  border-bottom-left-radius: var(--dialog-corner-radius);
   border-left: 0;
-  border-top: 0;
   border-right: 0;
+  border-top-width: 1px;
+  border-bottom-width: 2px;
+  border-style: solid;
+  border-color: rgba(var(--color-highlight), 0.30);  
 
   opacity: 0;
   transform: translateY(-1.5rem);
@@ -307,13 +322,12 @@ details-disclosure > details {
 .mega-menu__list {
   display: flex;
   list-style: none;
-  justify-content: space-between;
-  gap: var(--row-spacing);
+  gap: 56px;
 }
 
 .mega-menu__column {
   width: 100%;
-  max-width: 350px;
+  max-width: 250px;
 }
 
 .mega-menu__column--images {
@@ -327,30 +341,38 @@ details-disclosure > details {
 
 .mega-menu__parent {
   display: block;
-  font-size: 18px;
-  padding: 12px 10px;
+
+  font-family: 'Cinzel';
+  letter-spacing: 2.8px;
+  font-size: var(--font-body);
+
+  margin: 40px 0 0;
+  padding-bottom: 12px;
+  position: relative;
 }
 
-.mega-menu__parent--underline {
-  padding-bottom: var(--row-spacing);
-  border-bottom: 2px solid rgb(var(--color-foreground));
-}
+.mega-menu__parent:after {
+  content: '';
+  width: 48px;
+  height: 1px;
+  background-color: rgb(var(--color-highlight));
 
-.mega-menu__parent--underline + .mega-menu__children {
-  margin-top: calc(var(--row-spacing) + (var(--row-spacing) * 0.5));
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 .mega-menu__children {
   display: flex;
   flex-direction: column;
+  margin-top: 24px;
+  gap: 12px;
 }
 
 .mega-menu__child {
   display: flex;
   gap: 6px;
   align-items: center;
-
-  padding: 12px 10px;
 }
 
 .mega-menu__child--color {
@@ -433,6 +455,13 @@ details-disclosure > details {
   margin-top: calc(var(--row-spacing) * 0.25);
 }
 
+.mega-menu__footer {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Header icons */
 .header__icons {
   display: flex;
@@ -455,12 +484,14 @@ details-disclosure > details {
 .header__icon {
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 12px;
   height: auto;
   width: auto;
   padding: 0;
   position: relative;
   text-decoration: none;
+
+  color: rgba(255, 255, 255, 0.60);
 }
 
 .header__button .icon,
@@ -472,6 +503,12 @@ details-disclosure > details {
 
 .header__icon span {
   height: 100%;
+  line-height: 1;
+
+  font-family: Cinzel;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .header__button {
