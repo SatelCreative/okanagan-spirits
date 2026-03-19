@@ -25,11 +25,9 @@
 
   {%- if settings.search_inline -%}
     <button class="button">
-      {%- if section.settings.icons_image -%}
-        <span class="header__icon">
-          {% render 'icon-search' %}
-        </span>
-      {%- endif -%}
+      <span class="header__icon">
+        {% render 'icon-search' %}
+      </span>
 
       <span class="visually-hidden">{{ 'general.search.search' | t }}</span>
     </button>

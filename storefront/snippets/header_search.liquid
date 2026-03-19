@@ -13,19 +13,11 @@
     <summary
       aria-haspopup="dialog"
       aria-label="{{ 'general.search.search' | t }}"
-      class="
-        {% if section.settings.button_icons %}
-          header__button button
-        {% else %}
-          header__icon focus-inset
-        {% endif %}
-      "
+      class="header__icon focus-inset"
     >
-      {%- if section.settings.icons_image -%}
-        {% render 'icon-search' %}
-      {%- endif -%}
+      {% render 'icon-search' %}
 
-      <span class="{% unless section.settings.icons_text %}visually-hidden{% endunless %}">
+      <span>
         {{ 'general.search.search' | t }}
       </span>
     </summary>

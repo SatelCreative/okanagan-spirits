@@ -1,4 +1,4 @@
-<div id="predictive-search-results" class="predictive-search-results full-width" role="listbox">
+<div id="predictive-search-results" class="predictive-search-results page-width" role="listbox">
   <div id="predictive-search-results-groups-wrapper" class="predictive-search__results-groups-wrapper">
     {%- if settings.predictive_search_show_collection and predictive_search.resources.collections.size > 0 -%}
       <div class="predictive-search__container predictive-search__container--stretch">
@@ -80,4 +80,8 @@
       endif
     %}
   </span>
+
+  <div class="predictive-search-results__art">
+    {% render 'art-deco' %}
+  </div>
 </div>

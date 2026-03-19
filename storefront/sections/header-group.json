@@ -23,26 +23,14 @@
     "header": {
       "type": "header",
       "blocks": {
-        "header_icon_hpH8Wy": {
-          "type": "header_icon",
-          "settings": {
-            "hide_mobile": true,
-            "show_as_text": false,
-            "title": "Become A Retail Partner",
-            "link": ""
-          }
-        },
         "mega_menu_pEtCCd": {
           "type": "mega_menu",
           "settings": {
             "title": "SHOP",
             "parent_link": "",
-            "mega_weight": "body bold",
+            "mega_weight": "body",
             "parent_color": "rgba(0,0,0,0)",
             "menu": "shop-oks",
-            "parent_style": "h3",
-            "parent_underline": false,
-            "child_style": "body",
             "highlight_text": "",
             "desktop_format": "grid",
             "desktop_grid_columns": 4,
@@ -72,12 +60,9 @@
           "settings": {
             "title": "Discover",
             "parent_link": "",
-            "mega_weight": "body bold",
+            "mega_weight": "body",
             "parent_color": "rgba(0,0,0,0)",
             "menu": "discover",
-            "parent_style": "h3",
-            "parent_underline": false,
-            "child_style": "body",
             "highlight_text": "",
             "desktop_format": "grid",
             "desktop_grid_columns": 4,
@@ -107,12 +92,9 @@
           "settings": {
             "title": "Whisky Club",
             "parent_link": "#",
-            "mega_weight": "body bold",
+            "mega_weight": "body",
             "parent_color": "rgba(0,0,0,0)",
             "menu": "",
-            "parent_style": "h3",
-            "parent_underline": false,
-            "child_style": "body",
             "highlight_text": "",
             "desktop_format": "grid",
             "desktop_grid_columns": 4,
@@ -139,7 +121,6 @@
         }
       },
       "block_order": [
-        "header_icon_hpH8Wy",
         "mega_menu_pEtCCd",
         "mega_menu_EHpUKg",
         "mega_menu_XaLiw4"
@@ -150,9 +131,9 @@
       "settings": {
         "color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
         "menu_color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
-        "icon_size": 24,
+        "icon_size": 18,
         "icons_image": true,
-        "icons_text": false,
+        "icons_text": true,
         "button_icons": false,
         "layout": "full-width",
         "hamburger_desktop": false,
@@ -172,9 +153,7 @@
         "menu_text_2": "",
         "menu_link_text_2": "",
         "menu_link_url_2": "",
-        "show_customer_accounts": false,
-        "padding_top": 0.5,
-        "padding_bottom": 0.5
+        "show_customer_accounts": true
       }
     }
   },

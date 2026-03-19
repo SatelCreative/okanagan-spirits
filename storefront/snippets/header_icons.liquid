@@ -1,7 +1,6 @@
 <div class="
     header__icons
     {% if settings.search_inline %}header__icons--relative{% endif %}
-    {% if section.settings.button_icons %}header__icons--half{% endif %}
   ">
   {%- for block in section.blocks -%}
     {%- if block.type == 'header_icon' -%}
@@ -9,14 +8,10 @@
         href="{{ block.settings.link }}"
         class="
           {% if block.settings.hide_mobile %} small-hide{% endif %}
-          {% if section.settings.button_icons %}
-            header__button button
-          {% else %}
-            header__icon body body--small focus-inset
-          {% endif %}
+          header__icon body body--small focus-inset
         "
       >
-        {%- if section.settings.icons_image and block.settings.icon != blank -%}
+        {%- if block.settings.icon != blank -%}
           <img
             src="{{ block.settings.icon | image_url: width: 50 }}"
             class="cart-item__image"
@@ -26,12 +21,7 @@
             height="24"
           >
         {%- endif -%}
-        <span class="
-          {% if block.settings.show_as_text %}
-          {% elsif section.settings.icons_text == false %}
-            visually-hidden
-          {% endif %}
-          ">
+        <span>
           {{- block.settings.title -}}
         </span>
       </a>
@@ -49,18 +39,12 @@
       href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
       class="
         header__icon--account
-        {% if section.settings.button_icons %}
-          header__button button
-        {% else %}
-          header__icon focus-inset
-        {% endif %}
+        header__icon focus-inset
       "
     >
-      {%- if section.settings.icons_image -%}
-        {% render 'icon-account' %}
-      {%- endif -%}
+      {% render 'icon-account' %}
 
-      <span class="{% unless section.settings.icons_text %}visually-hidden{% endunless %}">
+      <span>
         {%- liquid
           if customer
             echo 'customer.account_fallback' | t
@@ -76,26 +60,16 @@
     href="{{ routes.cart_url }}"
     class="
       header__icon--cart
-      {% if section.settings.button_icons %}
-        header__button button
-      {% else %}
-        header__icon link focus-inset
-      {% endif %}
+      header__icon link focus-inset
     "
     id="cart-icon-bubble"
   >
-    {%- if section.settings.icons_image -%}
-      {%- render 'icon-cart' -%}
-    {%- endif -%}
-    <span class="{% unless section.settings.icons_text %}visually-hidden{% endunless %}">
+    {%- render 'icon-cart' -%}
+    <span class='visually-hidden'>
       {{- 'sections.cart.cart' | t -}}
     </span>
-    <div class="cart-count-bubble {% if section.settings.icons_text %}body body--small{% endif %}">
-      {% if section.settings.icons_text %}
-        (<span class="cart-count-bubble__count" aria-hidden="true">{{ cart.item_count }}</span>)
-      {%- else -%}
-        <span class="cart-count-bubble__count" aria-hidden="true">{{ cart.item_count }}</span>
-      {%- endif -%}
+    <div class="cart-count-bubble">
+      <span class="cart-count-bubble__count" aria-hidden="true">{{ cart.item_count }}</span>
       <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
     </div>
   </a>
