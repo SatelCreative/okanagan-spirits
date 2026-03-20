@@ -9,22 +9,238 @@
  */
 {
   "sections": {
-    "contact_form_zfnTji": {
-      "type": "contact-form",
-      "name": "t:sections.contact-form.presets.name",
+    "banner_i4kTjD": {
+      "type": "banner",
+      "blocks": {
+        "media_HVqTed": {
+          "type": "media",
+          "settings": {
+            "color_scheme_box": "scheme-1",
+            "transparent_box_desktop": true,
+            "transparent_box_mobile": false,
+            "image": "shopify://shop_images/drop-in-tastings-background-21.webp",
+            "image_mobile": "shopify://shop_images/drop-in-tastings-background-21.webp",
+            "image_link": "",
+            "image_overlay_opacity": 50,
+            "video_description": "",
+            "enable_video_autoplay": true,
+            "desktop_content_position": "middle-center",
+            "desktop_remove_extra_padding": false,
+            "desktop_content_alignment": "center",
+            "mobile_content_position": "middle",
+            "mobile_content_alignment": "center",
+            "heading": "Drop In Tastings",
+            "heading_size": "h0--desktop",
+            "heading_size_mobile": "h2--mobile",
+            "heading_letter_spacing": "",
+            "heading_shadow": "",
+            "heading_italic": false,
+            "is_h1": false,
+            "visually_hidden": false,
+            "text": "",
+            "text_style": "body--desktop",
+            "mobile_text_style": "body--mobile",
+            "button_label_1": "",
+            "button_link_1": "",
+            "button_bold_1": false,
+            "button_style_1": "button",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_bold_2": false,
+            "button_style_2": "button"
+          }
+        }
+      },
+      "block_order": [
+        "media_HVqTed"
+      ],
+      "name": "Media Banners",
       "settings": {
         "color_scheme": "",
-        "layout": "page-width",
-        "title": "Contact Us",
-        "header_is_h1": true,
+        "layout": "screen-width",
+        "layout_mobile": "screen-width",
+        "title": "",
+        "header_is_h1": false,
         "visually_hide_header": false,
         "heading_size": "h2",
         "description": "",
         "text_style": "body",
         "mobile_text_style": "body--mobile",
-        "heading_alignment": "center",
-        "social_title": "Stay in the know",
-        "show_social": false,
+        "heading_alignment": "left",
+        "aspect_ratio": "small",
+        "aspect_ratio_mobile": "adapt",
+        "stack_images_on_mobile": true,
+        "slider_show_dots": true,
+        "slider_show_arrows": false,
+        "accessibility_info": "",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_bottom": 0
+      }
+    },
+    "media_with_text_Yermec": {
+      "type": "media-with-text",
+      "blocks": {
+        "content_hBwx6J": {
+          "type": "content",
+          "settings": {
+            "image_first": true,
+            "image": "shopify://shop_images/Vernon_Tasting_Bar_Lee_Watson_41.webp",
+            "video_autoplay": false,
+            "heading": "TASTING BARS ARE OPEN!",
+            "heading_size": "h2",
+            "text": "<p>We welcome you to drop by either of our distilleries where we can entertain you at the tasting bar while educating you on how our farm-to-flask spirits are created. No bookings required for our tasting bars – for larger groups consider calling ahead for a group tasting session so we can do our best to accommodate!<br/><br/></p><p>Tasting fee is $10 for your choice of three available spirits.<br/><br/><em>Fee is waived with a spirit purchase.</em></p>",
+            "text_style": "body",
+            "mobile_text_style": "body--mobile",
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "box_color_scheme": "scheme-1",
+            "desktop_content_position": "top",
+            "desktop_content_alignment": "left",
+            "content_layout": "no-overlap",
+            "mobile_content_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "content_hBwx6J"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
+        "layout": "page-width",
+        "aspect_ratio": "square",
+        "desktop_image_width": "small",
+        "slider_show_dots": true,
+        "slider_show_arrows": false,
+        "padding_top": 2,
+        "padding_bottom": 2,
+        "margin_bottom": 0
+      }
+    },
+    "media_with_text_cAy3Kq": {
+      "type": "media-with-text",
+      "blocks": {
+        "content_wQPWQt": {
+          "type": "content",
+          "settings": {
+            "image_first": false,
+            "image": "shopify://shop_images/Vernon_Tasting_Bar_Lee_Watson_41.webp",
+            "video_autoplay": false,
+            "heading": "Private Tastings",
+            "heading_size": "h2",
+            "text": "<p>Learn how craft spirits are made and get an up-close look at our copper-pot still. Finish with a guided tasting of 3 of our award-winning spirits.<br/><br/></p><p>Tasting fee is $10 for your choice of three available spirits.<br/><br/><em>Fee is waived with a spirit purchase.</em></p>",
+            "text_style": "body",
+            "mobile_text_style": "body--mobile",
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "box_color_scheme": "",
+            "desktop_content_position": "top",
+            "desktop_content_alignment": "left",
+            "content_layout": "no-overlap",
+            "mobile_content_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "content_wQPWQt"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
+        "layout": "page-width",
+        "aspect_ratio": "square",
+        "desktop_image_width": "small",
+        "slider_show_dots": true,
+        "slider_show_arrows": false,
+        "padding_top": 2,
+        "padding_bottom": 2,
+        "margin_bottom": 0
+      }
+    },
+    "multicolumn_fQ3VJR": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_9H394a": {
+          "type": "column",
+          "settings": {
+            "color_scheme": "",
+            "image_overlay_opacity": 0,
+            "show_overlay_on_hover": false,
+            "title": "",
+            "heading_size": "h3",
+            "heading_size_mobile": "h3--mobile",
+            "text": "<h5>Coming in as a group or special occasion?</h5><h5>Check out our <a href=\"https://okanaganspirits.com/tours-experiences/\">Tours & Experiences</a></h5>",
+            "text_style": "body--large",
+            "text_style_mobile": "body--mobile",
+            "link_label": "",
+            "link": "",
+            "show_link_as_button": false,
+            "card_padding": 0.5
+          }
+        },
+        "column_8GwfPq": {
+          "type": "column",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "image_overlay_opacity": 0,
+            "show_overlay_on_hover": false,
+            "title": "",
+            "heading_size": "h3",
+            "heading_size_mobile": "h3--mobile",
+            "text": "<p>Looking to explore more Vernon Attractions and Experiences?</p><p>Check out <a href=\"https://www.kayak.com/Vernon.14728.guide#what-to-do\" target=\"_blank\">KAYAK’s Vernon Travel Guide</a></p>",
+            "text_style": "body",
+            "text_style_mobile": "body--mobile",
+            "link_label": "",
+            "link": "",
+            "show_link_as_button": false,
+            "card_padding": 0.5
+          }
+        }
+      },
+      "block_order": [
+        "column_9H394a",
+        "column_8GwfPq"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
+        "layout": "page-width",
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "title": "",
+        "header_is_h1": false,
+        "visually_hide_header": false,
+        "heading_size": "h2",
+        "description": "",
+        "text_style": "body",
+        "mobile_text_style": "body--mobile",
+        "heading_alignment": "left",
+        "cta_text": "",
+        "cta_link": "",
+        "override_grid_gap": false,
+        "spacing_grid_horizontal": 8,
+        "spacing_grid_horizontal_mobile": 8,
+        "overlap": false,
+        "aspect_ratio": "landscape",
+        "override_image_size": false,
+        "image_width": 72,
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "columns_mobile": 2,
+        "swipe_on_mobile": false,
+        "slider_show_dots": true,
+        "slider_show_arrows": false,
         "padding_top": 2,
         "padding_bottom": 2,
         "margin_bottom": 0
@@ -32,6 +248,9 @@
     }
   },
   "order": [
-    "contact_form_zfnTji"
+    "banner_i4kTjD",
+    "media_with_text_Yermec",
+    "media_with_text_cAy3Kq",
+    "multicolumn_fQ3VJR"
   ]
 }

@@ -15,7 +15,7 @@
         "media_qABjNN": {
           "type": "media",
           "settings": {
-            "color_scheme_box": "",
+            "color_scheme_box": "scheme-1",
             "transparent_box_desktop": true,
             "transparent_box_mobile": true,
             "image_link": "",
@@ -133,7 +133,7 @@
             "mobile_text_style": "body--mobile",
             "button_label": "Learn More",
             "button_link": "shopify://pages/our-story",
-            "button_style_secondary": true,
+            "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false,
@@ -150,7 +150,7 @@
       ],
       "name": "t:sections.image-with-text.name",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
         "layout": "page-width",
         "aspect_ratio": "square",
         "desktop_image_width": "medium",
@@ -178,7 +178,7 @@
             "mobile_text_style": "body--mobile",
             "button_label": "Visit Us",
             "button_link": "shopify://pages/tours-experiences",
-            "button_style_secondary": true,
+            "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false,
@@ -212,7 +212,7 @@
         "media_XE4cDB": {
           "type": "media",
           "settings": {
-            "color_scheme_box": "",
+            "color_scheme_box": "scheme-1",
             "transparent_box_desktop": true,
             "transparent_box_mobile": false,
             "image": "shopify://shop_images/oks_recipes_and_cocktails_bg1.jpg",
@@ -280,6 +280,10 @@
     },
     "featured_blog_hRFJ7m": {
       "type": "featured-blog",
+      "custom_css": [
+        ".card__details,.card__title-title,.card__description {color: #fff;}",
+        ".card__details {background-color: #11111160;}"
+      ],
       "name": "t:sections.featured-blog.presets.name",
       "settings": {
         "color_scheme": "scheme-f18d1889-243b-47e2-91a6-9a0d01cbbf4a",
@@ -391,14 +395,14 @@
         "color_scheme": "scheme-be262358-57ed-451e-b0f4-c952a25cb250",
         "color_scheme_card": "scheme-be262358-57ed-451e-b0f4-c952a25cb250",
         "layout": "page-width",
-        "title": "",
+        "title": "Featured Collections",
         "header_is_h1": false,
         "visually_hide_header": false,
         "heading_size": "h2",
         "description": "",
         "text_style": "body",
         "mobile_text_style": "body--mobile",
-        "heading_alignment": "left",
+        "heading_alignment": "center",
         "show_all": false,
         "show_all_text": "View all",
         "columns_desktop": 5,

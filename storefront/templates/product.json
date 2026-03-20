@@ -21,24 +21,17 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "title": {
-          "type": "title",
-          "settings": {
-            "title_size": "h2",
-            "title_size_mobile": "h2--mobile"
-          }
-        },
         "text_qBQ9Dz": {
           "type": "text",
           "settings": {
-            "color_scheme": "",
+            "color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
             "accordion": false,
             "border": false,
             "text_alignment": "left",
             "title": "",
-            "header_style": "body",
+            "header_style": "h6",
             "mobile_header_style": "body--mobile",
-            "text": "<p><em>{{ product.vendor }}</em></p>",
+            "text": "<p>Premium Craft Spirit</p>",
             "text_weight": "",
             "text_style": "body--small",
             "mobile_text_style": "body--mobile",
@@ -46,19 +39,26 @@
             "padding": ""
           }
         },
-        "text_4BQpzW": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": "h1",
+            "title_size_mobile": "h1--mobile"
+          }
+        },
+        "text_aBqmib": {
           "type": "text",
           "settings": {
-            "color_scheme": "",
+            "color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
             "accordion": false,
             "border": false,
             "text_alignment": "left",
             "title": "",
             "header_style": "body",
             "mobile_header_style": "body--mobile",
-            "text": "{{ product.description }}",
-            "text_weight": "",
-            "text_style": "body",
+            "text": "<p>Whisky | 750mL | 40% ABV Vol</p>",
+            "text_weight": "light",
+            "text_style": "body--small",
             "mobile_text_style": "body--mobile",
             "video_aspect_ratio": "square",
             "padding": ""
@@ -70,15 +70,6 @@
             "show_installments": false
           }
         },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_scheme": "",
-            "picker_type": "button",
-            "siblings_title": "Colours",
-            "siblings_swatches": true
-          }
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -87,10 +78,38 @@
             "show_gift_card_recipient": true
           }
         },
+        "text_4BQpzW": {
+          "type": "text",
+          "settings": {
+            "color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
+            "accordion": false,
+            "border": false,
+            "text_alignment": "left",
+            "title": "",
+            "header_style": "body",
+            "mobile_header_style": "body--mobile",
+            "text": "<p>Born in our North Okanagan fields, this cask-strength whisky is defined by a unique mash bill of 54% grain corn and 46% chocolate malted barley. Distilled in our state-of-the-art German copper-pot stills, it rests for over 7 1/2 years in custom toasted and charred, virgin American white oak. Bottled at a potent 52% ABV, this spirit captures the unbridled decadence that only a true cask-strength expression can achieve.</p>",
+            "text_weight": "",
+            "text_style": "body",
+            "mobile_text_style": "body--mobile",
+            "video_aspect_ratio": "square",
+            "padding": ""
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "disabled": true,
+          "settings": {
+            "picker_scheme": "",
+            "picker_type": "button",
+            "siblings_title": "Colours",
+            "siblings_swatches": true
+          }
+        },
         "text_YmTDnc": {
           "type": "text",
           "settings": {
-            "color_scheme": "",
+            "color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
             "accordion": true,
             "border": false,
             "text_alignment": "left",
@@ -108,7 +127,7 @@
         "text_wada6P": {
           "type": "text",
           "settings": {
-            "color_scheme": "",
+            "color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
             "accordion": true,
             "border": false,
             "text_alignment": "left",
@@ -126,7 +145,7 @@
         "text_dbFTHD": {
           "type": "text",
           "settings": {
-            "color_scheme": "",
+            "color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
             "accordion": true,
             "border": false,
             "text_alignment": "left",
@@ -155,19 +174,24 @@
         }
       },
       "block_order": [
-        "title",
         "text_qBQ9Dz",
-        "text_4BQpzW",
+        "title",
+        "text_aBqmib",
         "price_ymGdEt",
-        "variant_picker",
         "buy_buttons",
+        "text_4BQpzW",
+        "variant_picker",
         "text_YmTDnc",
         "text_wada6P",
         "text_dbFTHD",
         "recommended_maxHLM"
       ],
+      "custom_css": [
+        ".button {color: #0b0b0b; background-color: #e4b43b;}",
+        ".quantity {border: 1px solid #e4b43b;}"
+      ],
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
         "layout": "page-width",
         "layout_mobile": "full-width",
         "gallery_width": 50,
@@ -198,7 +222,7 @@
       "type": "product_mashbill",
       "name": "Product Mashbill",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
         "layout": "page-width",
         "title": "GRAIN COMPOSITION",
         "header_is_h1": false,
@@ -217,7 +241,7 @@
       "type": "related-products",
       "name": "t:sections.related-products.name",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
         "layout": "page-width",
         "title": "You May Also Like",
         "header_is_h1": false,

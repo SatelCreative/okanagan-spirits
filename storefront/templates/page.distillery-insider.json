@@ -11,6 +11,7 @@
   "sections": {
     "contact_form_zfnTji": {
       "type": "contact-form",
+      "disabled": true,
       "name": "t:sections.contact-form.presets.name",
       "settings": {
         "color_scheme": "",

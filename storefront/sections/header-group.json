@@ -13,9 +13,11 @@
   "sections": {
     "announcement-bar": {
       "type": "announcement-bar",
-      "custom_css": [],
+      "custom_css": [
+        ".utility-bar__container {font-family: \"cinzel\"; letter-spacing: 0.5px;}"
+      ],
       "settings": {
-        "color_scheme": "scheme-f18d1889-243b-47e2-91a6-9a0d01cbbf4a",
+        "color_scheme": "scheme-a4419e2a-db44-4cde-9d3a-1f1544200114",
         "text": "FREE CANADIAN SHIPPING ON ORDERS $150+",
         "link": ""
       }
@@ -28,7 +30,7 @@
           "settings": {
             "title": "SHOP",
             "parent_link": "",
-            "mega_weight": "body",
+            "mega_weight": "body medium",
             "parent_color": "rgba(0,0,0,0)",
             "menu": "shop-oks",
             "highlight_text": "",
@@ -132,9 +134,6 @@
         "color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
         "menu_color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
         "icon_size": 18,
-        "icons_image": true,
-        "icons_text": true,
-        "button_icons": false,
         "layout": "full-width",
         "hamburger_desktop": false,
         "header_type": "logo-menu_left-icons",
