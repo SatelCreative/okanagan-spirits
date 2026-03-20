@@ -79,6 +79,35 @@
             {%- case block.type -%}
               {%- when '@app' -%}
                 {% render block %}
+
+              {%- when 'caption' -%}
+                {%- if block.settings.text != blank -%}
+                  <div class='product__caption {% if block.settings.show_line %}product__caption--line{% endif %}'>
+                    {%- if block.settings.show_star -%}
+                      {% render 'icon-star' %}
+                    {%- endif -%}
+
+                    {{ block.settings.text }}
+                  </div>
+                {%- endif -%}
+
+              {%- when 'callouts' -%}
+                {%- if product.metafields.woo.Type != blank or product.metafields.woo.product_volume != blank or product.metafields.woo.product_alochol_content != blank -%}
+                  <div class='product__callouts'>
+                    {%- if product.metafields.woo.Type != blank -%}
+                      <div class='product__callout'>{{ product.metafields.woo.Type }}</div>
+                    {%- endif -%}
+
+                    {%- if product.metafields.woo.product_volume != blank -%}
+                      <div class='product__callout'>{{ product.metafields.woo.product_volume }} {{ 'products.product.callouts.volume' | t }}</div>
+                    {%- endif -%}
+
+                    {%- if product.metafields.woo.product_alochol_content != blank -%}
+                      <div class='product__callout'>{{ product.metafields.woo.product_alochol_content }} {{ 'products.product.callouts.alcohol_content' | t }}</div>
+                    {%- endif -%}
+                  </div>
+                {%- endif -%}
+              
               {%- when 'text' -%}
                 {%- liquid
                   assign title = block.settings.title
@@ -206,36 +235,19 @@
                     {{- output -}}
                   </div>
                 {%- endif -%}
-              {%- when 'reviews' -%}
-                <div class="product__reviews">[CUSTOM BUILD REQUIRED, PLEASE CONTACT YOUR DEVELOPMENT TEAM]</div>
-              {%- when 'hover-text' -%}
-                <div
-                  class="product__hover"
-                  {{ block.shopify_attributes }}
-                >
-                  <hover-component class="hover-component">
-                    <details class="hover-component__details">
-                      <summary class="hover-component__summary link link--text">{{ block.settings.title }}</summary>
-                      <div class="hover-component__content body body--small color-{{ block.settings.color_scheme }}">
-                        {{ block.settings.text }}
-                      </div>
-                    </details>
-                  </hover-component>
-                </div>
+
               {%- when 'title' -%}
-                <div
+                <h1
                   id="ProductTitle-{{ section.id }}"
-                  class="product__title product__title-wrapper"
+                  class="product__title"
                   {{ block.shopify_attributes }}
                 >
-                  <h1 class="{{ block.settings.title_size }} {{ block.settings.title_size_mobile }}">
-                    {{ product.title | escape }}
-                  </h1>
-                </div>
+                  {{ product.title | escape }}
+                </h1>
               {%- when 'price' -%}
                 <div
                   id="ProductPrice-{{ section.id }}"
-                  class="product__price h3"
+                  class="product__price"
                   role="status"
                   {{ block.shopify_attributes }}
                 >
@@ -256,62 +268,7 @@
                     </div>
                   {%- endif -%}
                 </div>
-              {%- when 'inventory' -%}
-                <p
-                  class="product__inventory {{ block.settings.text_style }} {{ block.settings.mobile_text_style }} {% if product.selected_or_first_available_variant.inventory_management != 'shopify' %} visibility-hidden{% endif %}"
-                  {{ block.shopify_attributes }}
-                  id="Inventory-{{ section.id }}"
-                  role="status"
-                >
-                  {%- if product.selected_or_first_available_variant.inventory_management == 'shopify' -%}
-                    {%- if product.selected_or_first_available_variant.inventory_quantity > 0 -%}
-                      {%-
-                        if product.selected_or_first_available_variant.inventory_quantity
-                        <= block.settings.inventory_threshold
-                      -%}
-                        <svg width="15" height="15" aria-hidden="true">
-                          <circle cx="7.5" cy="7.5" r="7.5" fill="rgb(238,148,65, 0.3)"/>
-                          <circle cx="7.5" cy="7.5" r="5" stroke="rgb(255, 255, 255)" stroke-width="1" fill="rgb(238,148,65)"/>
-                        </svg>
-                        {%- if block.settings.show_inventory_quantity -%}
-                          {{-
-                            'products.product.inventory_low_stock_show_count'
-                            | t: quantity: product.selected_or_first_available_variant.inventory_quantity
-                          -}}
-                        {%- else -%}
-                          {{- 'products.product.inventory_low_stock' | t -}}
-                        {%- endif -%}
-                      {%- else -%}
-                        <svg width="15" height="15" aria-hidden="true">
-                          <circle cx="7.5" cy="7.5" r="7.5" fill="rgb(62,214,96, 0.3)"/>
-                          <circle cx="7.5" cy="7.5" r="5" stroke="rgb(255, 255, 255)" stroke-width="1" fill="rgb(62,214,96)"/>
-                        </svg>
-                        {%- if block.settings.show_inventory_quantity -%}
-                          {{-
-                            'products.product.inventory_in_stock_show_count'
-                            | t: quantity: product.selected_or_first_available_variant.inventory_quantity
-                          -}}
-                        {%- else -%}
-                          {{- 'products.product.inventory_in_stock' | t -}}
-                        {%- endif -%}
-                      {%- endif -%}
-                    {%- else -%}
-                      {%- if product.selected_or_first_available_variant.inventory_policy == 'continue' -%}
-                        <svg width="15" height="15" aria-hidden="true">
-                          <circle cx="7.5" cy="7.5" r="7.5" fill="rgb(62,214,96, 0.3)"/>
-                          <circle cx="7.5" cy="7.5" r="5" stroke="rgb(255, 255, 255)" stroke-width="1" fill="rgb(62,214,96)"/>
-                        </svg>
-                        {{- 'products.product.inventory_out_of_stock_continue_selling' | t -}}
-                      {%- else -%}
-                        <svg width="15" height="15" aria-hidden="true">
-                          <circle cx="7.5" cy="7.5" r="7.5" fill="rgb(200,200,200, 0.3)"/>
-                          <circle cx="7.5" cy="7.5" r="5" stroke="rgb(255, 255, 255)" stroke-width="1" fill="rgb(200,200,200)"/>
-                        </svg>
-                        {{- 'products.product.inventory_out_of_stock' | t -}}
-                      {%- endif -%}
-                    {%- endif -%}
-                  {%- endif -%}
-                </p>
+
               {%- when 'sku' -%}
                 <div
                   class="product__sku {{ block.settings.text_style }} {{ block.settings.mobile_text_style }} {% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}"
@@ -324,57 +281,9 @@
                 </div>
               {%- when 'custom_liquid' -%}
                 {{ block.settings.custom_liquid }}
-              {%- when 'popup' -%}
-                <modal-opener
-                  class="product-popup-modal__opener quick-add-hidden"
-                  data-modal="#PopupModal-{{ block.id }}"
-                  {{ block.shopify_attributes }}
-                >
-                  <button
-                    id="ProductPopup-{{ block.id }}"
-                    class="product-popup-modal__button link"
-                    type="button"
-                    aria-haspopup="dialog"
-                  >
-                    {{ block.settings.text | default: block.settings.page.title | escape }}
-                  </button>
-                </modal-opener>
+
               {%- when 'variant_picker' -%}
                 <div class="product__variants">
-                  {%- assign group_id = false -%}
-
-                  {%- for tag in product.tags -%}
-                    {%- if tag contains '#.Group:' -%}
-                      {%- assign group_id = tag | remove: '#.Group:' -%}
-                      {%- break -%}
-                    {%- endif -%}
-                  {%- endfor -%}
-
-                  {%- if group_id -%}
-                    <product-group
-                      id="ProductGroupSwatches-{{ section.id }}"
-                      class="product__swatches"
-                      data-group-id="{{ group_id }}"
-                      data-product-handle="{{ product.handle }}"
-                      data-product-url="{{ product.url }}"
-                      data-limit-swatches="false"
-                    >
-                      <div class="product__swatches-group">
-                        <label class="product__swatches-selected h3">
-                          Core Colours:
-                          <span class="body body--large">
-                            {{- product.selected_or_first_available_variant.option1 -}}
-                          </span>
-                        </label>
-
-                        <div class="product__swatches-list" color-swatches-container>
-                          <div class="skeleton"></div>
-                          <div class="skeleton"></div>
-                        </div>
-                      </div>
-                    </product-group>
-                  {%- endif -%}
-
                   {%
                     render 'product-variant-picker',
                     product: product,
@@ -623,32 +532,6 @@
 
     {% render 'product_media-modal' %}
 
-    {% assign popups = section.blocks | where: 'type', 'popup' %}
-    {%- for block in popups -%}
-      <modal-dialog id="PopupModal-{{ block.id }}" class="modal" {{ block.shopify_attributes }}>
-        <div
-          role="dialog"
-          aria-label="{{ block.settings.text }}"
-          aria-modal="true"
-          class="modal__container"
-          tabindex="-1"
-        >
-          <button
-            id="ModalClose-{{ block.id }}"
-            type="button"
-            class="link modal__close"
-            aria-label="{{ 'accessibility.close' | t }}"
-          >
-            {% render 'icon-close' %}
-          </button>
-          <div class="modal__content">
-            <h1 class="h2">{{ block.settings.page.title | escape }}</h1>
-            {{ block.settings.page.content }}
-          </div>
-        </div>
-      </modal-dialog>
-    {%- endfor -%}
-
     {%- if first_3d_model -%}
       <script type="application/json" id="ProductJSON-{{ product.id }}">
         {{ product.media | where: 'media_type', 'model' | json }}
@@ -681,25 +564,30 @@
       "type": "@app"
     },
     {
-      "type": "hover-text",
-      "name": "Hover text",
+      "type": "caption",
+      "name": "Caption",
       "settings": [
         {
-          "type": "color_scheme",
-          "id": "color_scheme",
-          "label": "Color scheme"
+          "type": "checkbox",
+          "id": "show_star",
+          "label": "Show star"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_line",
+          "label": "Show line"
         },
         {
           "type": "text",
-          "id": "title",
-          "label": "Title"
-        },
-        {
-          "type": "richtext",
           "id": "text",
-          "label": "Hover over Text"
+          "label": "Text"
         }
       ]
+    },
+    {
+      "type": "callouts",
+      "name": "Callouts",
+      "limit": 1
     },
     {
       "type": "text",
@@ -939,49 +827,7 @@
     {
       "type": "title",
       "name": "t:sections.main-product.blocks.title.name",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "select",
-          "id": "title_size",
-          "options": [
-            {
-              "value": "h1",
-              "label": "H1"
-            },
-            {
-              "value": "h2",
-              "label": "H2"
-            },
-            {
-              "value": "h3",
-              "label": "H3"
-            }
-          ],
-          "default": "h2",
-          "label": "Title size"
-        },
-        {
-          "type": "select",
-          "id": "title_size_mobile",
-          "options": [
-            {
-              "value": "h1--mobile",
-              "label": "H1"
-            },
-            {
-              "value": "h2--mobile",
-              "label": "H2"
-            },
-            {
-              "value": "h3--mobile",
-              "label": "H3"
-            }
-          ],
-          "default": "h2--mobile",
-          "label": "Mobile title size"
-        }
-      ]
+      "limit": 1
     },
     {
       "type": "price",
@@ -1040,74 +886,6 @@
           ],
           "default": "body--mobile",
           "label": "Mobile text style"
-        }
-      ]
-    },
-    {
-      "type": "reviews",
-      "name": "Reviews",
-      "limit": 1
-    },
-    {
-      "type": "inventory",
-      "name": "t:sections.main-product.blocks.inventory.name",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "select",
-          "id": "text_style",
-          "options": [
-            {
-              "value": "body--small",
-              "label": "Small"
-            },
-            {
-              "value": "body",
-              "label": "Regular"
-            },
-            {
-              "value": "body--large",
-              "label": "Large"
-            }
-          ],
-          "default": "body",
-          "label": "Text style"
-        },
-        {
-          "type": "select",
-          "id": "mobile_text_style",
-          "options": [
-            {
-              "value": "body--small-mobile",
-              "label": "Small"
-            },
-            {
-              "value": "body--mobile",
-              "label": "Regular"
-            },
-            {
-              "value": "body--large-mobile",
-              "label": "Large"
-            }
-          ],
-          "default": "body--mobile",
-          "label": "Mobile text style"
-        },
-        {
-          "type": "range",
-          "id": "inventory_threshold",
-          "label": "t:sections.main-product.blocks.inventory.settings.inventory_threshold.label",
-          "min": 0,
-          "max": 100,
-          "step": 1,
-          "info": "t:sections.main-product.blocks.inventory.settings.inventory_threshold.info",
-          "default": 10
-        },
-        {
-          "type": "checkbox",
-          "id": "show_inventory_quantity",
-          "label": "t:sections.main-product.blocks.inventory.settings.show_inventory_quantity.label",
-          "default": true
         }
       ]
     },
@@ -1193,23 +971,6 @@
           "id": "custom_liquid",
           "label": "t:sections.custom-liquid.settings.custom_liquid.label",
           "info": "t:sections.custom-liquid.settings.custom_liquid.info"
-        }
-      ]
-    },
-    {
-      "type": "popup",
-      "name": "t:sections.main-product.blocks.popup.name",
-      "settings": [
-        {
-          "type": "text",
-          "id": "text",
-          "default": "t:sections.main-product.blocks.popup.settings.link_label.default",
-          "label": "t:sections.main-product.blocks.popup.settings.link_label.label"
-        },
-        {
-          "id": "page",
-          "type": "page",
-          "label": "t:sections.main-product.blocks.popup.settings.page.label"
         }
       ]
     },

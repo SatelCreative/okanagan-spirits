@@ -141,6 +141,10 @@
   },
   "products": {
     "product": {
+      "callouts": {
+        "volume": "mL",
+        "alcohol_content": "% ALC/VOL"
+      },
       "view_full_details": "View full details",
       "size_guide": "Size help?",
       "learn_more": "Learn more",

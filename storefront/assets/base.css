@@ -2788,7 +2788,7 @@ menu-drawer details[open] > .drawer,
 }
 
 .price__sale {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .price--on-sale .price__sale {
@@ -2799,28 +2799,11 @@ menu-drawer details[open] > .drawer,
   font-size: 0.75em;
 }
 
-/** Klaviyo Overrides **/
-.klaviyo-bis-trigger {
-  width: 100% !important;
-  margin-top: 0.25rem !important;
-}
-
-.product-form__buy-buttons.hide-klaviyo .klaviyo-bis-trigger {
-  display: none !important;
-}
-
-/** Firework CSS **/
-.fwn-grid .cy-made-in-fw,
-.fwn-grid .cy-made-in-fw + svg {
-  display: none !important;
-}
-
 /* Variant Options */
 variant-selects {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
+  gap: 24px;
 }
 
 .product-form__input {
@@ -2831,24 +2814,20 @@ variant-selects {
   flex-direction: column;
 }
 
-.product-form__input--color,
-.product-form__input--colour {
-  display: none !important;
-}
-
 .product-form__label {
   padding: 0;
-  margin-bottom: var(--row-spacing);
+  margin-bottom: 12px;
+  font-family: var(--font-heading-family);
+  letter-spacing: var(--font-heading-spacing);
 }
 
 .product-form__pills {
   display: flex;
   flex-flow: wrap;
-  gap: 8px;
+  gap: 12px;
 }
 
 .product-form__pill {
-  width: calc(100% / 3 - (8px * 2 / 3));
   align-items: center;
   justify-content: center;
   display: flex;
@@ -2857,25 +2836,22 @@ variant-selects {
 
 .product-form__pill label {
   width: 100%;
-  border-radius: var(--inputs-radius);
-  background-color: transparent;
-  border: 1px solid #c8c8c8;
-  padding: 1rem;
+  border: 2px solid rgb(var(--color-foreground));
+  padding: 10px;
   cursor: pointer;
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+
+  font-family: var(--font-heading-family);
+  letter-spacing: var(--font-heading-spacing);
+  text-transform: uppercase;
 }
 
 .product-form__pill label span {
   z-index: 1;
   position: relative;
   background: inherit;
-}
-
-.product-form__pill input:disabled + label {
-  background-color: #f2f2f2;
 }
 
 .product-form__pill input:disabled + label:after {
@@ -2892,13 +2868,14 @@ variant-selects {
   background: linear-gradient(
     to top right,
     #fff0 0% calc(50% - 1px),
-    #c8c8c8 50%,
+    rgb(var(--color-foreground)) 50%,
     #fff0 calc(50% + 1px) 100%
   );
 }
 
 .product-form__pill input:checked + label {
-  border-color: var(--color-foreground);
+  background-color: rgb(var(--color-foreground));
+  color: rgb(var(--color-background));
 }
 
 .product-form__pill:focus-within label {
