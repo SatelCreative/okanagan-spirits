@@ -361,7 +361,9 @@
       }
     },
     "footer": {
-      "payment": "Payment methods"
+      "payment": "Payment methods",
+      "reservations": "Reservations",
+      "email": "Email"
     },
     "featured_blog": {
       "view_all": "View all",
