@@ -48,6 +48,8 @@
   class="product__media-container media-type-{{ media.media_type }}"
   style="--ratio: {{ media.aspect_ratio | default: 1.0 }}; --preview-ratio: {{ media.preview_image.aspect_ratio | default: 1.0 }};"
 >
+
+
   <modal-opener
     class="product__modal-opener product__modal-opener--{{ media.media_type }}"
     data-modal="#ProductModal-{{ modal_id }}"

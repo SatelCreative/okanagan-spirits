@@ -10,10 +10,23 @@
   {% render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id %}
 {% endcomment %}
 
+{%- capture decoration -%}
+  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+    <path d="M0 0H12V12H11V1H0Z" fill="currentColor"/>
+  </svg>
+{%- endcapture -%}
+
 <div
   {{ block.shopify_attributes }}
   class="product-form__buy-buttons {% if product.metafields.custom.sold_out %} hide-klaviyo{% endif %} "
 >
+  {% if decoration %}
+    <span class="product-form__decoration product-form__decoration--1">{{ decoration }}</span>
+    <span class="product-form__decoration product-form__decoration--2">{{ decoration }}</span>
+    <span class="product-form__decoration product-form__decoration--3">{{ decoration }}</span>
+    <span class="product-form__decoration product-form__decoration--4">{{ decoration }}</span>
+  {% endif %}
+
   {%- if product != blank -%}
     {%- liquid
       assign gift_card_recipient_feature_active = false
@@ -83,7 +96,7 @@
             name="add"
             class="
               product-form__submit button 
-              {% if show_dynamic_checkout %}button--secondary{% endif %}
+              {% if show_dynamic_checkout or secondary %}button--secondary{% endif %}
               button--outline
               {% if small %}button--small{% endif %}
               {% if fancy %}button--fancy{% endif %}
@@ -137,7 +150,12 @@
         <button
           type="submit"
           name="add"
-          class="product-form__submit button {% if small %}button--small{% endif %}"
+          class="
+            product-form__submit
+            button
+            {% if small %}button--small{% endif %}
+            {% if secondary %}button--secondary{% endif %}
+          "
           disabled
         >
           {{ 'products.product.sold_out' | t }}

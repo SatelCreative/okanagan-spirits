@@ -162,6 +162,60 @@
 
 .product-form__buy-buttons {
   margin-top: auto;
+  position: relative;
+}
+
+.product-form__decoration {
+  position: absolute;
+  pointer-events: none;
+  height: 12px;
+  width: 12px;
+}
+
+.product-form__decoration--1 {
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+.product-form__decoration--1 svg {
+  transform: rotate(-90deg);
+}
+
+.product-form__decoration--2 {
+  bottom: 0;
+  right: 0;
+  transform: translate(50%, 50%);
+}
+
+.product-form__decoration--2 svg {
+  transform: rotate(90deg);
+}
+
+.product-form__decoration--3 {
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+.product-form__decoration--3 svg {
+  transform: rotate(0deg);
+}
+
+.product-form__decoration--4 {
+  bottom: 0;
+  left: 0;
+  transform: translate(-50%, 50%);
+}
+
+.product-form__decoration--4 svg {
+  transform: rotate(180deg);
+}
+
+.product-form__decoration svg {
+  width: 12px;
+  height: 12px;
+  vertical-align: top;
 }
 
 .card__actions {

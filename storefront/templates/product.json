@@ -21,53 +21,35 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "text_qBQ9Dz": {
-          "type": "text",
+        "caption_PWhDTd": {
+          "type": "caption",
           "settings": {
-            "color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
-            "accordion": false,
-            "border": false,
-            "text_alignment": "left",
-            "title": "",
-            "header_style": "h6",
-            "mobile_header_style": "body--mobile",
-            "text": "<p>Premium Craft Spirit</p>",
-            "text_weight": "",
-            "text_style": "body--small",
-            "mobile_text_style": "body--mobile",
-            "video_aspect_ratio": "square",
-            "padding": ""
+            "show_star": true,
+            "show_line": true,
+            "text": "{{ product.metafields.custom.product_caption.value }}"
           }
         },
         "title": {
           "type": "title",
-          "settings": {
-            "title_size": "h1",
-            "title_size_mobile": "h1--mobile"
-          }
+          "settings": {}
         },
-        "text_aBqmib": {
-          "type": "text",
-          "settings": {
-            "color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
-            "accordion": false,
-            "border": false,
-            "text_alignment": "left",
-            "title": "",
-            "header_style": "body",
-            "mobile_header_style": "body--mobile",
-            "text": "<p>Whisky | 750mL | 40% ABV Vol</p>",
-            "text_weight": "light",
-            "text_style": "body--small",
-            "mobile_text_style": "body--mobile",
-            "video_aspect_ratio": "square",
-            "padding": ""
-          }
+        "callouts_kzEmYX": {
+          "type": "callouts",
+          "settings": {}
         },
         "price_ymGdEt": {
           "type": "price",
           "settings": {
             "show_installments": false
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
+            "picker_type": "button",
+            "siblings_title": "Colours",
+            "siblings_swatches": true
           }
         },
         "buy_buttons": {
@@ -94,16 +76,6 @@
             "mobile_text_style": "body--mobile",
             "video_aspect_ratio": "square",
             "padding": ""
-          }
-        },
-        "variant_picker": {
-          "type": "variant_picker",
-          "disabled": true,
-          "settings": {
-            "picker_scheme": "",
-            "picker_type": "button",
-            "siblings_title": "Colours",
-            "siblings_swatches": true
           }
         },
         "text_YmTDnc": {
@@ -174,13 +146,13 @@
         }
       },
       "block_order": [
-        "text_qBQ9Dz",
+        "caption_PWhDTd",
         "title",
-        "text_aBqmib",
+        "callouts_kzEmYX",
         "price_ymGdEt",
+        "variant_picker",
         "buy_buttons",
         "text_4BQpzW",
-        "variant_picker",
         "text_YmTDnc",
         "text_wada6P",
         "text_dbFTHD",

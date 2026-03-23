@@ -80,9 +80,26 @@
               {%- when '@app' -%}
                 {% render block %}
 
+              {%- when 'seperator' -%}
+                <div class="product__seperator"></div>
+
+              {%- when 'description' -%}
+                <div class="product__description">
+                  {{ product.description }}
+                </div>
+
+              {%- when 'share' -%}
+                <div class="product__share">
+                  {% render 'social-icons' %}
+                </div>
+
               {%- when 'caption' -%}
                 {%- if block.settings.text != blank -%}
-                  <div class='product__caption {% if block.settings.show_line %}product__caption--line{% endif %}'>
+                  <div class='
+                    product__caption 
+                    {% if block.settings.show_line %}product__caption--line{% endif %}
+                     {% if block.settings.stylized_text %}product__caption--stylized{% endif %}
+                  '>
                     {%- if block.settings.show_star -%}
                       {% render 'icon-star' %}
                     {%- endif -%}
@@ -352,133 +369,10 @@
                     block: block,
                     product: product,
                     product_form_id: product_form_id,
-                    section_id: section.id
+                    section_id: section.id,
+                    secondary: true,
+                    decoration: true
                   -%}
-
-                  {%- if product.metafields.custom.bundle -%}
-                    <div class="product__bundles">
-                      {%- for bundle in product.metafields.custom.bundle.value -%}
-                        {%- assign index = forloop.index %}
-
-                        <div class="product__bundle">
-                          {%- comment -%}
-                            I'm not sure why, but I was unable to get the product list size for the bundle products.
-                            Doing it this weird way for now.
-                          {%- endcomment -%}
-
-                          {%- for product in bundle.products.value %}
-                            {%- if forloop.first and forloop.last -%}
-                              <div class="product__bundle-product">
-                                <input
-                                  type="hidden"
-                                  form="{{ product_form_id }}"
-                                  name="properties[NV SKU {{ index }}]"
-                                  value="{{ product.variants.first.sku }}"
-                                >
-                                <input
-                                  type="hidden"
-                                  form="{{ product_form_id }}"
-                                  name="properties[_NV SKU {{ index }} Product Name]"
-                                  value="{{ product.title }} {%- if product.variants.size > 1 -%} - {{ product.variants.first.title }}{%- endif -%}"
-                                >
-
-                                <div class="product__bundle-product-image">
-                                  <div class="media media--square">
-                                    <img
-                                      src="{{ product.featured_image | image_url: width: 300 }}"
-                                      class="cart-item__image"
-                                      alt="{{ product.featured_image.alt | escape }}"
-                                      loading="lazy"
-                                      width="150"
-                                      height="{{ 150 | divided_by: product.featured_image.aspect_ratio | ceil }}"
-                                    >
-                                  </div>
-                                </div>
-
-                                <div class="product__bundle-product-info">
-                                  <h3 class="body body--large">{{ bundle.title }}</h3>
-
-                                  {%- if product.variants.size > 1 -%}
-                                    {%- for option in product.options_with_values %}
-                                      <div class="product__bundle-product-variant body body--small">
-                                        {{ option.name }} - {{ option.selected_value }}
-                                      </div>
-                                    {%- endfor -%}
-                                  {%- endif -%}
-
-                                  <div class="product__bundle-product-description body body--small">
-                                    {{ product.description | strip_html | strip_newlines | truncatewords: 40 }}
-                                  </div>
-                                </div>
-                              </div>
-                            {%- elsif forloop.first %}
-                              <bundle-select class="product__bundle-product">
-                                <input
-                                  class="bundle__sku"
-                                  type="hidden"
-                                  form="{{ product_form_id }}"
-                                  name="properties[C SKU {{ index }}]"
-                                  value="{{ product.variants.first.sku }}"
-                                >
-                                <input
-                                  class="bundle__name"
-                                  type="hidden"
-                                  form="{{ product_form_id }}"
-                                  name="properties[_C SKU {{ index }} Product Name]"
-                                  value="{{ bundle.title }} - {{ product.title }}"
-                                >
-
-                                <div class="product__bundle-product-image">
-                                  <div class="media media--square">
-                                    <img
-                                      src="{{ product.featured_image | image_url: width: 300 }}"
-                                      class="cart-item__image"
-                                      alt="{{ product.featured_image.alt | escape }}"
-                                      loading="lazy"
-                                      width="150"
-                                      height="{{ 150 | divided_by: product.featured_image.aspect_ratio | ceil }}"
-                                    >
-                                  </div>
-                                </div>
-
-                                <div class="product__bundle-product-info">
-                                  <h3 class="body body--large">{{ bundle.title }}</h3>
-
-                                  {%- if product.variants.size > 1 -%}
-                                    {%- for option in product.options_with_values %}
-                                      <div class="product__bundle-product-variant body body--small">
-                                        {{ option.name }} - {{ option.selected_value }}
-                                      </div>
-                                    {%- endfor -%}
-                                  {%- endif -%}
-
-                                  <div class="product__bundle-product-description body body--small">
-                                    {{ product.description | strip_html | strip_newlines | truncatewords: 40 }}
-                                  </div>
-
-                                  <div class="field--select">
-                                    <select name="bundle_select" class="field__select product__bundle-product-select">
-                                      {%- for product in bundle.products.value %}
-                                        <option
-                                          value="{{ product.variants.first.sku }}"
-                                          data-name="{{ bundle.title }} - {{ product.title }}"
-                                        >
-                                          {{ product.title }}
-                                        </option>
-                                      {%- endfor -%}
-                                    </select>
-                                    {% render 'icon-caret' %}
-                                  </div>
-                                </div>
-                              </bundle-select>
-                            {%- endif -%}
-
-                            {%- break -%}
-                          {%- endfor -%}
-                        </div>
-                      {%- endfor -%}
-                    </div>
-                  {%- endif -%}
                 </div>
               {%- when 'recommended' -%}
                 {{ 'component-card.css' | asset_url | stylesheet_tag }}
@@ -564,6 +458,20 @@
       "type": "@app"
     },
     {
+      "type": "share",
+      "name": "Share",
+      "limit": 1
+    },
+    {
+      "type": "seperator",
+      "name": "Seperator"
+    },
+    {
+      "type": "description",
+      "name": "Description",
+      "limit": 1
+    },
+    {
       "type": "caption",
       "name": "Caption",
       "settings": [
@@ -576,6 +484,11 @@
           "type": "checkbox",
           "id": "show_line",
           "label": "Show line"
+        },
+        {
+          "type": "checkbox",
+          "id": "stylized_text",
+          "label": "Stylized text"
         },
         {
           "type": "text",
@@ -1247,23 +1160,6 @@
       "id": "display_thumbnails_as_dots",
       "label": "Display mobile thumbnails as dots",
       "default": true
-    },
-    {
-      "type": "select",
-      "id": "thumbnail_position",
-      "label": "Thumbnail position",
-      "info": "Desktop only, on mobile, they will always appear below.",
-      "options": [
-        {
-          "value": "left",
-          "label": "Left"
-        },
-        {
-          "value": "below",
-          "label": "Below"
-        }
-      ],
-      "default": "below"
     },
     {
       "type": "header",

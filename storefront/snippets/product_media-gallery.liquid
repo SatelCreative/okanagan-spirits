@@ -30,7 +30,6 @@
 {%- capture thumbnails -%}
   <div class="
       media-gallery__thumbnails
-      {% if hide_thumbnails_desktop == false and section.settings.thumbnail_position == "left" %}media-gallery__thumbnails--vertical{% endif %}
       {% if section.settings.display_thumbnails_as_dots %}media-gallery__thumbnails--dots{% endif %}
       {% if hide_thumbnails_desktop %}hidden--desktop{% endif %}
       {% if hide_thumbnails_mobile %}hidden--mobile{% endif %}
@@ -135,12 +134,27 @@
   </div>
 {%- endcapture -%}
 
+{%- capture decoration -%}
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+    <g clip-path="url(#clip0_159_886)">
+      <path d="M32 8V0H24" stroke="currentColor"/>
+      <path d="M28 4V0" stroke="currentColor"/>
+      <path d="M28 4H32" stroke="currentColor"/>
+      <path d="M29 3H27V5H29V3Z" fill="currentColor" stroke="currentColor"/>
+    </g>
+    <defs>
+      <clipPath id="clip0_159_886">
+        <rect width="32" height="32" fill="white"/>
+      </clipPath>
+    </defs>
+  </svg>
+{%- endcapture -%}
+
 <media-gallery
   id="MediaGallery-{{ section.id }}"
   role="region"
   class="
     media-gallery
-    {% if hide_thumbnails_desktop == false and section.settings.thumbnail_position == "left" %}media-gallery--horizontal{% endif %}
     media-gallery--{{ section.settings.gallery_type_desktop }}-desktop
     media-gallery--{{ section.settings.gallery_type_mobile }}-mobile
   "
@@ -148,11 +162,12 @@
 >
   <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
 
-  {%- if section.settings.thumbnail_position == 'left' -%}
-    {{ thumbnails }}
-  {%- endif -%}
-
   <div class="media-gallery__images {% if section.settings.image_zoom == "lightbox" %}media-gallery__images--zoom{% endif %}">
+    <span class='product__media-decoration product__media-decoration--1'>{{ decoration }}</span>
+    <span class='product__media-decoration product__media-decoration--2'>{{ decoration }}</span>
+    <span class='product__media-decoration product__media-decoration--3'>{{ decoration }}</span>
+    <span class='product__media-decoration product__media-decoration--4'>{{ decoration }}</span>
+
     <slider-component id="GalleryViewer-{{ section.id }}" class="media-gallery__images-slider">
       <ul
         id="Slider-Gallery-{{ section.id }}"
@@ -242,9 +257,7 @@
     </slider-component>
   </div>
 
-  {%- unless section.settings.thumbnail_position == 'left' -%}
-    {{ thumbnails }}
-  {%- endunless -%}
+  {{ thumbnails }}
 
   {%- if first_3d_model -%}
     <button

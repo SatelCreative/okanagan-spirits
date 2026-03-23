@@ -1853,6 +1853,7 @@ button.shopify-payment-button__button--unbranded,
   position: relative;
   min-width: 8rem;
   display: flex;
+  border: 1px solid rgb(var(--color-foreground));
   border-radius: var(--inputs-radius);
   height: var(--inputs-height);
 }
@@ -3063,24 +3064,32 @@ variant-selects {
 /* Social list */
 .list-social {
   display: flex;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+  gap: 2px;
+  margin: 0;
 }
 
 .list-social .list-social__item {
-  width: 25px;
-  height: 25px;
+  width: 57px;
+  height: 57px;
+}
+
+.list-social .list-social__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+  transform: rotate(45deg);
+
+  border: 1px solid rgba(var(--color-foreground), 0.4);
 }
 
 .list-social .list-social__item svg {
   vertical-align: top;
-}
-
-@media screen and (max-width: 749px) {
-  .list-social {
-    justify-content: center;
-    margin-top: 1.5rem;
-  }
+  width: 16px;
+  height: 16px;
+  transform: rotate(-45deg);
 }
 
 /** Hover component **/
@@ -3324,7 +3333,7 @@ slider-component.slider--full {
   }
 
   .slider-buttons {
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.3s ease-in-out;
   }
 
@@ -3341,8 +3350,9 @@ slider-component.slider--full {
   width: 28px;
   height: 28px;
   padding: 0;
-  background: rgba(255, 255, 255, 0.8);
-  border: none;
+  color: rgb(var(--color-foreground));
+  background: rgb(var(--color-background));
+  border: 2px solid rgb(var(--color-foreground));
   border-radius: var(--inputs-radius);
 
   display: flex;
@@ -3355,17 +3365,26 @@ slider-component.slider--full {
   z-index: 2;
 }
 
+@media screen and (min-width: 750px) {
+  .slider-button {
+    width: 48px;
+    height: 48px;    
+  }
+}
+
 .slider-button[disabled] .icon {
   color: rgba(var(--color-button-text), 0.3);
   cursor: not-allowed;
 }
 
 .slider-button--prev {
-  left: 1rem;
+  left: 0;
+  transform: translate(-50%, -50%);
 }
 
 .slider-button--next {
-  right: 1rem;
+  right: 0;
+  transform: translate(50%,-50%);
 }
 
 .slider-button .icon {
@@ -3374,19 +3393,11 @@ slider-component.slider--full {
 }
 
 .slider-button--next .icon {
-  transform: rotate(90deg);
-}
-
-.slider-button--prev .icon {
   transform: rotate(-90deg);
 }
 
-.slider-button--next:not([disabled]):hover .icon {
-  transform: rotate(90deg) scale(1.1);
-}
-
-.slider-button--prev:not([disabled]):hover .icon {
-  transform: rotate(-90deg) scale(1.1);
+.slider-button--prev .icon {
+  transform: rotate(90deg);
 }
 
 .slider-button__toggle {

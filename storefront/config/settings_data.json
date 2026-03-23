@@ -316,10 +316,5 @@
         }
       }
     }
-  },
-  "platform_customizations": {
-    "custom_css": [
-      ".button {font-family: \"cinzel\"; text-transform: uppercase;}"
-    ]
   }
 }
