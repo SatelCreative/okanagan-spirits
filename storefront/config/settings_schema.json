@@ -846,42 +846,6 @@
     "settings": [
       {
         "type": "header",
-        "content": "General card settings"
-      },
-      {
-        "type": "select",
-        "id": "card_heading_size",
-        "label": "Heading size",
-        "default": "h4",
-        "options": [
-          {
-            "value": "h5",
-            "label": "Heading Small"
-          },
-          {
-            "value": "h4",
-            "label": "Heading Medium"
-          },
-          {
-            "value": "h3",
-            "label": "Heading Large"
-          },          
-          {
-            "value": "body--large",
-            "label": "Body Large"
-          },
-          {
-            "value": "body",
-            "label": "Body Medium"
-          },
-          {
-            "value": "body--small",
-            "label": "Body Small"
-          }
-        ]
-      },
-      {
-        "type": "header",
         "content": "Product card settings"
       },
       {
@@ -910,28 +874,10 @@
       },
       {
         "type": "checkbox",
-        "id": "card_stock",
-        "label": "Show stock",
-        "default": false
-      },
-      {
-        "type": "checkbox",
-        "id": "card_sku",
-        "label": "Show sku",
-        "default": false
-      },
-      {
-        "type": "checkbox",
         "id": "card_short_description",
         "label": "Show short description",
         "default": true,
         "info": "Outputs metafield `custom.short_description`"
-      },
-      {
-        "type": "checkbox",
-        "id": "card_vendor",
-        "label": "Show vendor collection",
-        "default": false
       },
       {
         "type": "header",
@@ -1063,12 +1009,6 @@
         "max": 3,
         "step": 0.5,
         "default": 2
-      },
-      {
-        "type": "checkbox",
-        "id": "predictive_search_horizontal",
-        "default": false,
-        "label": "Display cards horizontally"
       },
       {
         "type": "header",

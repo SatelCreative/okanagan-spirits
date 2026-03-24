@@ -4,8 +4,6 @@
 
 {%- if override_image -%}
   {%- assign media = override_image -%}
-{%- elsif item.media.size > 1 and type == 'product' -%}
-  {%- assign media = item.media -%}
 {%- elsif item.featured_media -%}
   {%- assign media = item.featured_media -%}
 {%- elsif item.image -%}
@@ -24,15 +22,27 @@
   {{ settings.spacing_column_mobile | divided_by: 2 }}px) / {{ columns_mobile | default: 2 }})
 {%- endcapture %}
 
-<card-component class="
+{%- capture bracket -%}
+  <svg class='card__bracket' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <path d="M24 0H22V22H0V24H24Z" fill="currentColor"/>
+  </svg>
+{%- endcapture -%}
+
+<card-component
+  class="
     card
     {% if overlap_text_on_images %}card--overlap{% endif %}
     {% if small %}card--small{% endif %}
-    {% if horizontal %}card--horizontal{% endif %}
     {% if color_scheme %}color-{{ color_scheme }}{% endif %}
-  ">
+  "
+>
   {%- capture image -%}
     <div class="card__image-wrapper">
+      {{ bracket }}
+      {{ bracket }}
+      {{ bracket }}
+      {{ bracket }}
+      
       {% if settings.card_badge %}
         {%- if item.available == false -%}
           <span class="badge badge--text h6 special">
@@ -53,71 +63,34 @@
         {%- endif -%}
       {% endif %}
 
-      <div class="card__image-container">
-        {%- if media.size > 1 and type == 'product'-%}
-          <ul class="slider grid grid--1-col slider--desktop slider--mobile" aria-label="Product images">
-            {%- for media in item.media -%}
-              <li class="grid__item slider__slide">
-                <div
-                  class="media media--{{ aspect_ratio | default: settings.card_aspect_ratio }}"
-                  {% if settings.card_aspect_ratio == "adapt" %}
-                    style="padding-bottom: {{ 1 | divided_by: media.aspect_ratio | times: 100 }}%;"
-                  {% endif %}
-                >
-                  {%- if media.media_type == 'video' -%}
-                  {%- else -%}
-                    <img
-                      srcset="
-                        {%- if media.width >= 180 -%}{{ media | image_url: width: 180 }} 180w,{%- endif -%}
-                        {%- if media.width >= 360 -%}{{ media | image_url: width: 360 }} 360w,{%- endif -%}
-                        {%- if media.width >= 540 -%}{{ media | image_url: width: 540 }} 540w,{%- endif -%}
-                        {%- if media.width >= 720 -%}{{ media | image_url: width: 720 }} 720w,{%- endif -%}
-                        {%- if media.width >= 900 -%}{{ media | image_url: width: 900 }} 900w,{%- endif -%}
-                        {%- if media.width >= 1080 -%}{{ media | image_url: width: 1080 }} 1080w,{%- endif -%}
-                        {{ media | image_url }} {{ media.width }}w
-                      "
-                      src="{{ media | image_url: width: 540 }}"
-                      sizes="{{ sizes }}"
-                      alt="{{ media.alt | escape }}"
-                      class="motion-reduce"
-                      loading="lazy"
-                      width="{{ media.width }}"
-                      height="{{ media.height }}"
-                    >
-                  {% endif %}
-                </div>
-              </li>
-            {% endfor %}
-          </ul>
-        {%- else -%}
-          <div
-            class="media media--{{ aspect_ratio | default: settings.card_aspect_ratio }}"
-            {% if settings.card_aspect_ratio == "adapt" %}
-              style="padding-bottom: {{ 1 | divided_by: media.aspect_ratio | times: 100 }}%;"
-            {% endif %}
-          >
-            {% if media %}
-              <img
-                srcset="
-                  {%- if media.width >= 180 -%}{{ media | image_url: width: 180 }} 180w,{%- endif -%}
-                  {%- if media.width >= 360 -%}{{ media | image_url: width: 360 }} 360w,{%- endif -%}
-                  {%- if media.width >= 540 -%}{{ media | image_url: width: 540 }} 540w,{%- endif -%}
-                  {%- if media.width >= 720 -%}{{ media | image_url: width: 720 }} 720w,{%- endif -%}
-                  {%- if media.width >= 900 -%}{{ media | image_url: width: 900 }} 900w,{%- endif -%}
-                  {%- if media.width >= 1080 -%}{{ media | image_url: width: 1080 }} 1080w,{%- endif -%}
-                  {{ media | image_url }} {{ media.width }}w
-                "
-                src="{{ media | image_url: width: 540 }}"
-                sizes="{{ sizes }}"
-                alt="{{ media.alt | escape }}"
-                class="motion-reduce"
-                loading="lazy"
-                width="{{ media.width }}"
-                height="{{ media.height }}"
-              >
-            {% endif %}
-          </div>
-        {%- endif %}
+      <div class="card__image-container">  
+        <div
+          class="media media--{{ aspect_ratio | default: settings.card_aspect_ratio }}"
+          {% if settings.card_aspect_ratio == "adapt" %}
+            style="padding-bottom: {{ 1 | divided_by: media.aspect_ratio | times: 100 }}%;"
+          {% endif %}
+        >
+          {% if media %}
+            <img
+              srcset="
+                {%- if media.width >= 180 -%}{{ media | image_url: width: 180 }} 180w,{%- endif -%}
+                {%- if media.width >= 360 -%}{{ media | image_url: width: 360 }} 360w,{%- endif -%}
+                {%- if media.width >= 540 -%}{{ media | image_url: width: 540 }} 540w,{%- endif -%}
+                {%- if media.width >= 720 -%}{{ media | image_url: width: 720 }} 720w,{%- endif -%}
+                {%- if media.width >= 900 -%}{{ media | image_url: width: 900 }} 900w,{%- endif -%}
+                {%- if media.width >= 1080 -%}{{ media | image_url: width: 1080 }} 1080w,{%- endif -%}
+                {{ media | image_url }} {{ media.width }}w
+              "
+              src="{{ media | image_url: width: 540 }}"
+              sizes="{{ sizes }}"
+              alt="{{ media.alt | escape }}"
+              class="motion-reduce"
+              loading="lazy"
+              width="{{ media.width }}"
+              height="{{ media.height }}"
+            >
+          {% endif %}
+        </div>
       </div>
 
       {%- if type == 'product' and settings.enable_quickview %}
@@ -141,37 +114,8 @@
   </a>
 
   <div class="card__details">
-    {%- unless hide_swatches -%}
-      {%- if item.variants.size > 0 -%}
-        {%- assign group_id = false -%}
-
-        {%- for tag in item.tags -%}
-          {%- if tag contains '#.Group:' -%}
-            {%- assign group_id = tag | remove: '#.Group:' -%}
-            {%- break -%}
-          {%- endif -%}
-        {%- endfor -%}
-
-        {%- if group_id -%}
-          <card-group
-            class="card__swatches"
-            {% if group_id %}
-              data-group-id="{{ group_id }}"
-            {% endif %}
-            data-product-handle="{{ item.handle }}"
-            data-product-url="{{ item.url }}"
-            data-limit-swatches="true"
-            data-reorder-swatches="true"
-          >
-            <div class="skeleton"></div>
-            <div class="skeleton"></div>
-          </card-group>
-        {%- endif -%}
-      {%- endif -%}
-    {%- endunless -%}
-
     <div class="card__title">
-      <span class="card__title-title {{ settings.card_heading_size }}">
+      <span class="card__title-title">
         {%- if override_title != blank -%}
           {{ override_title }}
         {%- else -%}
@@ -179,25 +123,6 @@
         {%- endif -%}
       </span>
     </div>
-
-    {%- if item.selected_or_first_available_variant -%}
-      {%- if settings.card_sku or settings.card_vendor -%}
-        <div class="card__text">
-          {%- if settings.card_sku -%}
-            <span class="card__sku {% if settings.card_vendor %}card__sku--with-vendor{% endif %}">
-              SKU: <strong>{{ item.selected_or_first_available_variant.sku }}</strong>
-            </span>
-          {%- endif -%}
-          {%- if settings.card_vendor -%}
-            <span class="card__vendor">
-              <a href="/collections/{{ item.vendor | handleize }}" class="link">
-                {{ item.vendor }}
-              </a>
-            </span>
-          {%- endif -%}
-        </div>
-      {%- endif -%}
-    {%- endif -%}
 
     {%- if item.metafields.custom.short_description != blank -%}
       {%- if settings.card_short_description -%}
@@ -211,7 +136,7 @@
 
     {% if settings.card_price and item.price != blank %}
       {%- unless hide_price -%}
-        {%- render 'price', product: item, class: 'card__price body' -%}
+        {%- render 'price', product: item, class: 'card__price' -%}
       {%- endunless -%}
     {% endif %}
 
@@ -243,21 +168,15 @@
   {%- if type == 'product' and settings.card_add_to_cart -%}
     <div class="card__actions">
       <div class="card__buy-buttons">
-        {% render 'buy-buttons', block: block, product: item, product_form_id: unique_id, section_id: section.id %}
+        {% render 'buy-buttons',
+          block: block,
+          product: item,
+          product_form_id: unique_id,
+          section_id: section.id,
+          decoration: true,
+          tight: true
+        %}
       </div>
-      {% if settings.card_stock %}
-        <div class="card__text card__text--spaced">
-          <span class="card__stock {% if item.available %}success--text{% else %}error--text{% endif %}">
-            {%- if item.available -%}
-              {% render 'icon-success' %}
-              {{ 'products.product.inventory_in_stock' | t }}
-            {%- else -%}
-              {% render 'icon-error' %}
-              {{ 'products.product.inventory_out_of_stock' | t }}
-            {%- endif -%}
-          </span>
-        </div>
-      {% endif %}
     </div>
   {%- endif -%}
 </card-component>

@@ -10,7 +10,7 @@
   {% render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id %}
 {% endcomment %}
 
-{%- capture decoration -%}
+{%- capture brackets -%}
   <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
     <path d="M0 0H12V12H11V1H0Z" fill="currentColor"/>
   </svg>
@@ -21,10 +21,18 @@
   class="product-form__buy-buttons {% if product.metafields.custom.sold_out %} hide-klaviyo{% endif %} "
 >
   {% if decoration %}
-    <span class="product-form__decoration product-form__decoration--1">{{ decoration }}</span>
-    <span class="product-form__decoration product-form__decoration--2">{{ decoration }}</span>
-    <span class="product-form__decoration product-form__decoration--3">{{ decoration }}</span>
-    <span class="product-form__decoration product-form__decoration--4">{{ decoration }}</span>
+    <span class="product-form__decoration product-form__decoration--1 {% if tight %}product-form__decoration--tight{% endif %}">
+      {{- brackets -}}
+    </span>
+    <span class="product-form__decoration product-form__decoration--2 {% if tight %}product-form__decoration--tight{% endif %}">
+      {{- brackets -}}
+    </span>
+    <span class="product-form__decoration product-form__decoration--3 {% if tight %}product-form__decoration--tight{% endif %}">
+      {{- brackets -}}
+    </span>
+    <span class="product-form__decoration product-form__decoration--4 {% if tight %}product-form__decoration--tight{% endif %}">
+      {{- brackets -}}
+    </span>
   {% endif %}
 
   {%- if product != blank -%}
@@ -61,8 +69,7 @@
         <span class="product-form__error-message"></span>
       </div>
 
-      {%-
-        form 'product',
+      {%- form 'product',
         product,
         id: product_form_id,
         class: 'form',
@@ -77,9 +84,8 @@
           type="hidden"
           name="id"
           value="{{ product.selected_or_first_available_variant.id }}"
-          {%
-            if product.selected_or_first_available_variant.available == false
-            or product.selected_or_first_available_variant == nil
+          {% if product.selected_or_first_available_variant.available == false
+            or product.selected_or_first_available_variant == null
           %}
             disabled
           {% endif %}
@@ -95,21 +101,20 @@
             type="submit"
             name="add"
             class="
-              product-form__submit button 
+              product-form__submit button
               {% if show_dynamic_checkout or secondary %}button--secondary{% endif %}
               button--outline
               {% if small %}button--small{% endif %}
               {% if fancy %}button--fancy{% endif %}
             "
-            {%
-              if product.selected_or_first_available_variant.available == false
-              or product.selected_or_first_available_variant == nil
+            {% if product.selected_or_first_available_variant.available == false
+              or product.selected_or_first_available_variant == null
             %}
               disabled
             {% endif %}
           >
             <span>
-              {%- if product.selected_or_first_available_variant == nil -%}
+              {%- if product.selected_or_first_available_variant == null -%}
                 {{ 'products.product.unavailable' | t }}
               {%- elsif product.selected_or_first_available_variant.available == false -%}
                 {{ 'products.product.sold_out' | t }}
