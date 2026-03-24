@@ -26,6 +26,7 @@
           "settings": {
             "show_star": true,
             "show_line": true,
+            "stylized_text": true,
             "text": "{{ product.metafields.custom.product_caption.value }}"
           }
         },
@@ -60,89 +61,43 @@
             "show_gift_card_recipient": true
           }
         },
-        "text_4BQpzW": {
-          "type": "text",
+        "seperator_U3AJjh": {
+          "type": "seperator",
+          "settings": {}
+        },
+        "description_VEEFNU": {
+          "type": "description",
+          "settings": {}
+        },
+        "seperator_B8BVLJ": {
+          "type": "seperator",
+          "settings": {}
+        },
+        "caption_D7Xne7": {
+          "type": "caption",
           "settings": {
-            "color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
-            "accordion": false,
-            "border": false,
-            "text_alignment": "left",
-            "title": "",
-            "header_style": "body",
-            "mobile_header_style": "body--mobile",
-            "text": "<p>Born in our North Okanagan fields, this cask-strength whisky is defined by a unique mash bill of 54% grain corn and 46% chocolate malted barley. Distilled in our state-of-the-art German copper-pot stills, it rests for over 7 1/2 years in custom toasted and charred, virgin American white oak. Bottled at a potent 52% ABV, this spirit captures the unbridled decadence that only a true cask-strength expression can achieve.</p>",
-            "text_weight": "",
-            "text_style": "body",
-            "mobile_text_style": "body--mobile",
-            "video_aspect_ratio": "square",
-            "padding": ""
+            "show_star": true,
+            "show_line": false,
+            "stylized_text": false,
+            "text": "Proudly Canadian"
           }
         },
-        "text_YmTDnc": {
-          "type": "text",
+        "caption_GkDBmq": {
+          "type": "caption",
           "settings": {
-            "color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
-            "accordion": true,
-            "border": false,
-            "text_alignment": "left",
-            "title": "Product Features",
-            "header_style": "body",
-            "mobile_header_style": "body--mobile",
-            "text": "{{ product.description }}",
-            "text_weight": "",
-            "text_style": "body",
-            "mobile_text_style": "body--mobile",
-            "video_aspect_ratio": "square",
-            "padding": ""
+            "show_star": true,
+            "show_line": false,
+            "stylized_text": false,
+            "text": "Free shipping on orders $100+"
           }
         },
-        "text_wada6P": {
-          "type": "text",
-          "settings": {
-            "color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
-            "accordion": true,
-            "border": false,
-            "text_alignment": "left",
-            "title": "Materials & Care",
-            "header_style": "body",
-            "mobile_header_style": "body--mobile",
-            "text": "<p>-</p>",
-            "text_weight": "",
-            "text_style": "body",
-            "mobile_text_style": "body--mobile",
-            "video_aspect_ratio": "square",
-            "padding": ""
-          }
+        "seperator_ja4iJY": {
+          "type": "seperator",
+          "settings": {}
         },
-        "text_dbFTHD": {
-          "type": "text",
-          "settings": {
-            "color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
-            "accordion": true,
-            "border": false,
-            "text_alignment": "left",
-            "title": "Shipping & Delivery",
-            "header_style": "body",
-            "mobile_header_style": "body--mobile",
-            "text": "<p>-</p>",
-            "text_weight": "",
-            "text_style": "body",
-            "mobile_text_style": "body--mobile",
-            "video_aspect_ratio": "square",
-            "padding": ""
-          }
-        },
-        "recommended_maxHLM": {
-          "type": "recommended",
-          "settings": {
-            "intent": "related",
-            "block_heading": "Pairs well with",
-            "product_list_limit": 10,
-            "columns_desktop": 3,
-            "columns_mobile": 3,
-            "slider_show_dots": true,
-            "slider_show_arrows": false
-          }
+        "share_3Ag3aH": {
+          "type": "share",
+          "settings": {}
         }
       },
       "block_order": [
@@ -152,22 +107,21 @@
         "price_ymGdEt",
         "variant_picker",
         "buy_buttons",
-        "text_4BQpzW",
-        "text_YmTDnc",
-        "text_wada6P",
-        "text_dbFTHD",
-        "recommended_maxHLM"
+        "seperator_U3AJjh",
+        "description_VEEFNU",
+        "seperator_B8BVLJ",
+        "caption_D7Xne7",
+        "caption_GkDBmq",
+        "seperator_ja4iJY",
+        "share_3Ag3aH"
       ],
-      "custom_css": [
-        ".button {color: #0b0b0b; background-color: #e4b43b;}",
-        ".quantity {border: 1px solid #e4b43b;}"
-      ],
+      "custom_css": [],
       "settings": {
         "color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
         "layout": "page-width",
         "layout_mobile": "full-width",
         "gallery_width": 50,
-        "aspect_ratio": "portrait",
+        "aspect_ratio": "square",
         "gallery_type_desktop": "carousel",
         "gallery_type_mobile": "carousel",
         "only_variants_gallery": false,
@@ -176,16 +130,15 @@
         "image_zoom": "none",
         "gallery_grid_columns_desktop": 2,
         "gallery_grid_columns_mobile": 2,
-        "display_thumbnails_desktop": false,
-        "display_thumbnails_mobile": false,
-        "display_thumbnails_as_dots": true,
-        "thumbnail_position": "below",
+        "display_thumbnails_desktop": true,
+        "display_thumbnails_mobile": true,
+        "display_thumbnails_as_dots": false,
         "product_info_spacing": 1,
-        "enable_sticky_info": false,
+        "enable_sticky_info": true,
         "enable_sticky_add": false,
         "header_is_sticky": false,
         "sticky_color": "",
-        "padding_top": 2,
+        "padding_top": 0,
         "padding_bottom": 2,
         "margin_bottom": 0
       }

@@ -1,0 +1,347 @@
+{{ 'product_details.css' | asset_url | stylesheet_tag }}
+
+{%- render 'section_padding' %}
+
+{%- capture bracket -%}
+  <svg class='product-details__bracket' aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+    <path d="M0 0H14V14H12.5V1.5H0Z" fill="currentColor"/>
+  </svg>
+{%- endcapture -%}
+
+<div
+  id="{{ section.id }}"
+  class="color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding isolate  gradient"
+>
+  <div class="{{ section.settings.layout }}">
+    {%- render 'section_header' -%}
+
+    <tabs-element
+      class="tabs-element product-details"
+    >
+      <slider-component class="tabs-slider">
+        <div
+          class="
+            grid
+            slider
+            slider--mobile
+            slider--desktop
+            tabs
+          "
+          role="tablist"
+        >
+          {% for block in section.blocks %}
+            <button
+              class="body tab__item"
+              type="button"
+              role="tab"
+              id="Tab-{{ section.id }}-{{ forloop.index }}"
+              aria-controls="TabPanel-{{ section.id }}-{{ forloop.index }}"
+              aria-selected="{{ forloop.first }}"
+            >
+              {{ block.settings.heading }}
+            </button>
+          {% endfor %}
+        </div>
+      </slider-component>
+
+      {% for block in section.blocks %}
+        <div
+          class="panel"
+          aria-labelledby="Tab-{{ section.id }}-{{ forloop.index }}"
+          id="TabPanel-{{ section.id }}-{{ forloop.index }}"
+          role="tabpanel"
+          {% unless forloop.first %}
+            hidden
+          {% endunless %}
+        >
+          <div id="TabPanelContent-{{ section.id }}-{{ forloop.index }}">
+            <div class="product-details__content">
+              {% case block.settings.type %}
+                {% when 'description' %}
+                  <div class="product-details__boxes">
+                    <div class="product-details__box">
+                      {{ bracket }}
+                      {{ bracket }}
+                      {{ bracket }}
+                      {{ bracket }}
+
+                      {% render 'icon-diamond' %}
+
+                      <div class="product-details__box-heading">The Spirit</div>
+
+                      <div class="product-details__box-content">
+                        Lorem ipsum dolor sit amet consectetur. Hac nibh accumsan egestas enim convallis orci duis
+                        euismod varius. Fermentum dolor viverra pulvinar cursus sapien duis commodo arcu.
+                      </div>
+                    </div>
+                  </div>
+                {% when 'reviews' %}
+                  <div class="product-details__reviews">
+                    {{ block.settings.content }}
+                  </div>
+                {% when 'awards' %}
+                  <div class="product-details__awards">
+                    {{ block.settings.content }}
+                  </div>
+                {% when 'custom' %}
+                  <div class="product-details__custom">
+                    {{ block.settings.content }}
+                  </div>
+              {% endcase %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </tabs-element>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Product Details",
+  "tag": "section",
+  "class": "section",
+  "enabled_on": {
+    "templates": ["product"]
+  },
+  "blocks": [
+    {
+      "type": "tab",
+      "name": "Tab",
+      "settings": [
+        {
+          "type": "select",
+          "id": "type",
+          "label": "Type",
+          "options": [
+            {
+              "value": "description",
+              "label": "Description"
+            },
+            {
+              "value": "reviews",
+              "label": "Reviews"
+            },
+            {
+              "value": "awards",
+              "label": "Awards"
+            },
+            {
+              "value": "custom",
+              "label": "Custom"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content",
+          "info": "Only used for custom type"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "info": "t:sections.all.colors.has_cards_info",
+      "default": "scheme-1"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background image"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout",
+      "options": [
+        {
+          "value": "screen-width",
+          "label": "Screen width"
+        },
+        {
+          "value": "page-width",
+          "label": "Page width"
+        },
+        {
+          "value": "large-width",
+          "label": "Large width"
+        },
+        {
+          "value": "full-width",
+          "label": "Full width"
+        }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "header",
+      "content": "Section Header"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "visible_if": "{{ section.settings.title != blank }}",
+      "type": "checkbox",
+      "id": "header_is_h1",
+      "label": "Header is H1",
+      "default": false
+    },
+    {
+      "visible_if": "{{ section.settings.title != blank }}",
+      "type": "checkbox",
+      "id": "visually_hide_header",
+      "label": "Visually hide header",
+      "default": false
+    },
+    {
+      "visible_if": "{{ section.settings.title != blank }}",
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h5",
+          "label": "X-Small"
+        },
+        {
+          "value": "h4",
+          "label": "Small"
+        },
+        {
+          "value": "h3",
+          "label": "Medium"
+        },
+        {
+          "value": "h2",
+          "label": "Large"
+        },
+        {
+          "value": "h1",
+          "label": "X-Large"
+        }
+      ],
+      "default": "h2",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "visible_if": "{{ section.settings.description != blank }}",
+      "type": "select",
+      "id": "text_style",
+      "options": [
+        {
+          "value": "body--small",
+          "label": "Small"
+        },
+        {
+          "value": "body",
+          "label": "Regular"
+        },
+        {
+          "value": "body--large",
+          "label": "Large"
+        }
+      ],
+      "default": "body",
+      "label": "Text style"
+    },
+    {
+      "visible_if": "{{ section.settings.description != blank }}",
+      "type": "select",
+      "id": "mobile_text_style",
+      "options": [
+        {
+          "value": "body--small-mobile",
+          "label": "Small"
+        },
+        {
+          "value": "body--mobile",
+          "label": "Regular"
+        },
+        {
+          "value": "body--large-mobile",
+          "label": "Large"
+        }
+      ],
+      "default": "body--mobile",
+      "label": "Mobile text style"
+    },
+    {
+      "visible_if": "{{ section.settings.title != blank or section.settings.description != blank }}",
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "Heading Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.collapsible_content.settings.heading_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.collapsible_content.settings.heading_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.collapsible_content.settings.heading_alignment.options__3.label"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "header",
+      "content": "Section Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 4,
+      "step": 0.5,
+      "unit": "rem",
+      "label": "Padding top",
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 4,
+      "step": 0.5,
+      "unit": "rem",
+      "label": "Padding bottom",
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 4,
+      "step": 0.5,
+      "unit": "rem",
+      "label": "Section margin",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Details"
+    }
+  ]
+}
+{% endschema %}
