@@ -143,6 +143,56 @@
         "margin_bottom": 0
       }
     },
+    "product_details_NjbyjL": {
+      "type": "product_details",
+      "blocks": {
+        "tab_FLwFpQ": {
+          "type": "tab",
+          "settings": {
+            "type": "description",
+            "heading": "Description",
+            "content": ""
+          }
+        },
+        "tab_hXCexD": {
+          "type": "tab",
+          "settings": {
+            "type": "reviews",
+            "heading": "Reviews",
+            "content": ""
+          }
+        },
+        "tab_hBNPBe": {
+          "type": "tab",
+          "settings": {
+            "type": "awards",
+            "heading": "Awards",
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_FLwFpQ",
+        "tab_hXCexD",
+        "tab_hBNPBe"
+      ],
+      "name": "Product Details",
+      "settings": {
+        "color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
+        "layout": "page-width",
+        "title": "",
+        "header_is_h1": false,
+        "visually_hide_header": false,
+        "heading_size": "h2",
+        "description": "",
+        "text_style": "body",
+        "mobile_text_style": "body--mobile",
+        "heading_alignment": "left",
+        "padding_top": 2,
+        "padding_bottom": 2,
+        "margin_bottom": 0
+      }
+    },
     "product_mashbill_76mfef": {
       "type": "product_mashbill",
       "name": "Product Mashbill",
@@ -168,7 +218,7 @@
       "settings": {
         "color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
         "layout": "page-width",
-        "title": "You May Also Like",
+        "title": "Featured Spirits",
         "header_is_h1": false,
         "visually_hide_header": false,
         "heading_size": "h2",
@@ -185,12 +235,33 @@
         "padding_bottom": 2,
         "margin_bottom": 0
       }
+    },
+    "product_cocktail_LzWD9x": {
+      "type": "product_cocktail",
+      "name": "Product Cocktail",
+      "settings": {
+        "color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
+        "layout": "page-width",
+        "title": "Signature cocktail",
+        "header_is_h1": false,
+        "visually_hide_header": false,
+        "heading_size": "h2",
+        "description": "",
+        "text_style": "body",
+        "mobile_text_style": "body--mobile",
+        "heading_alignment": "center",
+        "padding_top": 2,
+        "padding_bottom": 2,
+        "margin_bottom": 0
+      }
     }
   },
   "order": [
     "product_breadcrumbs_9xPfwD",
     "main",
+    "product_details_NjbyjL",
     "product_mashbill_76mfef",
-    "related_products_acXrrg"
+    "related_products_acXrrg",
+    "product_cocktail_LzWD9x"
   ]
 }
