@@ -1499,12 +1499,9 @@ button.shopify-payment-button__button--unbranded,
 .customer button:disabled,
 .customer button[aria-disabled='true'],
 .customer button.disabled {
-  --color-button: #c1c1c1;
-  --color-button-text: #e8e6e4;
-
-  background: #c1c1c1;
-  border-color: #c1c1c1;
-  color: #e8e6e4;
+  background: rgba(var(--color-button), 0.4);
+  border-color: rgba(var(--color-button-border), 0.4);
+  color: rgba(var(--color-button-text), 0.4);
 }
 
 .button:disabled:after {

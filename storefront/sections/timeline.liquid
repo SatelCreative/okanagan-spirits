@@ -1,0 +1,384 @@
+{{ 'timeline.css' | asset_url | stylesheet_tag }}
+
+<script src="{{ 'timeline.js' | asset_url }}" defer="defer"></script>
+
+{%- render 'section_padding' %}
+
+{%- assign widths = '165, 360, 535, 750, 1070, 1500' -%}
+{%- capture sizes -%}
+  (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
+{%- endcapture -%}
+
+<div
+  id="{{ section.id }}"
+  class="color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding isolate  gradient"
+>
+  <div class="{{ section.settings.layout }}">
+    {%- render 'section_header' -%}
+
+    <timeline-component class="timelines">
+      <div class="timelines__items">
+        {% for block in section.blocks %}
+          <div
+            class="timelines__item"
+            aria-labelledby="Tab-{{ section.id }}-{{ forloop.index }}"
+            id="TabPanel-{{ section.id }}-{{ forloop.index }}"
+            role="tabpanel"
+            {% unless forloop.first %}
+              hidden
+            {% endunless %}
+          >
+            {% if block.settings.image != blank %}
+              <div class="timelines__item-image">
+                {% render 'icon-bracket' %}
+                {% render 'icon-bracket' %}
+                {% render 'icon-bracket' %}
+                {% render 'icon-bracket' %}
+
+                <div
+                  class="media media--adapt"
+                  style="padding-bottom: {{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100 }}%;"
+                >
+                  {{
+                    block.settings.image
+                    | image_url: width: 1500
+                    | image_tag: sizes: sizes, widths: widths, fetchpriority: 'auto', lazy: true
+                  }}
+                </div>
+              </div>
+            {% endif %}
+
+            <div class="timelines__item-content">
+              <div class="timelines__item-year">
+                {{ block.settings.year }}
+              </div>
+
+              <div class="timelines__item-subtitle">
+                {{ block.settings.subtitle }}
+              </div>
+
+              <div class="timelines__item-title">
+                {{ block.settings.title }}
+              </div>
+
+              <div class="timelines__item-separator">
+                <svg xmlns="http://www.w3.org/2000/svg" width="520" height="8" viewBox="0 0 520 8" fill="none">
+                  <rect width="40" height="1" transform="translate(0 3.5)" fill="rgba(var(--color-highlight), 0.6)" fill-opacity="0.6"/>
+                  <g clip-path="url(#clip0_222_797)">
+                  <path d="M56 0L60 4L56 8L52 4L56 0Z" fill="rgba(var(--color-highlight), 1)"/>
+                  </g>
+                  <rect width="40" height="1" transform="translate(72 3.5)" fill="rgba(var(--color-highlight), 0.6)" fill-opacity="0.6"/>
+                  <defs>
+                  <clipPath id="clip0_222_797">
+                  <rect width="8" height="8" fill="white" transform="translate(52)"/>
+                  </clipPath>
+                  </defs>
+                </svg>
+              </div>
+
+              <div class="timelines__item-description">
+                {{ block.settings.description }}
+              </div>
+
+              <div class="timelines__item-navigation">
+                <button
+                  type="button"
+                  class="
+                    button
+                    timelines__item-button
+                    timelines__item-button--prev
+                  "
+                  name="prev"
+                  aria-label="Previous"
+                  aria-controls="Timeline-{{ section.id }}"
+                  {% if forloop.first %}disabled{% endif %}
+                >
+                  {% render 'icon-caret' %}
+                  <span class="visually-hidden">Previous Timeline Item</span>
+                </button>
+
+                <button
+                  type="button"
+                  class="
+                    button
+                    timelines__item-button
+                    timelines__item-button--next
+                  "
+                  name="next"
+                  aria-label="Next"
+                  aria-controls="Timeline-{{ section.id }}"
+                  {% if forloop.last %}disabled{% endif %}
+                >
+                  {% render 'icon-caret' %}
+                  <span class="visually-hidden">Next Timeline Item</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+
+      <div
+        class="timelines__navigation"
+        id="Timeline-{{ section.id }}"
+        role="tablist"
+      >
+        {% for block in section.blocks %}
+          <button
+            class="timelines__navigation-item"
+            type="button"
+            role="tab"
+            id="Tab-{{ section.id }}-{{ forloop.index }}"
+            aria-controls="TabPanel-{{ section.id }}-{{ forloop.index }}"
+            aria-selected="{{ forloop.first }}"
+          >
+            <span class="timelines__navigation-star"></span>
+
+            {{ block.settings.year }}
+          </button>
+        {% endfor %}
+      </div>
+    </timeline-component>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Timeline",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "info": "t:sections.all.colors.has_cards_info",
+      "default": "scheme-1"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background image"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout",
+      "options": [
+        {
+          "value": "screen-width",
+          "label": "Screen width"
+        },
+        {
+          "value": "page-width",
+          "label": "Page width"
+        },
+        {
+          "value": "large-width",
+          "label": "Large width"
+        },
+        {
+          "value": "full-width",
+          "label": "Full width"
+        }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "header",
+      "content": "Section Header"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "visible_if": "{{ section.settings.title != blank }}",
+      "type": "checkbox",
+      "id": "header_is_h1",
+      "label": "Header is H1",
+      "default": false
+    },
+    {
+      "visible_if": "{{ section.settings.title != blank }}",
+      "type": "checkbox",
+      "id": "visually_hide_header",
+      "label": "Visually hide header",
+      "default": false
+    },
+    {
+      "visible_if": "{{ section.settings.title != blank }}",
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h5",
+          "label": "X-Small"
+        },
+        {
+          "value": "h4",
+          "label": "Small"
+        },
+        {
+          "value": "h3",
+          "label": "Medium"
+        },
+        {
+          "value": "h2",
+          "label": "Large"
+        },
+        {
+          "value": "h1",
+          "label": "X-Large"
+        }
+      ],
+      "default": "h2",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "visible_if": "{{ section.settings.description != blank }}",
+      "type": "select",
+      "id": "text_style",
+      "options": [
+        {
+          "value": "body--small",
+          "label": "Small"
+        },
+        {
+          "value": "body",
+          "label": "Regular"
+        },
+        {
+          "value": "body--large",
+          "label": "Large"
+        }
+      ],
+      "default": "body",
+      "label": "Text style"
+    },
+    {
+      "visible_if": "{{ section.settings.description != blank }}",
+      "type": "select",
+      "id": "mobile_text_style",
+      "options": [
+        {
+          "value": "body--small-mobile",
+          "label": "Small"
+        },
+        {
+          "value": "body--mobile",
+          "label": "Regular"
+        },
+        {
+          "value": "body--large-mobile",
+          "label": "Large"
+        }
+      ],
+      "default": "body--mobile",
+      "label": "Mobile text style"
+    },
+    {
+      "visible_if": "{{ section.settings.title != blank or section.settings.description != blank }}",
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "Heading Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.collapsible_content.settings.heading_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.collapsible_content.settings.heading_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.collapsible_content.settings.heading_alignment.options__3.label"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "header",
+      "content": "Section Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 4,
+      "step": 0.5,
+      "unit": "rem",
+      "label": "Padding top",
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 4,
+      "step": 0.5,
+      "unit": "rem",
+      "label": "Padding bottom",
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 4,
+      "step": 0.5,
+      "unit": "rem",
+      "label": "Section margin",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "year",
+          "label": "Year"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "subtitle",
+          "label": "Subtitle"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Timeline"
+    }
+  ]
+}
+{% endschema %}
