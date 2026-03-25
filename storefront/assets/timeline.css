@@ -79,6 +79,7 @@
 .timelines__item-image {
   position: relative;
   padding: 12px;
+  color: rgb(var(--color-highlight));
 }
 
 .timelines__item-image .icon-bracket {
@@ -205,7 +206,7 @@
   transform: translateY(-50%);
   width: 100%;
   height: 1px;
-  background: rgba(var(--color-foreground), 0.20);
+  background: rgba(var(--color-highlight), 0.20);
 }
 
 .timelines__navigation-item {
@@ -228,7 +229,7 @@
 }
 
 .timelines__navigation-item[aria-selected="true"] {
-  color: rgb(var(--color-foreground));
+  color: rgb(var(--color-highlight));
 }
 
 .timelines__navigation-star {
@@ -247,14 +248,14 @@
   height: 8px;
   transform: rotate(45deg);
 
-  border: 1.5px solid rgba(var(--color-foreground), 0.20);
+  border: 1.5px solid rgba(var(--color-highlight), 0.20);
 }
 
 .timelines__navigation-item[aria-selected="true"] .timelines__navigation-star:before {
   width: 14px;
   height: 14px;
 
-  border: 1.5px solid rgb(var(--color-foreground));
-  background: rgb(var(--color-foreground));
-  box-shadow: 0 0 10px 0 rgba(var(--color-foreground), 0.50);
+  border: 1.5px solid rgb(var(--color-highlight));
+  background: rgb(var(--color-highlight));
+  box-shadow: 0 0 10px 0 rgba(var(--color-highlight), 0.50);
 }
