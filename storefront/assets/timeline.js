@@ -4,8 +4,10 @@ class TimelineComponent extends HTMLElement {
 
     this.tabs = this.querySelectorAll('[role="tab"]');
     this.panels = this.querySelectorAll('[role="tabpanel"]');
+    this.navButtons = this.querySelectorAll('.timelines__item-button');
 
     this.initTabs();
+    this.initNavButtons();
   }
 
   initTabs() {
@@ -15,20 +17,39 @@ class TimelineComponent extends HTMLElement {
     });
   }
 
+  initNavButtons() {
+    this.navButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const panelId = button.getAttribute('aria-controls');
+        const tab = this.querySelector(`[role="tab"][aria-controls="${panelId}"]`);
+        if (tab) this.selectTab(tab);
+      });
+    });
+  }
+
   selectTab(selectedTab) {
-    this.panels.forEach((panel) => (panel.setAttribute('hidden', 'true')));
+    const currentPanel = this.querySelector('[role="tabpanel"]:not([hidden])');
+    const newPanel = this.querySelector(`#${selectedTab.getAttribute('aria-controls')}`);
+
+    if (!newPanel || currentPanel === newPanel) return;
+
     this.tabs.forEach((tab) => tab.setAttribute('aria-selected', 'false'));
-
-    const panel = this.querySelector(
-      `#${selectedTab.getAttribute('aria-controls')}`
-    );
-
-    if(panel) {
-      panel.removeAttribute('hidden');
-    }
-    
     selectedTab.setAttribute('aria-selected', 'true');
     selectedTab.focus();
+
+    if (currentPanel) {
+      currentPanel.classList.add('is-leaving');
+      currentPanel.addEventListener('animationend', () => {
+        currentPanel.classList.remove('is-leaving');
+        currentPanel.setAttribute('hidden', 'true');
+      }, { once: true });
+    }
+
+    newPanel.removeAttribute('hidden');
+    newPanel.classList.add('is-entering');
+    newPanel.addEventListener('animationend', () => {
+      newPanel.classList.remove('is-entering');
+    }, { once: true });
   }
 
   onKeydown(event, tab) {

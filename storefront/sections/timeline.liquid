@@ -9,6 +9,14 @@
   (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
 {%- endcapture -%}
 
+{% assign aspect_ratio = 0 %}
+
+{% for block in section.blocks %}
+  {% if block.settings.image.aspect_ratio > aspect_ratio %}
+    {% assign aspect_ratio = block.settings.image.aspect_ratio %}
+  {% endif %}
+{% endfor %}
+
 <div
   id="{{ section.id }}"
   class="color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding isolate  gradient"
@@ -37,7 +45,7 @@
 
                 <div
                   class="media media--adapt"
-                  style="padding-bottom: {{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100 }}%;"
+                  style="padding-bottom: {{ 1 | divided_by: aspect_ratio | times: 100 }}%;"
                 >
                   {{
                     block.settings.image
@@ -90,8 +98,8 @@
                   "
                   name="prev"
                   aria-label="Previous"
-                  aria-controls="Timeline-{{ section.id }}"
                   {% if forloop.first %}disabled{% endif %}
+                  aria-controls="TabPanel-{{ section.id }}-{{ forloop.index | minus: 1 }}"
                 >
                   {% render 'icon-caret' %}
                   <span class="visually-hidden">Previous Timeline Item</span>
@@ -106,8 +114,8 @@
                   "
                   name="next"
                   aria-label="Next"
-                  aria-controls="Timeline-{{ section.id }}"
                   {% if forloop.last %}disabled{% endif %}
+                  aria-controls="TabPanel-{{ section.id }}-{{ forloop.index | plus: 1 }}"
                 >
                   {% render 'icon-caret' %}
                   <span class="visually-hidden">Next Timeline Item</span>
