@@ -62,27 +62,40 @@
     </div>
 
     <div class="age-gate__content">
-      <div class="age-gate__message body body--large">
+      <h2 class="age-gate__title">{{ settings.age_gate_title }}</h2>
+
+      <div class="age-gate__message body">
         {{ settings.age_gate_message }}
       </div>
 
-      <div class='age-gate__actions'>
-        <div class='age-gate__action'>
-          <input id='age-gate-action-yes' type='radio' name='age-permitted' value='yes'>
-          <label for='age-gate-action-yes'>{{ settings.age_gate_yes }}</label>
+      <div class="age-gate__actions">
+        <div class="age-gate__action">
+          <input class="age-gate__action-input" id="AgeGateActionYes" type="radio" name="age-permitted" value="yes">
+          <label for="AgeGateActionYes">{{ settings.age_gate_yes }}</label>
         </div>
-        <div class='age-gate__action'>
-          <input id='age-gate-action-no' type='radio' name='age-permitted' value='no'>
-          <label for='age-gate-action-no'>{{ settings.age_gate_no }}</label>
+        <div class="age-gate__action">
+          <input class="age-gate__action-input" id="AgeGateActionNo" type="radio" name="age-permitted" value="no">
+          <label for="AgeGateActionNo">{{ settings.age_gate_no }}</label>
         </div>
       </div>
 
-      <div class='age-gate__button'>
-        <button class='button button--primary'>{{ settings.age_gate_button_text }}</button>
+      <div class="age-gate__button">
+        <button class="button button--primary">
+          {{ settings.age_gate_button_text }}
+          {% render 'icon-arrow-right' %}
+        </button>
+      </div>
+
+      <div class="age-gate__divider">
+        <svg xmlns="http://www.w3.org/2000/svg" width="340" height="8" viewBox="0 0 340 8" fill="none">
+          <rect x="0" y="3.5" width="158" height="1" fill="currentColor" fill-opacity="0.3"/>
+          <path d="M170 0L174 4L170 8L166 4L170 0Z" fill="currentColor" fill-opacity="0.5"/>
+          <rect x="182" y="3.5" width="158" height="1" fill="currentColor" fill-opacity="0.3"/>
+        </svg>
       </div>
 
       <!-- Footer text -->
-      <div class="age-gate__footer body body--small">
+      <div class="age-gate__footer">
         {{ settings.age_gate_footer }}
       </div>
     </div>

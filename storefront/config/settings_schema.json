@@ -8,6 +8,59 @@
     "theme_support_url": "https://support.shopify.com/"
   },
   {
+    "name": "Age Gate",
+    "settings": [
+      {
+        "type": "inline_richtext",
+        "id": "age_gate_title",
+        "label": "Age gate title",
+        "default": "Welcome"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "age_gate_message",
+        "label": "Age gate message",
+        "default": "Please confirm you are of legal drinking age in your province or territory to enter this site."
+      },
+      {
+        "type": "text",
+        "id": "age_gate_yes",
+        "label": "Age gate yes",
+        "default": "Yes, I am of legal drinking age"
+      },
+      {
+        "type": "text",
+        "id": "age_gate_no",
+        "label": "Age gate no",
+        "default": "No, I am not"
+      },
+      {
+        "type": "text",
+        "id": "age_gate_button_text",
+        "label": "Age gate button text",
+        "default": "Enter Site"
+      },
+      {
+        "type": "text",
+        "id": "age_gate_footer",
+        "label": "Age gate footer",
+        "default": "By entering this site, you are agreeing to our Terms of Service and Privacy Policy. You confirm that you are of legal drinking age in your jurisdiction and that you will consume alcohol responsibly. If you are not of legal drinking age, please exit this site immediately."
+      },
+      {
+        "type": "text",
+        "id": "age_gate_deny_title",
+        "label": "Age gate deny title",
+        "default": "Access Denied"
+      },
+      {
+        "type": "text",
+        "id": "age_gate_deny_message",
+        "label": "Age gate deny message",
+        "default": "You are not of legal drinking age in your province or territory. Please exit this site immediately."
+      }
+    ]
+  },
+  {
     "name": "Logo / Favicon",
     "settings": [
       {

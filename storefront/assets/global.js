@@ -1928,6 +1928,9 @@ class AgeGate extends HTMLElement {
       this.remove();
       this.body.classList.remove('verification-required');
     }
+    else {
+      this.body.classList.add('verification-required');
+    }
 
     this.form.addEventListener('submit', this.handleSubmit.bind(this));
   }
