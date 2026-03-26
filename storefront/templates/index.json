@@ -81,6 +81,61 @@
         "margin_bottom": 0
       }
     },
+    "timeline_Nm7Leh": {
+      "type": "timeline",
+      "blocks": {
+        "item_LzgEc9": {
+          "type": "item",
+          "settings": {
+            "year": "2004",
+            "image": "shopify://shop_images/Whisky_Green_Laird_of_Fintry_LOF_Tequila_squre_2.jpg",
+            "subtitle": "The Beginning",
+            "title": "BC's First Craft Distillery",
+            "description": "<p>Frank Deiter had a bold vision: to create world-class craft spirits from the bountiful harvests of British Columbia's Okanagan Valley. Drawing on generations of European distilling tradition and the region's exceptional fruit, Okanagan Spirits was established as the first craft distillery in BC — pioneering a movement that would transform the Canadian spirits landscape.</p>"
+          }
+        },
+        "item_jxqNJz": {
+          "type": "item",
+          "settings": {
+            "year": "2008",
+            "image": "shopify://shop_images/Whisky_Green_Laird_Ice_1.jpg",
+            "subtitle": "meep",
+            "title": "moop",
+            "description": "<p>this is a description</p>"
+          }
+        },
+        "item_3rWrgF": {
+          "type": "item",
+          "settings": {
+            "year": "2012",
+            "subtitle": "",
+            "title": "",
+            "description": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_LzgEc9",
+        "item_jxqNJz",
+        "item_3rWrgF"
+      ],
+      "name": "Timeline",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "layout": "page-width",
+        "title": "",
+        "header_is_h1": false,
+        "visually_hide_header": false,
+        "heading_size": "h2",
+        "description": "",
+        "text_style": "body",
+        "mobile_text_style": "body--mobile",
+        "heading_alignment": "left",
+        "padding_top": 2,
+        "padding_bottom": 2,
+        "margin_bottom": 0
+      }
+    },
     "featured_collection_JMU7xb": {
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
@@ -420,6 +475,7 @@
   },
   "order": [
     "banner_bUwrTe",
+    "timeline_Nm7Leh",
     "featured_collection_JMU7xb",
     "media_with_text_yHXQ8n",
     "media_with_text_9rVgBj",

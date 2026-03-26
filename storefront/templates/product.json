@@ -12,7 +12,7 @@
     "product_breadcrumbs_9xPfwD": {
       "type": "product_breadcrumbs",
       "settings": {
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
         "padding_top": 2,
         "padding_bottom": 2,
         "margin_bottom": 0
@@ -130,8 +130,8 @@
         "image_zoom": "none",
         "gallery_grid_columns_desktop": 2,
         "gallery_grid_columns_mobile": 2,
-        "display_thumbnails_desktop": true,
-        "display_thumbnails_mobile": true,
+        "display_thumbnails_desktop": false,
+        "display_thumbnails_mobile": false,
         "display_thumbnails_as_dots": false,
         "product_info_spacing": 1,
         "enable_sticky_info": true,
@@ -151,7 +151,7 @@
           "settings": {
             "type": "description",
             "heading": "Description",
-            "content": ""
+            "content": "<p>{{ product.metafields.custom.product_appearance.value }}{{ product.metafields.custom.product_mouth_feel | metafield_tag }}{{ product.metafields.custom.product_finish | metafield_tag }}</p>"
           }
         },
         "tab_hXCexD": {
@@ -167,7 +167,7 @@
           "settings": {
             "type": "awards",
             "heading": "Awards",
-            "content": ""
+            "content": "<p><em>🍁Gold Medal Winner at Canadian Whisky Awards 2022 where Okanagan Spirits also won Artisanal Distillery of the Year🍁</em></p>"
           }
         }
       },
@@ -250,7 +250,7 @@
         "text_style": "body",
         "mobile_text_style": "body--mobile",
         "heading_alignment": "center",
-        "padding_top": 2,
+        "padding_top": 0.5,
         "padding_bottom": 2,
         "margin_bottom": 0
       }

@@ -30,7 +30,7 @@
           "settings": {
             "title": "SHOP",
             "parent_link": "",
-            "mega_weight": "body medium",
+            "mega_weight": "body bold",
             "parent_color": "rgba(0,0,0,0)",
             "menu": "shop-oks",
             "highlight_text": "",
@@ -62,7 +62,7 @@
           "settings": {
             "title": "Discover",
             "parent_link": "",
-            "mega_weight": "body",
+            "mega_weight": "body bold",
             "parent_color": "rgba(0,0,0,0)",
             "menu": "discover",
             "highlight_text": "",
@@ -94,7 +94,7 @@
           "settings": {
             "title": "Whisky Club",
             "parent_link": "#",
-            "mega_weight": "body",
+            "mega_weight": "body bold",
             "parent_color": "rgba(0,0,0,0)",
             "menu": "",
             "highlight_text": "",
@@ -128,7 +128,8 @@
         "mega_menu_XaLiw4"
       ],
       "custom_css": [
-        ".bold {font-family: \"market deco\" !important; font-size: 17px;}"
+        ".bold {font-family: \"market deco\" !important; font-size: 17px;}",
+        ".header__icons span {font-family: \"market deco\" !important;}"
       ],
       "settings": {
         "color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",

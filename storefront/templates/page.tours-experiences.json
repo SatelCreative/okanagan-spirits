@@ -11,6 +11,7 @@
   "sections": {
     "contact_form_zfnTji": {
       "type": "contact-form",
+      "disabled": true,
       "name": "t:sections.contact-form.presets.name",
       "settings": {
         "color_scheme": "",
@@ -29,9 +30,270 @@
         "padding_bottom": 2,
         "margin_bottom": 0
       }
+    },
+    "banner_iDgk78": {
+      "type": "banner",
+      "blocks": {
+        "media_qgJibE": {
+          "type": "media",
+          "settings": {
+            "color_scheme_box": "",
+            "transparent_box_desktop": true,
+            "transparent_box_mobile": true,
+            "image": "shopify://shop_images/tours_experiences.webp",
+            "image_mobile": "shopify://shop_images/tours_experiences.webp",
+            "image_link": "",
+            "image_overlay_opacity": 0,
+            "video_url": "",
+            "video_description": "",
+            "enable_video_autoplay": true,
+            "desktop_content_position": "middle-center",
+            "desktop_remove_extra_padding": false,
+            "desktop_content_alignment": "center",
+            "mobile_content_position": "middle",
+            "mobile_content_alignment": "center",
+            "heading": "Tours & Distillery Experiences",
+            "heading_size": "h0--desktop",
+            "heading_size_mobile": "h2--mobile",
+            "heading_letter_spacing": "",
+            "heading_shadow": "",
+            "heading_italic": false,
+            "is_h1": false,
+            "visually_hidden": false,
+            "text": "<p>Discover the Art of Craft Distilling—Book Your Experience Today!<br/><br/>While we welcome drop-in tastings, we highly recommend reserving a sit-down Distillery Experience for a deeper dive into the craft of distilling. Enjoy our award-winning spirits while learning about the time-honored traditions and innovations that make them truly exceptional.</p><p><br/>All Distillery Experiences are by reservation only <br/><br/>Drop in anytime for a $10 tasting—no booking required!<br/><br/>Click below to check availability and reserve your spot.<br/><br/><br/></p>",
+            "text_style": "body--desktop",
+            "mobile_text_style": "body--mobile",
+            "button_label_1": "Reserve Now",
+            "button_link_1": "https://fareharbor.com/embeds/book/okanaganspiritscraftdistillery/items/?language=en-ca&a=yes&full-items=yes&back=https://www.okanaganspirits.com/tours-experiences/%23&gclid=CjwKCAjw1N7NBhAoEiwAcPchp7JVB6ACBJyH4RIYouA2FwuutUWFWV5RRrPs_GdbdgEIcMdD6o0vNhoCCW8QAvD_BwE&g4=yes",
+            "button_bold_1": false,
+            "button_style_1": "button button--secondary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_bold_2": false,
+            "button_style_2": "button"
+          }
+        }
+      },
+      "block_order": [
+        "media_qgJibE"
+      ],
+      "name": "Media Banners",
+      "settings": {
+        "color_scheme": "",
+        "layout": "screen-width",
+        "layout_mobile": "screen-width",
+        "title": "",
+        "header_is_h1": false,
+        "visually_hide_header": false,
+        "heading_size": "h2",
+        "description": "",
+        "text_style": "body",
+        "mobile_text_style": "body--mobile",
+        "heading_alignment": "left",
+        "aspect_ratio": "adapt",
+        "aspect_ratio_mobile": "adapt",
+        "stack_images_on_mobile": true,
+        "slider_show_dots": true,
+        "slider_show_arrows": false,
+        "accessibility_info": "",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_bottom": 0
+      }
+    },
+    "media_with_text_aUz6qF": {
+      "type": "media-with-text",
+      "blocks": {
+        "content_KHBNax": {
+          "type": "content",
+          "settings": {
+            "image_first": false,
+            "image": "shopify://shop_images/toursImg1.webp",
+            "video_url": "",
+            "video_autoplay": false,
+            "heading": "Farm-To-Flask Experience",
+            "heading_size": "h1",
+            "text": "<p>CELEBRATING OUR LOCAL TERROIR<br/><br/></p><p><em>45 minutes  | 2-12 people</em><br/><br/>A curated tour encompassing how craft spirits are made at our Flagship Distillery in Vernon and finishes with a guided tasting of 4 of our award-winning spirits, from 4 different spirits categories. Get an up-close look at our copper-pot stills, condensing still, fermentation vessels, and mash cooker. Reservations required.</p>",
+            "text_style": "body",
+            "mobile_text_style": "body--mobile",
+            "button_label": "Reserve Vernon",
+            "button_link": "https://fareharbor.com/embeds/book/okanaganspiritscraftdistillery/items/215608/calendar/2026/03/?flow=485228&a=yes&full-items=yes&back=https://www.okanaganspirits.com/tours-experiences/&gclid=CjwKCAjw1N7NBhAoEiwAcPchp7JVB6ACBJyH4RIYouA2FwuutUWFWV5RRrPs_GdbdgEIcMdD6o0vNhoCCW8QAvD_BwE&g4=yes",
+            "button_style_secondary": true,
+            "button_label_2": "Reserve Kelowna",
+            "button_link_2": "https://fareharbor.com/embeds/book/okanaganspiritscraftdistillery/items/215615/calendar/2026/03/?flow=485229&a=yes&full-items=yes&back=https://www.okanaganspirits.com/tours-experiences/&gclid=CjwKCAjw1N7NBhAoEiwAcPchp7JVB6ACBJyH4RIYouA2FwuutUWFWV5RRrPs_GdbdgEIcMdD6o0vNhoCCW8QAvD_BwE&g4=yes",
+            "button_style_secondary_2": true,
+            "box_color_scheme": "scheme-1",
+            "desktop_content_position": "middle",
+            "desktop_content_alignment": "left",
+            "content_layout": "no-overlap",
+            "mobile_content_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "content_KHBNax"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "background_image": "shopify://shop_images/image.png",
+        "layout": "page-width",
+        "aspect_ratio": "square",
+        "desktop_image_width": "medium",
+        "slider_show_dots": true,
+        "slider_show_arrows": false,
+        "padding_top": 2,
+        "padding_bottom": 2,
+        "margin_bottom": 0
+      }
+    },
+    "media_with_text_8TzaYa": {
+      "type": "media-with-text",
+      "blocks": {
+        "content_UBVxcJ": {
+          "type": "content",
+          "settings": {
+            "image_first": true,
+            "image": "shopify://shop_images/20240911_154307-1-scaled-e1732216349355.webp",
+            "video_url": "",
+            "video_autoplay": false,
+            "heading": "Whisky Experience",
+            "heading_size": "h1",
+            "text": "<p>ALL ABOUT WHISKY<br/><br/></p><p><em>1 hour  | 2-6 people<br/><br/></em></p><p>Our Whisky Experience begins by exploring the elements of craft whisky making and what it means to be “Craft” in B.C. Guests will enjoy a tour of the distillery and an insight into craft whisky production before being treated to a guided tasting of 4 of our premium whiskies. Depart with a Signature Okanagan Spirits whisky tasting glass for you to enjoy at home.</p>",
+            "text_style": "body",
+            "mobile_text_style": "body--mobile",
+            "button_label": "Reserve Vernon",
+            "button_link": "https://fareharbor.com/embeds/book/okanaganspiritscraftdistillery/items/215520/?full-items=yes&back=https%3A%2F%2Fwww.okanaganspirits.com%2Ftours-experiences%2F&flow=485228&a=yes&g4=yes&u=21eb9b34-9e18-4c56-9baf-b3250f760610&from-ssl=yes&ga4t=AW-16671893323%2Cundefined__undefined%3BAW-652726401%2Cundefined__undefined%3BG-8Q8EVSBEKN%2C1692619388.1765839750__1774470193%3B&cp=no&csp=no&gclid=CjwKCAjw1N7NBhAoEiwAcPchp7JVB6ACBJyH4RIYouA2FwuutUWFWV5RRrPs_GdbdgEIcMdD6o0vNhoCCW8QAvD_BwE",
+            "button_style_secondary": true,
+            "button_label_2": "Reserve Kelowna",
+            "button_link_2": "https://fareharbor.com/embeds/book/okanaganspiritscraftdistillery/items/271143/?full-items=yes&back=https%3A%2F%2Fwww.okanaganspirits.com%2Ftours-experiences%2F&flow=485229&a=yes&g4=yes&u=21eb9b34-9e18-4c56-9baf-b3250f760610&from-ssl=yes&ga4t=AW-16671893323%2Cundefined__undefined%3BAW-652726401%2Cundefined__undefined%3BG-8Q8EVSBEKN%2C1692619388.1765839750__1774470193%3B&cp=no&csp=no&gclid=CjwKCAjw1N7NBhAoEiwAcPchp7JVB6ACBJyH4RIYouA2FwuutUWFWV5RRrPs_GdbdgEIcMdD6o0vNhoCCW8QAvD_BwE",
+            "button_style_secondary_2": true,
+            "box_color_scheme": "scheme-1",
+            "desktop_content_position": "middle",
+            "desktop_content_alignment": "left",
+            "content_layout": "no-overlap",
+            "mobile_content_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "content_UBVxcJ"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "background_image": "shopify://shop_images/image.png",
+        "layout": "page-width",
+        "aspect_ratio": "square",
+        "desktop_image_width": "medium",
+        "slider_show_dots": true,
+        "slider_show_arrows": false,
+        "padding_top": 2,
+        "padding_bottom": 2,
+        "margin_bottom": 0
+      }
+    },
+    "media_with_text_Niqw8y": {
+      "type": "media-with-text",
+      "blocks": {
+        "content_h4zCQA": {
+          "type": "content",
+          "settings": {
+            "image_first": false,
+            "image": "shopify://shop_images/20240911_154307-1-scaled-e1732216349355.webp",
+            "video_url": "",
+            "video_autoplay": false,
+            "heading": "Whisky Experience",
+            "heading_size": "h1",
+            "text": "<p>ALL ABOUT WHISKY<br/><br/></p><p><em>1 hour  | 2-6 people<br/><br/></em></p><p>Our Whisky Experience begins by exploring the elements of craft whisky making and what it means to be “Craft” in B.C. Guests will enjoy a tour of the distillery and an insight into craft whisky production before being treated to a guided tasting of 4 of our premium whiskies. Depart with a Signature Okanagan Spirits whisky tasting glass for you to enjoy at home.</p>",
+            "text_style": "body",
+            "mobile_text_style": "body--mobile",
+            "button_label": "Reserve Vernon",
+            "button_link": "https://fareharbor.com/embeds/book/okanaganspiritscraftdistillery/items/215520/?full-items=yes&back=https%3A%2F%2Fwww.okanaganspirits.com%2Ftours-experiences%2F&flow=485228&a=yes&g4=yes&u=21eb9b34-9e18-4c56-9baf-b3250f760610&from-ssl=yes&ga4t=AW-16671893323%2Cundefined__undefined%3BAW-652726401%2Cundefined__undefined%3BG-8Q8EVSBEKN%2C1692619388.1765839750__1774470193%3B&cp=no&csp=no&gclid=CjwKCAjw1N7NBhAoEiwAcPchp7JVB6ACBJyH4RIYouA2FwuutUWFWV5RRrPs_GdbdgEIcMdD6o0vNhoCCW8QAvD_BwE",
+            "button_style_secondary": true,
+            "button_label_2": "Reserve Kelowna",
+            "button_link_2": "https://fareharbor.com/embeds/book/okanaganspiritscraftdistillery/items/271143/?full-items=yes&back=https%3A%2F%2Fwww.okanaganspirits.com%2Ftours-experiences%2F&flow=485229&a=yes&g4=yes&u=21eb9b34-9e18-4c56-9baf-b3250f760610&from-ssl=yes&ga4t=AW-16671893323%2Cundefined__undefined%3BAW-652726401%2Cundefined__undefined%3BG-8Q8EVSBEKN%2C1692619388.1765839750__1774470193%3B&cp=no&csp=no&gclid=CjwKCAjw1N7NBhAoEiwAcPchp7JVB6ACBJyH4RIYouA2FwuutUWFWV5RRrPs_GdbdgEIcMdD6o0vNhoCCW8QAvD_BwE",
+            "button_style_secondary_2": true,
+            "box_color_scheme": "scheme-1",
+            "desktop_content_position": "middle",
+            "desktop_content_alignment": "left",
+            "content_layout": "no-overlap",
+            "mobile_content_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "content_h4zCQA"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "background_image": "shopify://shop_images/image.png",
+        "layout": "page-width",
+        "aspect_ratio": "square",
+        "desktop_image_width": "medium",
+        "slider_show_dots": true,
+        "slider_show_arrows": false,
+        "padding_top": 2,
+        "padding_bottom": 2,
+        "margin_bottom": 0
+      }
+    },
+    "media_with_text_8Pbmjx": {
+      "type": "media-with-text",
+      "blocks": {
+        "content_cgp9Mt": {
+          "type": "content",
+          "settings": {
+            "image_first": true,
+            "image": "shopify://shop_images/20240911_154307-1-scaled-e1732216349355.webp",
+            "video_url": "",
+            "video_autoplay": false,
+            "heading": "Whisky Experience",
+            "heading_size": "h1",
+            "text": "<p>ALL ABOUT WHISKY<br/><br/></p><p><em>1 hour  | 2-6 people<br/><br/></em></p><p>Our Whisky Experience begins by exploring the elements of craft whisky making and what it means to be “Craft” in B.C. Guests will enjoy a tour of the distillery and an insight into craft whisky production before being treated to a guided tasting of 4 of our premium whiskies. Depart with a Signature Okanagan Spirits whisky tasting glass for you to enjoy at home.</p>",
+            "text_style": "body",
+            "mobile_text_style": "body--mobile",
+            "button_label": "Reserve Vernon",
+            "button_link": "https://fareharbor.com/embeds/book/okanaganspiritscraftdistillery/items/215520/?full-items=yes&back=https%3A%2F%2Fwww.okanaganspirits.com%2Ftours-experiences%2F&flow=485228&a=yes&g4=yes&u=21eb9b34-9e18-4c56-9baf-b3250f760610&from-ssl=yes&ga4t=AW-16671893323%2Cundefined__undefined%3BAW-652726401%2Cundefined__undefined%3BG-8Q8EVSBEKN%2C1692619388.1765839750__1774470193%3B&cp=no&csp=no&gclid=CjwKCAjw1N7NBhAoEiwAcPchp7JVB6ACBJyH4RIYouA2FwuutUWFWV5RRrPs_GdbdgEIcMdD6o0vNhoCCW8QAvD_BwE",
+            "button_style_secondary": true,
+            "button_label_2": "Reserve Kelowna",
+            "button_link_2": "https://fareharbor.com/embeds/book/okanaganspiritscraftdistillery/items/271143/?full-items=yes&back=https%3A%2F%2Fwww.okanaganspirits.com%2Ftours-experiences%2F&flow=485229&a=yes&g4=yes&u=21eb9b34-9e18-4c56-9baf-b3250f760610&from-ssl=yes&ga4t=AW-16671893323%2Cundefined__undefined%3BAW-652726401%2Cundefined__undefined%3BG-8Q8EVSBEKN%2C1692619388.1765839750__1774470193%3B&cp=no&csp=no&gclid=CjwKCAjw1N7NBhAoEiwAcPchp7JVB6ACBJyH4RIYouA2FwuutUWFWV5RRrPs_GdbdgEIcMdD6o0vNhoCCW8QAvD_BwE",
+            "button_style_secondary_2": true,
+            "box_color_scheme": "scheme-1",
+            "desktop_content_position": "middle",
+            "desktop_content_alignment": "left",
+            "content_layout": "no-overlap",
+            "mobile_content_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "content_cgp9Mt"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "background_image": "shopify://shop_images/image.png",
+        "layout": "page-width",
+        "aspect_ratio": "square",
+        "desktop_image_width": "medium",
+        "slider_show_dots": true,
+        "slider_show_arrows": false,
+        "padding_top": 2,
+        "padding_bottom": 2,
+        "margin_bottom": 0
+      }
     }
   },
   "order": [
-    "contact_form_zfnTji"
+    "contact_form_zfnTji",
+    "banner_iDgk78",
+    "media_with_text_aUz6qF",
+    "media_with_text_8TzaYa",
+    "media_with_text_Niqw8y",
+    "media_with_text_8Pbmjx"
   ]
 }

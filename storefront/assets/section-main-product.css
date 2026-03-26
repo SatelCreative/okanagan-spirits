@@ -115,14 +115,14 @@ product-info {
 /* Title */
 .product__title {
   word-break: break-word;
-  font-size: 48px;
+  font-size: 36px;
   letter-spacing: 2.4px;
   margin: 0;
 }
 
 @media screen and (max-width: 749px) {
   .product__title {
-    font-size: 32px;
+    font-size: 24px;
     letter-spacing: 1.6px;
   }
 }
@@ -167,7 +167,7 @@ product-info {
 /* Price */
 .product__price {
   font-family: var(--font-heading-family);
-  font-size: 45px;
+  font-size: 20px;
   line-height: 60px;
 }
 
