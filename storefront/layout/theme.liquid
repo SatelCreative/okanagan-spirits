@@ -113,7 +113,9 @@
   </head>
 
   <body class="gradient">
-    {%- render 'age-gate' -%}
+    {% if settings.age_gate_enabled %}
+      {%- render 'age-gate' -%}
+    {% endif %}
 
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}

@@ -11,6 +11,12 @@
     "name": "Age Gate",
     "settings": [
       {
+        "type": "checkbox",
+        "id": "age_gate_enabled",
+        "label": "Enable age gate",
+        "default": true
+      },
+      {
         "type": "inline_richtext",
         "id": "age_gate_title",
         "label": "Age gate title",
