@@ -9,29 +9,371 @@
  */
 {
   "sections": {
-    "contact_form_zfnTji": {
-      "type": "contact-form",
-      "name": "t:sections.contact-form.presets.name",
+    "rich_text_bpzNBD": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_TBP9gX": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our Story",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_TBP9gX"
+      ],
+      "name": "t:sections.rich-text.presets.name",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-be262358-57ed-451e-b0f4-c952a25cb250",
+        "background_image": "shopify://shop_images/image.png",
         "layout": "page-width",
-        "title": "Contact Us",
-        "header_is_h1": true,
+        "desktop_content_position": "left",
+        "content_alignment": "center",
+        "padding_top": 2,
+        "padding_bottom": 2,
+        "margin_bottom": 0
+      }
+    },
+    "timeline_i9zP9t": {
+      "type": "timeline",
+      "blocks": {
+        "item_pVFQ6t": {
+          "type": "item",
+          "settings": {
+            "year": "2004",
+            "image": "shopify://shop_images/OkanaganSpirits_Dyck_Family_Jeremie_Melissa_Tyler_Patricia_Tony-11_4d74704c-3935-43d7-a670-da8b52bfc46d.webp",
+            "subtitle": "<em>Rooted in old-world craft, a new distilling legacy takes shape in the Okanagan.</em>",
+            "title": "The Spirit is Born",
+            "description": "<p>Okanagan Spirits is founded with a focus on traditional techniques and locally sourced fruit, laying the groundwork for craft distilling in Western Canada.</p>"
+          }
+        },
+        "item_3r9Xtw": {
+          "type": "item",
+          "settings": {
+            "year": "2007",
+            "image": "shopify://shop_images/Whisky_Green_Laird_-_adamDewar_OkanaganSpirits_Apr2022-9_1.jpg",
+            "subtitle": "<em>Small-batch spirits begin to set a new bar.</em>",
+            "title": "<strong>Raising the Standard</strong>",
+            "description": "<p>As one of Canada’s early craft distilleries, the brand helps define quality and authenticity in a growing premium spirits market.</p>"
+          }
+        },
+        "item_gMacKV": {
+          "type": "item",
+          "settings": {
+            "year": "2013",
+            "image": "shopify://shop_images/Whisky-LOF-Mini-Gift-Pack-Christmas-1-e1769039996153.jpg",
+            "subtitle": "<em>Recognition grows with every bottle poured.</em>",
+            "title": "Making a Name Worth Sipping",
+            "description": "<p>Expanded production and award-winning releases establish Okanagan Spirits as a respected name across British Columbia and beyond.</p>"
+          }
+        },
+        "item_e7xwAx": {
+          "type": "item",
+          "settings": {
+            "year": "2018",
+            "image": "shopify://shop_images/Vernon_Tasting_Bar_Lee_Watson_41.webp",
+            "subtitle": "Craft becomes an experience, not just a product.",
+            "title": "<strong>Where the Bar Meets the Craft</strong>",
+            "description": "<p>Retail spaces and tasting experiences bring the brand to life, connecting visitors directly to the distilling process and story.</p>"
+          }
+        },
+        "item_ABcBmd": {
+          "type": "item",
+          "settings": {
+            "year": "2023",
+            "image": "shopify://shop_images/OKspirits2023_78-1-scaled.webp",
+            "subtitle": "Tradition evolves for a new generation of spirit enthusiasts.",
+            "title": "<strong>A Modern Pour</strong>",
+            "description": "<p>Investment in digital, retail, and operations supports continued growth while preserving the heritage and quality at the brand’s core.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_pVFQ6t",
+        "item_3r9Xtw",
+        "item_gMacKV",
+        "item_e7xwAx",
+        "item_ABcBmd"
+      ],
+      "name": "Timeline",
+      "settings": {
+        "color_scheme": "scheme-be262358-57ed-451e-b0f4-c952a25cb250",
+        "layout": "page-width",
+        "title": "Our Legacy in the Making",
+        "header_is_h1": false,
+        "visually_hide_header": false,
+        "heading_size": "h2",
+        "description": "<p>From orchard to still, each chapter reflects a commitment to tradition, innovation, and the art of fine spirits.</p>",
+        "text_style": "body",
+        "mobile_text_style": "body--mobile",
+        "heading_alignment": "center",
+        "padding_top": 4,
+        "padding_bottom": 4,
+        "margin_bottom": 0
+      }
+    },
+    "multicolumn_PfzLEH": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_eHYUpq": {
+          "type": "column",
+          "settings": {
+            "color_scheme": "scheme-be262358-57ed-451e-b0f4-c952a25cb250",
+            "image": "shopify://shop_images/2022-awards.webp",
+            "image_overlay_opacity": 0,
+            "show_overlay_on_hover": false,
+            "title": "",
+            "heading_size": "h3",
+            "heading_size_mobile": "h3--mobile",
+            "text": "",
+            "text_style": "body",
+            "text_style_mobile": "body--mobile",
+            "link_label": "",
+            "link": "",
+            "show_link_as_button": false,
+            "card_padding": 0.5
+          }
+        }
+      },
+      "block_order": [
+        "column_eHYUpq"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "color_scheme": "scheme-be262358-57ed-451e-b0f4-c952a25cb250",
+        "background_image": "shopify://shop_images/image.png",
+        "layout": "page-width",
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "title": "Awards + Recognition",
+        "header_is_h1": false,
         "visually_hide_header": false,
         "heading_size": "h2",
         "description": "",
         "text_style": "body",
         "mobile_text_style": "body--mobile",
         "heading_alignment": "center",
-        "social_title": "Stay in the know",
-        "show_social": false,
+        "cta_text": "",
+        "cta_link": "",
+        "override_grid_gap": false,
+        "spacing_grid_horizontal": 8,
+        "spacing_grid_horizontal_mobile": 8,
+        "overlap": false,
+        "aspect_ratio": "adapt",
+        "override_image_size": false,
+        "image_width": 72,
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "columns_mobile": 1,
+        "swipe_on_mobile": false,
+        "slider_show_dots": true,
+        "slider_show_arrows": false,
+        "padding_top": 2,
+        "padding_bottom": 4,
+        "margin_bottom": 0
+      }
+    },
+    "collection_list_rfgzrp": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_pTpFNP": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "whisky",
+            "collection_image": "shopify://shop_images/Whisky_LOF_Blue_Rum_dark_theSecondShot_Adam_Dewar.jpg",
+            "title_override": ""
+          }
+        },
+        "featured_collection_UrRDV4": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bourbon-style",
+            "collection_image": "shopify://shop_images/Whisky_LOF_Blue_Rum_dark_theSecondShot_Adam_Dewar.jpg",
+            "title_override": ""
+          }
+        },
+        "featured_collection_irxbqC": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "cabin-gin",
+            "collection_image": "shopify://shop_images/Whisky_LOF_Blue_Rum_dark_theSecondShot_Adam_Dewar.jpg",
+            "title_override": ""
+          }
+        },
+        "featured_collection_ABb7kh": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "vodka",
+            "collection_image": "shopify://shop_images/Whisky_LOF_Blue_Rum_dark_theSecondShot_Adam_Dewar.jpg",
+            "title_override": ""
+          }
+        },
+        "featured_collection_nVUdj9": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "absinthe",
+            "collection_image": "shopify://shop_images/Whisky_LOF_Blue_Rum_dark_theSecondShot_Adam_Dewar.jpg",
+            "title_override": ""
+          }
+        },
+        "featured_collection_pe8K73": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "aquavit",
+            "collection_image": "shopify://shop_images/Whisky_LOF_Blue_Rum_dark_theSecondShot_Adam_Dewar.jpg",
+            "title_override": ""
+          }
+        },
+        "featured_collection_J4Bj7a": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "fruit-brandy-marc",
+            "collection_image": "shopify://shop_images/Whisky_LOF_Blue_Rum_dark_theSecondShot_Adam_Dewar.jpg",
+            "title_override": "Eau De Vie"
+          }
+        },
+        "featured_collection_9ECXLz": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bottled-cocktails",
+            "collection_image": "shopify://shop_images/Whisky_LOF_Blue_Rum_dark_theSecondShot_Adam_Dewar.jpg",
+            "title_override": ""
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_pTpFNP",
+        "featured_collection_UrRDV4",
+        "featured_collection_irxbqC",
+        "featured_collection_ABb7kh",
+        "featured_collection_nVUdj9",
+        "featured_collection_pe8K73",
+        "featured_collection_J4Bj7a",
+        "featured_collection_9ECXLz"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "color_scheme": "scheme-be262358-57ed-451e-b0f4-c952a25cb250",
+        "color_scheme_card": "scheme-be262358-57ed-451e-b0f4-c952a25cb250",
+        "layout": "page-width",
+        "title": "Featured Spirits",
+        "header_is_h1": false,
+        "visually_hide_header": false,
+        "heading_size": "h2",
+        "description": "",
+        "text_style": "body",
+        "mobile_text_style": "body--mobile",
+        "heading_alignment": "center",
+        "show_all": false,
+        "show_all_text": "View all",
+        "columns_desktop": 5,
+        "enable_desktop_slider": true,
+        "columns_mobile": 1.5,
+        "swipe_on_mobile": true,
+        "full_width": false,
+        "slider_show_dots": true,
+        "slider_show_arrows": false,
         "padding_top": 2,
         "padding_bottom": 2,
+        "margin_bottom": 0
+      }
+    },
+    "media_with_text_dTRTmA": {
+      "type": "media-with-text",
+      "blocks": {
+        "content_rVjTGi": {
+          "type": "content",
+          "settings": {
+            "image_first": true,
+            "image": "shopify://shop_images/2021-Okanagan-Spirits-Dyck-Family-11.webp",
+            "video_autoplay": false,
+            "heading": "Authentic Craft Distillation",
+            "heading_size": "h2",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text_style": "body",
+            "mobile_text_style": "body--mobile",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "box_color_scheme": "scheme-be262358-57ed-451e-b0f4-c952a25cb250",
+            "desktop_content_position": "middle",
+            "desktop_content_alignment": "left",
+            "content_layout": "no-overlap",
+            "mobile_content_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "content_rVjTGi"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "color_scheme": "scheme-be262358-57ed-451e-b0f4-c952a25cb250",
+        "layout": "page-width",
+        "aspect_ratio": "square",
+        "desktop_image_width": "small",
+        "slider_show_dots": true,
+        "slider_show_arrows": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_bottom": 0
+      }
+    },
+    "media_with_text_g76WVq": {
+      "type": "media-with-text",
+      "blocks": {
+        "content_8YYn3q": {
+          "type": "content",
+          "settings": {
+            "image_first": false,
+            "image": "shopify://shop_images/corn.webp",
+            "video_autoplay": false,
+            "heading": "Authentic Craft Distillation",
+            "heading_size": "h2",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text_style": "body",
+            "mobile_text_style": "body--mobile",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "box_color_scheme": "scheme-be262358-57ed-451e-b0f4-c952a25cb250",
+            "desktop_content_position": "middle",
+            "desktop_content_alignment": "left",
+            "content_layout": "no-overlap",
+            "mobile_content_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "content_8YYn3q"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "color_scheme": "scheme-be262358-57ed-451e-b0f4-c952a25cb250",
+        "layout": "page-width",
+        "aspect_ratio": "square",
+        "desktop_image_width": "small",
+        "slider_show_dots": true,
+        "slider_show_arrows": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
         "margin_bottom": 0
       }
     }
   },
   "order": [
-    "contact_form_zfnTji"
+    "rich_text_bpzNBD",
+    "timeline_i9zP9t",
+    "multicolumn_PfzLEH",
+    "collection_list_rfgzrp",
+    "media_with_text_dTRTmA",
+    "media_with_text_g76WVq"
   ]
 }

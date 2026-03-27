@@ -909,12 +909,6 @@
       },
       {
         "type": "checkbox",
-        "id": "enable_quickview",
-        "label": "Enable quickview",
-        "default": false
-      },
-      {
-        "type": "checkbox",
         "id": "card_price",
         "label": "Show price",
         "default": true

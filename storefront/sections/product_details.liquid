@@ -67,14 +67,13 @@
 
                       {% render 'icon-diamond' %}
 
-                      <div class="product-details__box-heading">The Spirit</div>
+                      <div class="product-details__box-heading">SPIRIT</div>
 
                       <div class="product-details__box-content">
-                        Lorem ipsum dolor sit amet consectetur. Hac nibh accumsan egestas enim convallis orci duis
-                        euismod varius. Fermentum dolor viverra pulvinar cursus sapien duis commodo arcu.
+                         {{ product.description }}
+                      </div>
                       </div>
                     </div>
-                  </div>
                 {% when 'reviews' %}
                   <div class="product-details__reviews">
                     {{ block.settings.content }}

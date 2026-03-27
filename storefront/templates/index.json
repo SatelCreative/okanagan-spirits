@@ -81,61 +81,6 @@
         "margin_bottom": 0
       }
     },
-    "timeline_Nm7Leh": {
-      "type": "timeline",
-      "blocks": {
-        "item_LzgEc9": {
-          "type": "item",
-          "settings": {
-            "year": "2004",
-            "image": "shopify://shop_images/Whisky_Green_Laird_of_Fintry_LOF_Tequila_squre_2.jpg",
-            "subtitle": "The Beginning",
-            "title": "BC's First Craft Distillery",
-            "description": "<p>Frank Deiter had a bold vision: to create world-class craft spirits from the bountiful harvests of British Columbia's Okanagan Valley. Drawing on generations of European distilling tradition and the region's exceptional fruit, Okanagan Spirits was established as the first craft distillery in BC — pioneering a movement that would transform the Canadian spirits landscape.</p>"
-          }
-        },
-        "item_jxqNJz": {
-          "type": "item",
-          "settings": {
-            "year": "2008",
-            "image": "shopify://shop_images/Whisky_Green_Laird_Ice_1.jpg",
-            "subtitle": "meep",
-            "title": "moop",
-            "description": "<p>this is a description</p>"
-          }
-        },
-        "item_3rWrgF": {
-          "type": "item",
-          "settings": {
-            "year": "2012",
-            "subtitle": "",
-            "title": "",
-            "description": ""
-          }
-        }
-      },
-      "block_order": [
-        "item_LzgEc9",
-        "item_jxqNJz",
-        "item_3rWrgF"
-      ],
-      "name": "Timeline",
-      "settings": {
-        "color_scheme": "scheme-1",
-        "layout": "page-width",
-        "title": "",
-        "header_is_h1": false,
-        "visually_hide_header": false,
-        "heading_size": "h2",
-        "description": "",
-        "text_style": "body",
-        "mobile_text_style": "body--mobile",
-        "heading_alignment": "left",
-        "padding_top": 2,
-        "padding_bottom": 2,
-        "margin_bottom": 0
-      }
-    },
     "featured_collection_JMU7xb": {
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
@@ -171,6 +116,84 @@
         "margin_bottom": 0
       }
     },
+    "timeline_jP7gLt": {
+      "type": "timeline",
+      "blocks": {
+        "item_canDYc": {
+          "type": "item",
+          "settings": {
+            "year": "2004",
+            "image": "shopify://shop_images/OkanaganSpirits_Dyck_Family_Jeremie_Melissa_Tyler_Patricia_Tony-11_4d74704c-3935-43d7-a670-da8b52bfc46d.webp",
+            "subtitle": "<em>Rooted in old-world craft, a new distilling legacy takes shape in the Okanagan.</em>",
+            "title": "The Spirit is Born",
+            "description": "<p>Okanagan Spirits is founded with a focus on traditional techniques and locally sourced fruit, laying the groundwork for craft distilling in Western Canada.</p>"
+          }
+        },
+        "item_EinMPH": {
+          "type": "item",
+          "settings": {
+            "year": "2007",
+            "image": "shopify://shop_images/OkanaganSpirits_Dyck_Family_Jeremie_Melissa_Tyler_Patricia_Tony-11_4d74704c-3935-43d7-a670-da8b52bfc46d.webp",
+            "subtitle": "<em>Small-batch spirits begin to set a new bar.</em>",
+            "title": "<strong>Raising the Standard</strong>",
+            "description": "<p>As one of Canada’s early craft distilleries, the brand helps define quality and authenticity in a growing premium spirits market.</p>"
+          }
+        },
+        "item_eJ988X": {
+          "type": "item",
+          "settings": {
+            "year": "2013",
+            "image": "shopify://shop_images/OkanaganSpirits_Dyck_Family_Jeremie_Melissa_Tyler_Patricia_Tony-11_4d74704c-3935-43d7-a670-da8b52bfc46d.webp",
+            "subtitle": "<em>Recognition grows with every bottle poured.</em>",
+            "title": "Making a Name Worth Sipping",
+            "description": "<p>Expanded production and award-winning releases establish Okanagan Spirits as a respected name across British Columbia and beyond.</p>"
+          }
+        },
+        "item_f6K4xV": {
+          "type": "item",
+          "settings": {
+            "year": "2018",
+            "image": "shopify://shop_images/OkanaganSpirits_Dyck_Family_Jeremie_Melissa_Tyler_Patricia_Tony-11_4d74704c-3935-43d7-a670-da8b52bfc46d.webp",
+            "subtitle": "Craft becomes an experience, not just a product.",
+            "title": "<strong>Where the Bar Meets the Craft</strong>",
+            "description": "<p>Retail spaces and tasting experiences bring the brand to life, connecting visitors directly to the distilling process and story.</p>"
+          }
+        },
+        "item_re4MpR": {
+          "type": "item",
+          "settings": {
+            "year": "2023",
+            "image": "shopify://shop_images/OkanaganSpirits_Dyck_Family_Jeremie_Melissa_Tyler_Patricia_Tony-11_4d74704c-3935-43d7-a670-da8b52bfc46d.webp",
+            "subtitle": "Tradition evolves for a new generation of spirit enthusiasts.",
+            "title": "<strong>A Modern Pour</strong>",
+            "description": "<p>Investment in digital, retail, and operations supports continued growth while preserving the heritage and quality at the brand’s core.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_canDYc",
+        "item_EinMPH",
+        "item_eJ988X",
+        "item_f6K4xV",
+        "item_re4MpR"
+      ],
+      "name": "Timeline",
+      "settings": {
+        "color_scheme": "scheme-f18d1889-243b-47e2-91a6-9a0d01cbbf4a",
+        "layout": "page-width",
+        "title": "Our Legacy in the Making",
+        "header_is_h1": true,
+        "visually_hide_header": false,
+        "heading_size": "h2",
+        "description": "<p>From orchard to still, each chapter reflects a commitment to tradition, innovation, and the art of fine spirits.</p>",
+        "text_style": "body",
+        "mobile_text_style": "body--mobile",
+        "heading_alignment": "center",
+        "padding_top": 4,
+        "padding_bottom": 4,
+        "margin_bottom": 0
+      }
+    },
     "media_with_text_yHXQ8n": {
       "type": "media-with-text",
       "blocks": {
@@ -203,51 +226,7 @@
       "block_order": [
         "content_gxmDWb"
       ],
-      "name": "t:sections.image-with-text.name",
-      "settings": {
-        "color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
-        "layout": "page-width",
-        "aspect_ratio": "square",
-        "desktop_image_width": "medium",
-        "slider_show_dots": true,
-        "slider_show_arrows": false,
-        "padding_top": 2,
-        "padding_bottom": 2,
-        "margin_bottom": 0
-      }
-    },
-    "media_with_text_9rVgBj": {
-      "type": "media-with-text",
-      "blocks": {
-        "content_RmehW3": {
-          "type": "content",
-          "settings": {
-            "image_first": false,
-            "image": "shopify://shop_images/Tours-and-Tastings-1-scaled.jpg",
-            "video_url": "",
-            "video_autoplay": false,
-            "heading": "Tours & Experiences",
-            "heading_size": "h2",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "text_style": "body",
-            "mobile_text_style": "body--mobile",
-            "button_label": "Visit Us",
-            "button_link": "shopify://pages/tours-experiences",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false,
-            "box_color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
-            "desktop_content_position": "middle",
-            "desktop_content_alignment": "left",
-            "content_layout": "no-overlap",
-            "mobile_content_alignment": "left"
-          }
-        }
-      },
-      "block_order": [
-        "content_RmehW3"
-      ],
+      "disabled": true,
       "name": "t:sections.image-with-text.name",
       "settings": {
         "color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
@@ -273,7 +252,7 @@
             "image": "shopify://shop_images/oks_recipes_and_cocktails_bg1.jpg",
             "image_mobile": "shopify://shop_images/oks_recipes_and_cocktails_bg1.jpg",
             "image_link": "",
-            "image_overlay_opacity": 20,
+            "image_overlay_opacity": 60,
             "video_url": "",
             "video_description": "",
             "enable_video_autoplay": true,
@@ -333,6 +312,51 @@
         "margin_bottom": 0
       }
     },
+    "media_with_text_9rVgBj": {
+      "type": "media-with-text",
+      "blocks": {
+        "content_RmehW3": {
+          "type": "content",
+          "settings": {
+            "image_first": false,
+            "image": "shopify://shop_images/Tours-and-Tastings-1-scaled.jpg",
+            "video_url": "",
+            "video_autoplay": false,
+            "heading": "Tours & Experiences",
+            "heading_size": "h2",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text_style": "body",
+            "mobile_text_style": "body--mobile",
+            "button_label": "Visit Us",
+            "button_link": "shopify://pages/tours-experiences",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "box_color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
+            "desktop_content_position": "middle",
+            "desktop_content_alignment": "left",
+            "content_layout": "no-overlap",
+            "mobile_content_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "content_RmehW3"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
+        "layout": "page-width",
+        "aspect_ratio": "square",
+        "desktop_image_width": "medium",
+        "slider_show_dots": true,
+        "slider_show_arrows": false,
+        "padding_top": 2,
+        "padding_bottom": 2,
+        "margin_bottom": 0
+      }
+    },
     "featured_blog_hRFJ7m": {
       "type": "featured-blog",
       "custom_css": [
@@ -342,6 +366,7 @@
       "name": "t:sections.featured-blog.presets.name",
       "settings": {
         "color_scheme": "scheme-f18d1889-243b-47e2-91a6-9a0d01cbbf4a",
+        "background_image": "shopify://shop_images/image.png",
         "layout": "page-width",
         "title": "Browse Recipes",
         "header_is_h1": false,
@@ -450,7 +475,7 @@
         "color_scheme": "scheme-be262358-57ed-451e-b0f4-c952a25cb250",
         "color_scheme_card": "scheme-be262358-57ed-451e-b0f4-c952a25cb250",
         "layout": "page-width",
-        "title": "Featured Collections",
+        "title": "Featured Spirits",
         "header_is_h1": false,
         "visually_hide_header": false,
         "heading_size": "h2",
@@ -475,11 +500,11 @@
   },
   "order": [
     "banner_bUwrTe",
-    "timeline_Nm7Leh",
     "featured_collection_JMU7xb",
+    "timeline_jP7gLt",
     "media_with_text_yHXQ8n",
-    "media_with_text_9rVgBj",
     "banner_EhUJqA",
+    "media_with_text_9rVgBj",
     "featured_blog_hRFJ7m",
     "collection_list_7c7Dm7"
   ]

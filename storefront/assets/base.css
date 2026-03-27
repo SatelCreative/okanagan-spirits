@@ -3494,6 +3494,14 @@ body.verification-required {
   overflow: hidden;
 }
 
+body.verification-required .age-gate {
+  display: flex;
+}
+
+body.verification-required .age-gate ~ * {
+  display: none;
+}
+
 .age-gate {
   position: fixed;
   top: 0;
@@ -3503,13 +3511,9 @@ body.verification-required {
   background: rgba(var(--color-background), 0.2);
   z-index: 1000;
 
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
-}
-
-.age-gate ~ * {
-  display: none;
 }
 
 .age-gate__modal {

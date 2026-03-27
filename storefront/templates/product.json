@@ -151,7 +151,7 @@
           "settings": {
             "type": "description",
             "heading": "Description",
-            "content": "<p>{{ product.metafields.custom.product_appearance.value }}{{ product.metafields.custom.product_mouth_feel | metafield_tag }}{{ product.metafields.custom.product_finish | metafield_tag }}</p>"
+            "content": "{{ product.description }}"
           }
         },
         "tab_hXCexD": {

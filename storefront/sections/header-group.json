@@ -13,12 +13,9 @@
   "sections": {
     "announcement-bar": {
       "type": "announcement-bar",
-      "custom_css": [
-        ".utility-bar__container {font-family: \"cinzel\"; letter-spacing: 0.5px;}"
-      ],
       "settings": {
         "color_scheme": "scheme-a4419e2a-db44-4cde-9d3a-1f1544200114",
-        "text": "FREE CANADIAN SHIPPING ON ORDERS $150+",
+        "text": "Free Canadian Shipping On Orders $150+",
         "link": ""
       }
     },

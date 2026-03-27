@@ -93,6 +93,7 @@
         </div>
       </div>
 
+      {% comment %}
       {%- if type == 'product' and settings.enable_quickview %}
         {%- unless hide_quickview -%}
           <quickview-trigger
@@ -106,6 +107,7 @@
           </quickview-trigger>
         {%- endunless -%}
       {%- endif -%}
+      {% endcomment %}
     </div>
   {%- endcapture -%}
 

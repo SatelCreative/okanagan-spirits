@@ -31,6 +31,10 @@
       assign price = false
     endcomment
 
+    if value == "50ml"
+      assign skip_option = true
+    endif
+
     for variant in product.variants
       if variant.title == value
         comment

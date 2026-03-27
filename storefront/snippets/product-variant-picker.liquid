@@ -8,7 +8,24 @@
   Usage:
   {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
 {% endcomment %}
-{%- unless product.has_only_default_variant and product.metafields.custom.siblings == blank -%}
+
+
+{%- assign show_variants = false -%}
+
+{% if product.has_only_default_variant %}
+{% else %}
+  {% for variant in product.variants %}
+    {% if variant.option1 != "50ml" %}
+      {% assign show_variants = true %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% if product.metafields.custom.siblings != blank %}
+  {% assign show_variants = true %}
+{% endif %}
+
+{%- if show_variants -%}
   <variant-selects
     id="variant-selects-{{ section.id }}"
     data-section="{{ section.id }}"
@@ -72,4 +89,4 @@
       {{ product.selected_or_first_available_variant | json }}
     </script>
   </variant-selects>
-{%- endunless -%}
+{%- endif -%}

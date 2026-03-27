@@ -193,15 +193,15 @@
         "settings": {
           "background": "#1a1612",
           "background_gradient": "linear-gradient(180deg, rgba(26, 22, 18, 1) 4%, rgba(13, 11, 9, 1) 100%)",
-          "text": "#ffffff",
+          "text": "#f5f3ed",
           "button": "rgba(0,0,0,0)",
-          "button_border": "#c6a75c",
-          "button_label": "#c6a75c",
+          "button_border": "#cda235",
+          "button_label": "#cda235",
           "button_hover": "rgba(0,0,0,0)",
           "button_border_hover": "#c6a75c",
           "button_label_hover": "#c6a75c",
-          "button_secondary": "#c6a75c",
-          "button_secondary_border": "#c6a75c",
+          "button_secondary": "#cda235",
+          "button_secondary_border": "#cda235",
           "button_secondary_label": "#1a1612",
           "button_secondary_hover": "#e4b43b",
           "button_secondary_border_hover": "#e4b43b",
@@ -337,5 +337,10 @@
         }
       }
     }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      ".button {font-family: \"Market Deco\";}"
+    ]
   }
 }

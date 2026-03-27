@@ -11,6 +11,7 @@
   "sections": {
     "contact_form_zfnTji": {
       "type": "contact-form",
+      "disabled": true,
       "name": "t:sections.contact-form.presets.name",
       "settings": {
         "color_scheme": "",
@@ -29,9 +30,291 @@
         "padding_bottom": 2,
         "margin_bottom": 0
       }
+    },
+    "banner_WnJmGn": {
+      "type": "banner",
+      "blocks": {
+        "media_aPemJx": {
+          "type": "media",
+          "settings": {
+            "color_scheme_box": "",
+            "transparent_box_desktop": true,
+            "transparent_box_mobile": true,
+            "image": "shopify://shop_images/Okanagan-Spirits-About-header-2-11.webp",
+            "image_mobile": "shopify://shop_images/Okanagan-Spirits-About-header-2-11.webp",
+            "image_link": "",
+            "image_overlay_opacity": 0,
+            "video_description": "",
+            "enable_video_autoplay": true,
+            "desktop_content_position": "middle-center",
+            "desktop_remove_extra_padding": false,
+            "desktop_content_alignment": "center",
+            "mobile_content_position": "middle",
+            "mobile_content_alignment": "center",
+            "heading": "Stewardship & Sustainability Initiatives",
+            "heading_size": "h1--desktop",
+            "heading_size_mobile": "h1--mobile",
+            "heading_letter_spacing": "",
+            "heading_shadow": "",
+            "heading_italic": false,
+            "is_h1": true,
+            "visually_hidden": false,
+            "text": "",
+            "text_style": "body--desktop",
+            "mobile_text_style": "body--mobile",
+            "button_label_1": "",
+            "button_link_1": "",
+            "button_bold_1": false,
+            "button_style_1": "button",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_bold_2": false,
+            "button_style_2": "button"
+          }
+        }
+      },
+      "block_order": [
+        "media_aPemJx"
+      ],
+      "name": "Media Banners",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "layout": "screen-width",
+        "layout_mobile": "screen-width",
+        "title": "",
+        "header_is_h1": false,
+        "visually_hide_header": false,
+        "heading_size": "h2",
+        "description": "",
+        "text_style": "body",
+        "mobile_text_style": "body--mobile",
+        "heading_alignment": "left",
+        "aspect_ratio": "xsmall",
+        "aspect_ratio_mobile": "landscape",
+        "stack_images_on_mobile": true,
+        "slider_show_dots": true,
+        "slider_show_arrows": false,
+        "accessibility_info": "",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_bottom": 0
+      }
+    },
+    "media_with_text_XMpjVx": {
+      "type": "media-with-text",
+      "blocks": {
+        "content_FdxjbX": {
+          "type": "content",
+          "settings": {
+            "image_first": true,
+            "image": "shopify://shop_images/Whisky-LOF-Old-Laird-New-Laird-Barrels-EDIT.webp",
+            "video_autoplay": false,
+            "heading": "The Laird of Fintry",
+            "heading_size": "h2",
+            "text": "<p><strong>HOMAGE TO THE OKANAGAN</strong><br/><br/>On the west shore of Okanagan Lake is the delta of Fintry and the heritage site of the former Fintry Estate. Throughout the Okanagan Valley, the legend of “The Laird of Fintry” has stoked imaginations for more than a century.</p><p>It’s a true story that “The Laird” James Cameron Dun-Water ordered a special batch of personally-labeled Single-Malt Whisky (Scotch) from his homeland of Scotland in the early 1900s. The namesake and label design of our signature Single-Malt comes directly from a leftover bottle of the Laird’s secret stash – it’s our way of honouring the history of whisky in the Okanagan.</p><p>In turn, we support the <a href=\"https://www.fintry.ca/friends/\" target=\"_blank\">Friends of Fintry Society</a> with an annual donation to help maintain the original property of The Laird.</p>",
+            "text_style": "body",
+            "mobile_text_style": "body--mobile",
+            "button_label": "Shop Laird Of Fintry",
+            "button_link": "shopify://products/2025-laird-of-fintry-black-label-cask-strength-single-malt-whisky",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "box_color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
+            "desktop_content_position": "middle",
+            "desktop_content_alignment": "left",
+            "content_layout": "no-overlap",
+            "mobile_content_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "content_FdxjbX"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "layout": "page-width",
+        "aspect_ratio": "square",
+        "desktop_image_width": "medium",
+        "slider_show_dots": true,
+        "slider_show_arrows": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_bottom": 0
+      }
+    },
+    "timeline_9aPTmt": {
+      "type": "timeline",
+      "blocks": {
+        "item_bnYwL3": {
+          "type": "item",
+          "settings": {
+            "year": "",
+            "image": "shopify://shop_images/fields.webp",
+            "subtitle": "",
+            "title": "Sustainability is in Our Spirit",
+            "description": "<p>For five generations, our family has called the beautiful Okanagan Valley home. Since opening our doors in 2004, Okanagan Spirits Craft Distillery has been more than just a family-owned business—it’s a commitment to crafting award-winning spirits while protecting the land we love. Our dedication to sustainability runs as deep as our roots in this community, and we’re proud to lead by example with green initiatives that reduce waste, support local farmers, and preserve our environment for generations to come.</p>"
+          }
+        },
+        "item_YYcrKn": {
+          "type": "item",
+          "settings": {
+            "year": "",
+            "image": "shopify://shop_images/corn.webp",
+            "subtitle": "",
+            "title": "Farm-to-Flask Philosophy",
+            "description": "<p>We live by a 100% farm-to-flask model, sourcing ingredients as locally as possible to minimize our carbon footprint. Every step of our production process—from grain to glass—is designed with sustainability in mind. By partnering with local farmers and orchardists who share our values, we ensure that the Okanagan’s rich terroir shines through in every sip of our whisky, gin, vodka, and liqueurs.</p>"
+          }
+        },
+        "item_4ticmb": {
+          "type": "item",
+          "settings": {
+            "year": "",
+            "image": "shopify://shop_images/bessie-the-cow-okanagan-spirits.webp",
+            "subtitle": "",
+            "title": "Turning Waste into Opportunity",
+            "description": "<p>At Okanagan Spirits, nothing goes to waste. After mashing, our spent grains and fruit pulp are returned to the community as nutrient-rich feed for local livestock—keeping cows like Bessie and chickens happy (and no, not <em>that</em> kind of happy; our spent grains are alcohol-free, more like a batch of delicious bran muffins!). These byproducts also enrich local fields as compost, fortifying the soil for the next harvest. Cheers to our hardworking farmers—your support fuels us all!</p><p>But that’s not all. We take the extra step of processing our distillation byproducts—known as “fronts and tails”—into fuel for our company vehicles. Does it save money? Not really, when you factor in the labour. But sustainability isn’t about the bottom line—it’s about doing what’s right for our planet, one kilometer at a time.</p><p><em>Photo credit: Cowboy Ted aka Farmer Ted</em></p>"
+          }
+        },
+        "item_VypGkP": {
+          "type": "item",
+          "settings": {
+            "year": "",
+            "image": "shopify://shop_images/building-vernon-sawmill-counters.webp",
+            "subtitle": "",
+            "title": "Building with Purpose",
+            "description": "<p>Our distilleries reflect our commitment to the environment and our heritage. In Kelowna, we’ve built with reclaimed beams from the historic Laurel and Gellatly Bay fruit packinghouses, where our ancestors once worked. Our Vernon location features salvaged flooring and countertops from local schools and buildings, alongside a stunning recycled spirits glass countertop. These choices honor the Okanagan’s past while treading lightly on its future.</p>"
+          }
+        },
+        "item_MDY6XB": {
+          "type": "item",
+          "settings": {
+            "year": "",
+            "image": "shopify://shop_images/vodka-FR-Lake-Outdoorwhisky-4.webp",
+            "subtitle": "",
+            "title": "Innovating for Efficiency",
+            "description": "<p>We’re always exploring new ways to reduce our environmental impact. From capturing heat from our stills to cut energy waste, to reusing water wherever possible, to sustainable packaging options —we’re committed to evolving for a greener tomorrow.</p>"
+          }
+        },
+        "item_Fx3Tj9": {
+          "type": "item",
+          "settings": {
+            "year": "",
+            "image": "shopify://shop_images/farmers-OKS.webp",
+            "subtitle": "",
+            "title": "Supporting Our Community",
+            "description": "<p>Sustainability isn’t just about the environment—it’s about people, too. We’re proud to give back through donations, sponsorships, and partnerships with the local farmers and orchardists who make our spirits possible. When you enjoy a glass of Okanagan Spirits, you’re supporting a thriving community that’s been our home for over a century.</p>"
+          }
+        },
+        "item_XQtwdX": {
+          "type": "item",
+          "settings": {
+            "year": "",
+            "image": "shopify://shop_images/whisky-3-pack-375ml-edit.webp",
+            "subtitle": "",
+            "title": "Bottle Return Program",
+            "description": "<p>You can be part of our sustainability story! Bring your etched Okanagan Spirits bottles back to either distillery and enjoy:</p><ul><li><strong>$4 credit</strong> for 750ml bottles</li><li><strong>$2 credit</strong> for 375ml bottles<br/>(Eligible bottles: Family Reserve Vodka & Gin & Barrel Aged Gin, Evolve, BRBN, 1Malt, Barrel Aged Gin, Essentials – Vodka, Gin, Rye, Taboo Absinthe)</li><li><strong>$25 credit</strong> for all 1.75L bottles!</li><li>(Eligible bottles: Family Reserve Vodka & Gin and barrel aged Gin, Evolve, BRBN, 1Malt, Barrel Aged Gin, Essentials – Vodka, Gin, Rye, Taboo Absinthe)</li></ul><p>Our Family Reserve and our Essentials spirits bottles are etched in Vernon, BC, with genuine gold metal in the labeling.</p>"
+          }
+        },
+        "item_dgAV4Y": {
+          "type": "item",
+          "settings": {
+            "year": "",
+            "image": "shopify://shop_images/refuling-car.webp",
+            "subtitle": "375ML OR 750ML",
+            "title": "A Toast to a Sustainable Future",
+            "description": "<p>From powering our vehicles with distillation byproducts to feeding local livestock with spent grains, we’re crafting spirits with a purpose. Join us in raising a glass to the Okanagan Valley, our farmers, and a greener planet. Sustainability is in our DNA—and it’s in every bottle we make.</p>"
+          }
+        },
+        "item_BcEjMT": {
+          "type": "item",
+          "settings": {
+            "year": "",
+            "image": "shopify://shop_images/Gift-OKS-Gin-Trio-Set-11.webp",
+            "subtitle": "Supporting the fight against gender discrimination",
+            "title": "EVOLVE Legacy Gin Project",
+            "description": "<p>EVOLVE Gin is part of Okanagan Spirits’ commitment to supporting the fight against gender discrimination.</p><p>Imagine a future with gender equality.  EVOLVE Legacy Gin Project aims to make this a reality.  Proceeds from each bottle benchmarked off the gender pay gap and provide funding to organizations that champion educational opportunities and empowerment initiatives for women and those affected by gender discrimination.</p><p>For our EVOLVE Legacy Gin Project, we have come up with a local Okanagan, farm-to-flask, colour-changing gin to symbolize our aim to achieve gender equality within our lifetime.</p><p>Why should “blue” be any different than “pink”?</p><p>To us, EVOLVE represents the fluidity of gender and the need for all shades on this spectrum to be equally respected, be it in politics, sports, the boardroom, or the pay stub. Our stance is if we can get people thinking about how social constructs adversely affect more than half of the human population, we can help balance the scales.</p><p>EVOLVE starts its journey in local orchards, just a few kilometers from our family distillery. After crafting our gluten-free fruit alcohol, we add our secret blend of botanicals with highlights of basil, orange, and meadowsweet, re-distill, and then infuse our local wildflower melange to impart the magical colour-changing properties that are activated when citrus or tonic are mixed with the gin.</p><p>If our gin can EVOLVE, surely society can too.</p><p><a href=\"https://drive.google.com/file/d/1Ch80uKJY50avKI1gPjpC4UzHPszDDSmH/view?usp=sharing\">See Tyler’s EVOLVE Video</a></p>"
+          }
+        },
+        "item_DtnH3p": {
+          "type": "item",
+          "settings": {
+            "year": "",
+            "image": "shopify://shop_images/super-hero-2-11.webp",
+            "subtitle": "",
+            "title": "Flatten The Curve Hand Sanitizer",
+            "description": "<p>When the supply of sanitizer products ran short throughout the world in the early stages of the global pandemic, Okanagan Spirits put our stills to work on a new product to help the fight against Covid-19. Our Flatten the Curve Hand Sanitizer was initially donated to front-line organizations, including all major area hospitals, community care workers, schools, fire halls, RCMP detachments, the BC ambulance service, over 70 care homes, family practices, grocery stores, gas stations, and countless delivery, transit, and taxi drivers.</p><p>Eventually, we could offer our sanitizer to the general public by donation (and later for sale), enabling us to continue donating thousands of bottles to front-line workers. Every donation helped us produce and distribute the desperately needed hand sanitizer.</p><p>As the global supply chain from big chemical companies stabilized in 2022, small producers, including Okanagan Spirits, started to be phased out of the sanitizer market through figurative ‘red tape’. Now, we have only a few small bottles remaining for sale at our two locations.</p><p>Note: As per Health Canada requirements, we have never used industrial-grade alcohol in any of our products. Our sanitizer is food-grade alcohol which we denature with hydrogen peroxide and glycerol for a pure (but undrinkable) premium hand sanitizer.</p><p>Composition: 80% ethyl alcohol, hydrogen peroxide, glycerol.</p><p>External Use Only, not for consumption.</p><p>Sanitizer works best with a sprayer/mister top screwed onto the top of the bottle.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_bnYwL3",
+        "item_YYcrKn",
+        "item_4ticmb",
+        "item_VypGkP",
+        "item_MDY6XB",
+        "item_Fx3Tj9",
+        "item_XQtwdX",
+        "item_dgAV4Y",
+        "item_BcEjMT",
+        "item_DtnH3p"
+      ],
+      "name": "Timeline",
+      "settings": {
+        "color_scheme": "scheme-be262358-57ed-451e-b0f4-c952a25cb250",
+        "layout": "page-width",
+        "title": "Our Initiatives",
+        "header_is_h1": false,
+        "visually_hide_header": false,
+        "heading_size": "h2",
+        "description": "",
+        "text_style": "body",
+        "mobile_text_style": "body--mobile",
+        "heading_alignment": "left",
+        "padding_top": 4,
+        "padding_bottom": 4,
+        "margin_bottom": 0
+      }
+    },
+    "featured_blog_jwMGgR": {
+      "type": "featured-blog",
+      "name": "t:sections.featured-blog.presets.name",
+      "settings": {
+        "color_scheme": "scheme-be262358-57ed-451e-b0f4-c952a25cb250",
+        "layout": "page-width",
+        "title": "Learn More",
+        "header_is_h1": false,
+        "visually_hide_header": false,
+        "heading_size": "h2",
+        "description": "",
+        "text_style": "body",
+        "mobile_text_style": "body--mobile",
+        "heading_alignment": "left",
+        "overlap_text_on_images": false,
+        "blog": "news",
+        "post_limit": 8,
+        "columns_desktop": 4,
+        "show_date": true,
+        "show_author": false,
+        "show_view_all": true,
+        "grid_desktop": false,
+        "grid_mobile": false,
+        "slider_show_dots": true,
+        "slider_show_arrows": false,
+        "padding_top": 2,
+        "padding_bottom": 2,
+        "margin_bottom": 0
+      }
     }
   },
   "order": [
-    "contact_form_zfnTji"
+    "contact_form_zfnTji",
+    "banner_WnJmGn",
+    "media_with_text_XMpjVx",
+    "timeline_9aPTmt",
+    "featured_blog_jwMGgR"
   ]
 }
