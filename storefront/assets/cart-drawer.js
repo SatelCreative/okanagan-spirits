@@ -13,10 +13,13 @@ class CartDrawer extends HTMLElement {
       'keyup',
       (evt) => evt.code === 'Escape' && this.close()
     );
-    this.querySelector('#CartDrawer-Overlay').addEventListener(
-      'click',
-      this.close.bind(this)
-    );
+
+    this.addEventListener('click', (event) => {
+      if (!event.target.closest('.drawer__container')) {
+        this.close();
+      }
+    });
+
     this.setHeaderCartIconAccessibility();
   }
 
@@ -111,10 +114,6 @@ class CartDrawer extends HTMLElement {
     });
 
     setTimeout(() => {
-      this.querySelector('#CartDrawer-Overlay').addEventListener(
-        'click',
-        this.close.bind(this)
-      );
       this.open();
     });
   }

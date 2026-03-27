@@ -3,8 +3,7 @@
 
   Accepts:
   - product: {Object} Product Liquid object (optional)
-  - use_variant: {Boolean} Renders selected or first variant price instead of overall product pricing (optional)
-  - custom_price: {Number} Custom price to render (optional)
+  - selected_variant: {Boolean} Renders variant price instead of overall product pricing (optional)
   - class: {String} Adds a price class to the price element (optional)
 
   Usage:
@@ -12,27 +11,51 @@
 {% endcomment %}
 
 {%- liquid
-  if use_variant
-    assign target = product.selected_or_first_available_variant
+  assign lowest_price = 99999999
+  assign highest_price = 0
+  
+  if selected_variant
+    assign target = selected_variant
+
+    assign lowest_price = target.price
+    assign highest_price = target.price
   else
     assign target = product
+
+    for variant in product.variants
+      if variant.option1 == "50ml"
+        continue
+      endif
+
+      if variant.price < lowest_price
+        assign lowest_price = variant.price
+      endif
+
+      if variant.price > highest_price
+        assign highest_price = variant.price
+      endif
+    endfor
   endif
 
-  assign compare_at_price = target.compare_at_price
-  assign price = target.price | default: 1999
-
-  if custom_price
-    assign price = custom_price | times: 1
-  endif
-
-  assign money_price = price | money
+  assign lowest_money_price = lowest_price | money
 
   if settings.currency_code_enabled
-    assign money_price = price | money_with_currency
+    assign lowest_money_price = lowest_money_price | money_with_currency
   endif
 
-  if target == product and product.price_varies
-    assign money_price = 'products.product.price.from_price_html' | t: price: money_price
+  if lowest_price == highest_price and lowest_price < target.compare_at_price
+    assign compare_at_price = target.compare_at_price
+    assign money_compare_at_price = compare_at_price | money
+
+    if settings.currency_code_enabled
+      assign money_compare_at_price = money_compare_at_price | money_with_currency
+    endif
+  endif 
+
+  if lowest_price != highest_price
+    assign money_price = 'products.product.price.from_price_html' | t: price: lowest_money_price
+  else 
+    assign money_price = lowest_money_price
   endif
 -%}
 
@@ -49,15 +72,11 @@
       </span>
     </div>
 
-    {%- if compare_at_price > price %}
+    {%- if compare_at_price %}
       <div class="price__regular gray">
         <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
         <s class="price-item">
-          {% if settings.currency_code_enabled %}
-            {{ compare_at_price | money_with_currency | replace: '.00', '' }}
-          {% else %}
-            {{ compare_at_price | money | replace: '.00', '' }}
-          {% endif %}
+          {{ money_compare_at_price | replace: '.00', '' }}
         </s>
       </div>
     {%- endif -%}

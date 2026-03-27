@@ -6,6 +6,17 @@
   {%- break -%}
 {%- endif -%}
 
+{%- assign selected_variant = product.selected_or_first_available_variant -%}
+
+{% if selected_variant.option1 == "50ml" %}
+  {% for variant in product.variants %}
+    {% if variant.option1 != "50ml" %}
+      {% assign selected_variant = variant %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
 {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
 {{ 'component-accordion.css' | asset_url | stylesheet_tag }}
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
@@ -268,7 +279,7 @@
                   role="status"
                   {{ block.shopify_attributes }}
                 >
-                  {%- render 'price', product: product, use_variant: true -%}
+                  {%- render 'price', product: product, selected_variant: selected_variant -%}
 
                   {%- if block.settings.show_installments -%}
                     <div {{ block.shopify_attributes }}>
@@ -279,7 +290,7 @@
                         id: product_form_installment_id,
                         class: 'body body--small product__installment'
                       -%}
-                        <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                        <input type="hidden" name="id" value="{{ selected_variant.id }}">
                         {{ form | payment_terms }}
                       {%- endform -%}
                     </div>
@@ -288,13 +299,13 @@
 
               {%- when 'sku' -%}
                 <div
-                  class="product__sku {{ block.settings.text_style }} {{ block.settings.mobile_text_style }} {% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}"
+                  class="product__sku {{ block.settings.text_style }} {{ block.settings.mobile_text_style }} {% if selected_variant.sku.size == 0 %} visibility-hidden{% endif %}"
                   id="Sku-{{ section.id }}"
                   role="status"
                   {{ block.shopify_attributes }}
                 >
                   <span class="visually-hidden">{{ 'products.product.sku' | t }}:</span>
-                  {{- product.selected_or_first_available_variant.sku -}}
+                  {{- selected_variant.sku -}}
                 </div>
               {%- when 'custom_liquid' -%}
                 {{ block.settings.custom_liquid }}
@@ -305,7 +316,8 @@
                     render 'product-variant-picker',
                     product: product,
                     block: block,
-                    product_form_id: product_form_id
+                    product_form_id: product_form_id,
+                    selected_variant: selected_variant
                   %}
                 </div>
               {%- when 'buy_buttons' -%}
@@ -322,7 +334,7 @@
                     >
                       {%-
                         assign cart_qty = cart
-                        | item_count_for_variant: product.selected_or_first_available_variant.id
+                        | item_count_for_variant: selected_variant.id
                       -%}
 
                       <label class="visually-hidden" for="Quantity-{{ section.id }}">
@@ -344,14 +356,14 @@
                           name="quantity"
                           id="Quantity-{{ section.id }}"
                           data-cart-quantity="{{ cart_qty }}"
-                          data-min="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
-                          min="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
-                          {% if product.selected_or_first_available_variant.quantity_rule.max != null %}
-                            data-max="{{ product.selected_or_first_available_variant.quantity_rule.max }}"
-                            max="{{ product.selected_or_first_available_variant.quantity_rule.max }}"
+                          data-min="{{ selected_variant.quantity_rule.min }}"
+                          min="{{ selected_variant.quantity_rule.min }}"
+                          {% if selected_variant.quantity_rule.max != null %}
+                            data-max="{{ selected_variant.quantity_rule.max }}"
+                            max="{{ selected_variant.quantity_rule.max }}"
                           {% endif %}
-                          step="{{ product.selected_or_first_available_variant.quantity_rule.increment }}"
-                          value="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
+                          step="{{ selected_variant.quantity_rule.increment }}"
+                          value="{{ selected_variant.quantity_rule.min }}"
                           form="{{ product_form_id }}"
                         >
                         <button class="quantity__button" name="plus" type="button">
@@ -369,55 +381,12 @@
                     block: block,
                     product: product,
                     product_form_id: product_form_id,
+                    selected_variant: selected_variant,
                     section_id: section.id,
                     secondary: true,
                     decoration: true
                   -%}
                 </div>
-              {%- when 'recommended' -%}
-                {{ 'component-card.css' | asset_url | stylesheet_tag }}
-
-                <product-recommendations
-                  class="recommended-products quick-add-hidden no-js-hidden"
-                  data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ block.settings.product_list_limit }}&intent={{ block.settings.intent }}"
-                  data-title="{{ block.settings.block_heading }}"
-                >
-                  {% assign products_to_display = recommendations.products | size %}
-                  {% if products_to_display > 10 %}
-                    {% assign products_to_display = 10 %}
-                  {% endif %}
-
-                  {%- if recommendations.performed and recommendations.products_count > 0 -%}
-                    <h2 class="recommended-products__heading h4">{{ block.settings.block_heading }}</h2>
-
-                    <slider-component class="{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-                      <ul
-                        class="recommended-products__grid grid grid--small grid--{{ block.settings.columns_desktop | handle }}-col-desktop grid--{{ block.settings.columns_mobile | handle }}-col-mobile slider slider--mobile slider--desktop"
-                        id="Slider-{{ block.id }}"
-                        role="list"
-                      >
-                        {%- for product in recommendations.products limit: block.settings.product_list_limit -%}
-                          <li
-                            class="grid__item slider__slide"
-                            id="Slide-{{ block.id }}-{{ forloop.index }}"
-                            role="region"
-                          >
-                            {%
-                              render 'card',
-                              item: product,
-                              type: 'product',
-                              aspect_ratio: block.settings.image_ratio,
-                              columns_desktop: section.settings.columns_desktop,
-                              columns_mobile: section.settings.columns_mobile
-                            %}
-                          </li>
-                        {%- endfor -%}
-                      </ul>
-
-                      {%- render 'slider_controls', section: block -%}
-                    </slider-component>
-                  {%- endif -%}
-                </product-recommendations>
             {%- endcase -%}
           {%- endfor -%}
         </section>
@@ -814,22 +783,6 @@
           "default": "color-2"
         },
         {
-          "type": "select",
-          "id": "picker_type",
-          "options": [
-            {
-              "value": "dropdown",
-              "label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.options__1.label"
-            },
-            {
-              "value": "button",
-              "label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.options__2.label"
-            }
-          ],
-          "default": "button",
-          "label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.label"
-        },
-        {
           "type": "header",
           "content": "Siblings"
         },
@@ -884,81 +837,6 @@
           "id": "custom_liquid",
           "label": "t:sections.custom-liquid.settings.custom_liquid.label",
           "info": "t:sections.custom-liquid.settings.custom_liquid.info"
-        }
-      ]
-    },
-    {
-      "type": "recommended",
-      "name": "Recommended Products",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "paragraph",
-          "content": "This uses the `Search & Discovery` app. Please make sure it is installed and configured. If you are using something else, it will need to be custom built."
-        },
-        {
-          "type": "select",
-          "id": "intent",
-          "options": [
-            {
-              "value": "related",
-              "label": "Related"
-            },
-            {
-              "value": "complementary",
-              "label": "Complementary"
-            }
-          ],
-          "default": "related",
-          "label": "Intent"
-        },
-        {
-          "type": "text",
-          "id": "block_heading",
-          "label": "Heading",
-          "default": "Pairs well with"
-        },
-        {
-          "type": "range",
-          "id": "product_list_limit",
-          "min": 1,
-          "max": 10,
-          "step": 1,
-          "default": 10,
-          "label": "Product list limit"
-        },
-        {
-          "type": "range",
-          "id": "columns_desktop",
-          "min": 1,
-          "max": 4.5,
-          "step": 0.5,
-          "default": 3,
-          "label": "Columns (desktop)"
-        },
-        {
-          "type": "range",
-          "id": "columns_mobile",
-          "min": 1,
-          "max": 4.5,
-          "step": 0.5,
-          "default": 3,
-          "label": "Columns (mobile)"
-        },
-        {
-          "type": "header",
-          "content": "Slider settings"
-        },
-        {
-          "type": "checkbox",
-          "id": "slider_show_dots",
-          "label": "Show dots",
-          "default": true
-        },
-        {
-          "type": "checkbox",
-          "id": "slider_show_arrows",
-          "label": "Show arrows"
         }
       ]
     }
