@@ -44,6 +44,7 @@
             "image_mobile": "shopify://shop_images/Okanagan-Spirits-About-header-2-11.webp",
             "image_link": "",
             "image_overlay_opacity": 0,
+            "video_url": "",
             "video_description": "",
             "enable_video_autoplay": true,
             "desktop_content_position": "middle-center",
@@ -108,12 +109,13 @@
         "content_FdxjbX": {
           "type": "content",
           "settings": {
-            "image_first": true,
+            "image_first": false,
             "image": "shopify://shop_images/Whisky-LOF-Old-Laird-New-Laird-Barrels-EDIT.webp",
+            "video_url": "",
             "video_autoplay": false,
             "heading": "The Laird of Fintry",
             "heading_size": "h2",
-            "text": "<p><strong>HOMAGE TO THE OKANAGAN</strong><br/><br/>On the west shore of Okanagan Lake is the delta of Fintry and the heritage site of the former Fintry Estate. Throughout the Okanagan Valley, the legend of “The Laird of Fintry” has stoked imaginations for more than a century.</p><p>It’s a true story that “The Laird” James Cameron Dun-Water ordered a special batch of personally-labeled Single-Malt Whisky (Scotch) from his homeland of Scotland in the early 1900s. The namesake and label design of our signature Single-Malt comes directly from a leftover bottle of the Laird’s secret stash – it’s our way of honouring the history of whisky in the Okanagan.</p><p>In turn, we support the <a href=\"https://www.fintry.ca/friends/\" target=\"_blank\">Friends of Fintry Society</a> with an annual donation to help maintain the original property of The Laird.</p>",
+            "text": "<p><strong>HOMAGE TO THE OKANAGAN</strong><br/><br/>On the west shore of Okanagan Lake is the delta of Fintry and the heritage site of the former Fintry Estate. Throughout the Okanagan Valley, the legend of “The Laird of Fintry” has stoked imaginations for more than a century.<br/><br/>It’s a true story that “The Laird” James Cameron Dun-Water ordered a special batch of personally-labeled Single-Malt Whisky (Scotch) from his homeland of Scotland in the early 1900s. The namesake and label design of our signature Single-Malt comes directly from a leftover bottle of the Laird’s secret stash – it’s our way of honouring the history of whisky in the Okanagan.<br/><br/>In turn, we support the <a href=\"https://www.fintry.ca/friends/\" target=\"_blank\">Friends of Fintry Society</a> with an annual donation to help maintain the original property of The Laird.</p>",
             "text_style": "body",
             "mobile_text_style": "body--mobile",
             "button_label": "Shop Laird Of Fintry",

@@ -11,6 +11,7 @@
   "sections": {
     "contact_form_zfnTji": {
       "type": "contact-form",
+      "disabled": true,
       "name": "t:sections.contact-form.presets.name",
       "settings": {
         "color_scheme": "",
@@ -29,9 +30,261 @@
         "padding_bottom": 2,
         "margin_bottom": 0
       }
+    },
+    "banner_9MXL7r": {
+      "type": "banner",
+      "blocks": {
+        "media_EQXPq9": {
+          "type": "media",
+          "settings": {
+            "color_scheme_box": "",
+            "transparent_box_desktop": true,
+            "transparent_box_mobile": true,
+            "image": "shopify://shop_images/OS_Home-top-header-31.jpg",
+            "image_mobile": "shopify://shop_images/OS_Home-top-header-31.jpg",
+            "image_link": "",
+            "image_overlay_opacity": 0,
+            "video_description": "",
+            "enable_video_autoplay": true,
+            "desktop_content_position": "middle-center",
+            "desktop_remove_extra_padding": false,
+            "desktop_content_alignment": "center",
+            "mobile_content_position": "middle",
+            "mobile_content_alignment": "center",
+            "heading": "Our Products. 100% Craft. 100% BC. Proudly Canadian.",
+            "heading_size": "h0--desktop",
+            "heading_size_mobile": "h2--mobile",
+            "heading_letter_spacing": "",
+            "heading_shadow": "",
+            "heading_italic": false,
+            "is_h1": false,
+            "visually_hidden": false,
+            "text": "",
+            "text_style": "body--desktop",
+            "mobile_text_style": "body--mobile",
+            "button_label_1": "",
+            "button_link_1": "",
+            "button_bold_1": false,
+            "button_style_1": "button",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_bold_2": false,
+            "button_style_2": "button"
+          }
+        }
+      },
+      "block_order": [
+        "media_EQXPq9"
+      ],
+      "name": "Media Banners",
+      "settings": {
+        "color_scheme": "",
+        "layout": "screen-width",
+        "layout_mobile": "screen-width",
+        "title": "",
+        "header_is_h1": false,
+        "visually_hide_header": false,
+        "heading_size": "h2",
+        "description": "",
+        "text_style": "body",
+        "mobile_text_style": "body--mobile",
+        "heading_alignment": "left",
+        "aspect_ratio": "small",
+        "aspect_ratio_mobile": "adapt",
+        "stack_images_on_mobile": true,
+        "slider_show_dots": true,
+        "slider_show_arrows": false,
+        "accessibility_info": "",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_bottom": 0
+      }
+    },
+    "media_with_text_9iPYxa": {
+      "type": "media-with-text",
+      "blocks": {
+        "content_iBjzKV": {
+          "type": "content",
+          "settings": {
+            "image_first": true,
+            "image": "shopify://shop_images/Whisky-Laird-LOF-2024-Original-with-box-barrelsd-square-1-Copy-Copy-1.jpg",
+            "video_autoplay": false,
+            "heading": "Whisky",
+            "heading_size": "h1",
+            "text": "<p><strong>LIQUID GOLD</strong></p><p><br/>Small-batch and in high demand, we distill four lines of whisky including the Laird of Fintry Single Malt Whisky, B.C. Rye, BRBN Bourbon-Style Corn Whisky, and our innovative line of seasonal release beer-inspired whisky. 100% Canadian from farm to flask.</p>",
+            "text_style": "body--large",
+            "mobile_text_style": "body--large-mobile",
+            "button_label": "Shop whiskey",
+            "button_link": "shopify://collections/whisky",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "box_color_scheme": "",
+            "desktop_content_position": "top",
+            "desktop_content_alignment": "left",
+            "content_layout": "no-overlap",
+            "mobile_content_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "content_iBjzKV"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "color_scheme": "",
+        "layout": "page-width",
+        "aspect_ratio": "square",
+        "desktop_image_width": "medium",
+        "slider_show_dots": true,
+        "slider_show_arrows": false,
+        "padding_top": 2,
+        "padding_bottom": 2,
+        "margin_bottom": 0
+      }
+    },
+    "media_with_text_MyQxam": {
+      "type": "media-with-text",
+      "blocks": {
+        "content_t7xj9D": {
+          "type": "content",
+          "settings": {
+            "image_first": false,
+            "image": "shopify://shop_images/VODKA-FR-Black-2-square-website-e1764474131199.jpg",
+            "video_autoplay": false,
+            "heading": "Vodka & Gin",
+            "heading_size": "h1",
+            "text": "<p><strong>WHERE IT ALL STARTED</strong></p><p><br/>We start with locally grown grains and fruits to carefully create these ultra-premium spirits that tell a story of the local terroir.</p><p><br/>We offer two fundamentally different 100% locally crafted vodkas to choose from. For the traditionalists out there, we present our Essentials Line Vodka. This ultra-premium Vodka starts its life in the fields as we use our locally grown grains for the base. And for those vodka connoisseurs who are looking for something uniquely Okanagan, we offer BC’s Original apple-based vodka, our Family Reserve Okanagan Vodka – also 100% gluten free.</p><p><br/>Our Gin family has grown to multiple lines: Our essentials line Gin for the traditionalists, our Family Reserve Okanagan apple-based Gin (which we also offer in a barrel-aged version), our Evolve Colour Changing Legacy Gin (which is deliciously smooth and 100% gluten free),</p><p><br/>These amazingly smooth spirits are distilled to the unparalleled level of 96.4% alcohol in our state-of-the-art 50 plate Copper Pot Still to achieve absolute purity.</p>",
+            "text_style": "body",
+            "mobile_text_style": "body--mobile",
+            "button_label": "Shop Vodka",
+            "button_link": "shopify://collections/vodka",
+            "button_style_secondary": true,
+            "button_label_2": "Shop Gin",
+            "button_link_2": "shopify://collections/gin",
+            "button_style_secondary_2": true,
+            "box_color_scheme": "",
+            "desktop_content_position": "top",
+            "desktop_content_alignment": "left",
+            "content_layout": "no-overlap",
+            "mobile_content_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "content_t7xj9D"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "color_scheme": "",
+        "layout": "page-width",
+        "aspect_ratio": "square",
+        "desktop_image_width": "medium",
+        "slider_show_dots": true,
+        "slider_show_arrows": false,
+        "padding_top": 2,
+        "padding_bottom": 2,
+        "margin_bottom": 0
+      }
+    },
+    "media_with_text_JirW4r": {
+      "type": "media-with-text",
+      "blocks": {
+        "content_3z6iBg": {
+          "type": "content",
+          "settings": {
+            "image_first": true,
+            "image": "shopify://shop_images/products-absinthe-aquavit1.jpg",
+            "video_autoplay": false,
+            "heading": "Absinthe & Aquavit",
+            "heading_size": "h1",
+            "text": "<p><strong>FRINGE FAVOURITES</strong></p><p><br/>With the realization that Absinthe was not banned in Canada, Okanagan Spirits decided to make the country’s first genuine Absinthe in 2007, now known as “Taboo”. An avid pick for those who enjoy the taste of Black Licorice, our award winning recipe contains no artificial flavors or essences, and has won Gold at the World Spirits Awards (2013 & 2015)</p><p><br/>Meanwhile our Aquavit has been embraced by the local Scandinavian community and others who enjoy this aromatic spirit. Aquavit is a vodka-style spirit infused with aromatic herbs and spices to give a distinctive flavour characterized by a dominance of Caraway and Dill, our version also includes Anise, Fennel, Coriander, and Juniper. Its quality was affirmed at the World Spirits Awards held in Denmark in 2015 where it earned a Double-Gold in the ‘home of Aquavit.’</p>",
+            "text_style": "body",
+            "mobile_text_style": "body--mobile",
+            "button_label": "Shop Absinthe",
+            "button_link": "shopify://collections/absinthe",
+            "button_style_secondary": true,
+            "button_label_2": "shop aquavit",
+            "button_link_2": "shopify://collections/aquavit",
+            "button_style_secondary_2": true,
+            "box_color_scheme": "",
+            "desktop_content_position": "top",
+            "desktop_content_alignment": "left",
+            "content_layout": "no-overlap",
+            "mobile_content_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "content_3z6iBg"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "color_scheme": "",
+        "layout": "page-width",
+        "aspect_ratio": "square",
+        "desktop_image_width": "medium",
+        "slider_show_dots": true,
+        "slider_show_arrows": false,
+        "padding_top": 2,
+        "padding_bottom": 2,
+        "margin_bottom": 0
+      }
+    },
+    "media_with_text_WN7Ffk": {
+      "type": "media-with-text",
+      "blocks": {
+        "content_jpzLcz": {
+          "type": "content",
+          "settings": {
+            "image_first": false,
+            "image": "shopify://shop_images/Liqueur-Lineup-2025-Angle-website-scaled-e1764474587306.jpg",
+            "video_autoplay": false,
+            "heading": "Liqueurs & More",
+            "heading_size": "h2",
+            "text": "<p><strong>100% PURE FRUIT ELEGANCE.</strong></p><p><br/>Created on-site from scratch using only the freshest of fruits, our liqueurs are designed to give a vibrant fruit flavour without an overpowering taste of sweetness. These products are produced using only three natural ingredients: Our in-house pure fruit alcohol (gluten-free), perfectly ripened local BC fruit, and a very small amount of natural cane sugar.</p><p><br/>Fruit Brandy is a traditional ‘Schnapps’ style spirit encompassing a richness in aroma, taste and premium sipping quality. Enjoy neat, over ice or as a component in cocktails and cooking.</p><p><br/>Marc (Grappa) originated in Italy as a means to use the leftover product from winemaking. The pomace (skins, pulp, seeds, and stems) of grapes are fermented and run through our traditional copper-pot still before being cut with locally sourced B.C. Spring water. These bold, dry spirits are commonly enjoyed commonly as a digestif or traditionally in a Caffè Corretto.</p>",
+            "text_style": "body",
+            "mobile_text_style": "body--mobile",
+            "button_label": "shop liqueurs",
+            "button_link": "shopify://collections/liqueur",
+            "button_style_secondary": true,
+            "button_label_2": "shop brandy & marc",
+            "button_link_2": "shopify://collections/fruit-brandy-marc",
+            "button_style_secondary_2": true,
+            "box_color_scheme": "",
+            "desktop_content_position": "top",
+            "desktop_content_alignment": "left",
+            "content_layout": "no-overlap",
+            "mobile_content_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "content_jpzLcz"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "color_scheme": "",
+        "layout": "page-width",
+        "aspect_ratio": "square",
+        "desktop_image_width": "medium",
+        "slider_show_dots": true,
+        "slider_show_arrows": false,
+        "padding_top": 2,
+        "padding_bottom": 2,
+        "margin_bottom": 0
+      }
     }
   },
   "order": [
-    "contact_form_zfnTji"
+    "contact_form_zfnTji",
+    "banner_9MXL7r",
+    "media_with_text_9iPYxa",
+    "media_with_text_MyQxam",
+    "media_with_text_JirW4r",
+    "media_with_text_WN7Ffk"
   ]
 }

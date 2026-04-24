@@ -137,8 +137,10 @@
         </h2>
 
         <ul class='recipe-table__list'>
-          {% for ingredient in article.metafields.custom.ingredient_list.value %}
 
+          {% assign replacements = article.metafields.custom.ingredient_product_replacements | split: "," %}
+
+          {% for ingredient in article.metafields.custom.ingredient_list.value %}
             {% assign x_index = forloop.index %}
 
             {% for measurement in article.metafields.custom.ingredient_measurements.value %}
@@ -146,7 +148,29 @@
 
               {% if x_index == y_index %}
                 <li class='recipe-table__item'>
-                  <span class='recipe-table__item-label'>{{ ingredient }}</span>
+                  <span class='recipe-table__item-label'>
+                    {% assign found = false %}
+                    {% for replacement in replacements %}
+                      {% assign i = replacement | strip | split: ":" | first | strip %}
+                      {% assign handle = replacement | strip | split: ":" | last | strip %}
+
+                      {% if i == ingredient %}
+                        <a 
+                          class='link'
+                          href='{{ all_products[handle].url }}'
+                        >
+                          {{ ingredient }}
+                        </a>
+
+                        {% assign found = true %}
+                        {% break %}
+                      {% endif %}
+                    {% endfor %}
+
+                    {% if found == false %}
+                      {{ ingredient }}
+                    {% endif %}
+                  </span>
                   <span class='recipe-table__item-value'>{{ measurement }}</span>
                 </li>
               {% endif %}

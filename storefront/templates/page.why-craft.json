@@ -11,6 +11,7 @@
   "sections": {
     "page_xLxR7a": {
       "type": "page",
+      "disabled": true,
       "name": "t:sections.page.presets.name",
       "settings": {
         "page": "",
@@ -20,9 +21,226 @@
         "padding_bottom": 2,
         "margin_bottom": 0
       }
+    },
+    "banner_pY9bUp": {
+      "type": "banner",
+      "blocks": {
+        "media_eUE3cJ": {
+          "type": "media",
+          "settings": {
+            "color_scheme_box": "",
+            "transparent_box_desktop": true,
+            "transparent_box_mobile": true,
+            "image": "shopify://shop_images/renaissance_of_craft_hero1.jpg",
+            "image_mobile": "shopify://shop_images/renaissance_of_craft_hero1.jpg",
+            "image_link": "",
+            "image_overlay_opacity": 0,
+            "video_description": "",
+            "enable_video_autoplay": true,
+            "desktop_content_position": "middle-center",
+            "desktop_remove_extra_padding": false,
+            "desktop_content_alignment": "center",
+            "mobile_content_position": "middle",
+            "mobile_content_alignment": "center",
+            "heading": "The Renaissance of Craft",
+            "heading_size": "h0--desktop",
+            "heading_size_mobile": "h2--mobile",
+            "heading_letter_spacing": "",
+            "heading_shadow": "",
+            "heading_italic": false,
+            "is_h1": false,
+            "visually_hidden": false,
+            "text": "",
+            "text_style": "body--desktop",
+            "mobile_text_style": "body--mobile",
+            "button_label_1": "",
+            "button_link_1": "",
+            "button_bold_1": false,
+            "button_style_1": "button",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_bold_2": false,
+            "button_style_2": "button"
+          }
+        }
+      },
+      "block_order": [
+        "media_eUE3cJ"
+      ],
+      "name": "Media Banners",
+      "settings": {
+        "color_scheme": "",
+        "layout": "screen-width",
+        "layout_mobile": "screen-width",
+        "title": "",
+        "header_is_h1": false,
+        "visually_hide_header": false,
+        "heading_size": "h2",
+        "description": "",
+        "text_style": "body",
+        "mobile_text_style": "body--mobile",
+        "heading_alignment": "left",
+        "aspect_ratio": "small",
+        "aspect_ratio_mobile": "adapt",
+        "stack_images_on_mobile": true,
+        "slider_show_dots": true,
+        "slider_show_arrows": false,
+        "accessibility_info": "",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_bottom": 0
+      }
+    },
+    "rich_text_EQqXae": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_jCziUh": {
+          "type": "heading",
+          "settings": {
+            "heading": "100% Craft. 100% BC",
+            "heading_size": "h1"
+          }
+        },
+        "heading_4nTkai": {
+          "type": "heading",
+          "settings": {
+            "heading": "WHAT IT MEANS TO BE A CRAFT DISTILLERY IN BC",
+            "heading_size": "h2"
+          }
+        },
+        "text_EdFHdN": {
+          "type": "text",
+          "settings": {
+            "text": "<p>ONLY BC grains, fruit and produce used<br/>ONLY on-site fermentation & distillation using traditional methods<br/>NO additives, preservatives, or artificial flavours</p>",
+            "text_style": "body--large",
+            "mobile_text_style": "body--large-mobile"
+          }
+        },
+        "button_bMUx3r": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Our Products",
+            "button_link": "shopify://collections/all",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_jCziUh",
+        "heading_4nTkai",
+        "text_EdFHdN",
+        "button_bMUx3r"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "layout": "page-width",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "padding_top": 2,
+        "padding_bottom": 2,
+        "margin_bottom": 0
+      }
+    },
+    "media_with_text_j3FhCD": {
+      "type": "media-with-text",
+      "blocks": {
+        "content_6QtdPX": {
+          "type": "content",
+          "settings": {
+            "image_first": false,
+            "image": "shopify://shop_images/the_truth_about_sediment_and_good_whisky1.jpg",
+            "video_autoplay": false,
+            "heading": "The Truth About Sediment And Good Whisky",
+            "heading_size": "h1",
+            "text": "<p>HOW WE CHOOSE TO PRESENT OUR WHISKY</p><p><br/>During fermentation, distillation and barrel aging, the flavours of whisky (various lipids, phenols and esters) get absorbed into the liquid, but later appear as sediment or whisps when the alcohol’s temperature drops – usually during storage.<br/><br/>“Chill filtering” is the large-volume producer’s method of removing these unsightly molecules which in turn diminishes the flavour and mouth-feel of the finished product.<br/><br/>Craft and small batch producers are challenging the need for chill filtering, and, at Okanagan Spirits, we choose to present our whisky to our loyal enthusiasts with much of the original flavour profile still intact. We still filter our whisky, sometimes several times over, before it goes in the bottle – but we don’t chill filter as we’re always wanting to give as much of that straight-from-the barrel experience as possible.<br/><br/>With a quick shake of the bottle, these wisps will fall back into suspension and return the whisky to its clear state.<br/></p>",
+            "text_style": "body",
+            "mobile_text_style": "body--mobile",
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "box_color_scheme": "",
+            "desktop_content_position": "top",
+            "desktop_content_alignment": "left",
+            "content_layout": "no-overlap",
+            "mobile_content_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "content_6QtdPX"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "color_scheme": "",
+        "layout": "page-width",
+        "aspect_ratio": "square",
+        "desktop_image_width": "medium",
+        "slider_show_dots": false,
+        "slider_show_arrows": false,
+        "padding_top": 2,
+        "padding_bottom": 2,
+        "margin_bottom": 0
+      }
+    },
+    "media_with_text_LAzyJb": {
+      "type": "media-with-text",
+      "blocks": {
+        "content_fN8bYD": {
+          "type": "content",
+          "settings": {
+            "image_first": true,
+            "image": "shopify://shop_images/2021-Okanagan-Spirits-Dyck-Family-11.jpg",
+            "video_autoplay": false,
+            "heading": "Champions Of Craft",
+            "heading_size": "h1",
+            "text": "<p>A FARM-TO-FLASK INITIATIVE<br/><br/>Okanagan Spirits Craft Distillery celebrates their local partners who truly champion the craft local renaissance in authentic spirits production. These hospitality sector leaders support local and highlight true Craft BC Spirits in their cocktail programs to enhance the local BC experience for their patrons. We work with great partners across the Okanagan and BC to ensure the Craft BC movement keeps growing.<br/><br/>We hope that you choose to support these amazing local businesses as they have joined the Farm-to-Flask movement and supported us.<br/></p>",
+            "text_style": "body",
+            "mobile_text_style": "body--mobile",
+            "button_label": "Join the movement",
+            "button_link": "shopify://pages/contact",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "box_color_scheme": "",
+            "desktop_content_position": "top",
+            "desktop_content_alignment": "left",
+            "content_layout": "no-overlap",
+            "mobile_content_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "content_fN8bYD"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "color_scheme": "",
+        "layout": "page-width",
+        "aspect_ratio": "square",
+        "desktop_image_width": "medium",
+        "slider_show_dots": true,
+        "slider_show_arrows": false,
+        "padding_top": 2,
+        "padding_bottom": 2,
+        "margin_bottom": 0
+      }
     }
   },
   "order": [
-    "page_xLxR7a"
+    "page_xLxR7a",
+    "banner_pY9bUp",
+    "rich_text_EQqXae",
+    "media_with_text_j3FhCD",
+    "media_with_text_LAzyJb"
   ]
 }

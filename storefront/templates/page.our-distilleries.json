@@ -11,6 +11,7 @@
   "sections": {
     "contact_form_zfnTji": {
       "type": "contact-form",
+      "disabled": true,
       "name": "t:sections.contact-form.presets.name",
       "settings": {
         "color_scheme": "",
@@ -29,9 +30,370 @@
         "padding_bottom": 2,
         "margin_bottom": 0
       }
+    },
+    "banner_aHLtDL": {
+      "type": "banner",
+      "blocks": {
+        "media_JV8Jaz": {
+          "type": "media",
+          "settings": {
+            "color_scheme_box": "",
+            "transparent_box_desktop": true,
+            "transparent_box_mobile": true,
+            "image": "shopify://shop_images/Okanagan-Spirits-Our-Distilleries-21.jpg",
+            "image_mobile": "shopify://shop_images/Okanagan-Spirits-Our-Distilleries-21.jpg",
+            "image_link": "",
+            "image_overlay_opacity": 0,
+            "video_url": "",
+            "video_description": "",
+            "enable_video_autoplay": true,
+            "desktop_content_position": "middle-center",
+            "desktop_remove_extra_padding": false,
+            "desktop_content_alignment": "center",
+            "mobile_content_position": "middle",
+            "mobile_content_alignment": "center",
+            "heading": "Our Distilleries",
+            "heading_size": "h0--desktop",
+            "heading_size_mobile": "h2--mobile",
+            "heading_letter_spacing": "",
+            "heading_shadow": "",
+            "heading_italic": false,
+            "is_h1": false,
+            "visually_hidden": false,
+            "text": "<p>Step into the heart of Canadian craft distilling at our Vernon and Kelowna locations. Guests are invited to<strong>sample our internationally awarded spirits</strong>while discovering the artistry behind our farm-to-flask production. From grain to glass, our team shares the story of how locally grown ingredients are transformed into world-class whisky, gin, vodka, and liqueurs. Whether you’re a curious newcomer or a seasoned enthusiast, each visit offers a<strong>memorable tasting experience</strong>and a deeper appreciation for the craft.</p>",
+            "text_style": "body--desktop",
+            "mobile_text_style": "body--mobile",
+            "button_label_1": "",
+            "button_link_1": "",
+            "button_bold_1": false,
+            "button_style_1": "button",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_bold_2": false,
+            "button_style_2": "button"
+          }
+        }
+      },
+      "block_order": [
+        "media_JV8Jaz"
+      ],
+      "name": "Media Banners",
+      "settings": {
+        "color_scheme": "",
+        "layout": "screen-width",
+        "layout_mobile": "screen-width",
+        "title": "",
+        "header_is_h1": false,
+        "visually_hide_header": false,
+        "heading_size": "h2",
+        "description": "",
+        "text_style": "body",
+        "mobile_text_style": "body--mobile",
+        "heading_alignment": "left",
+        "aspect_ratio": "small",
+        "aspect_ratio_mobile": "adapt",
+        "stack_images_on_mobile": true,
+        "slider_show_dots": true,
+        "slider_show_arrows": false,
+        "accessibility_info": "",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_bottom": 0
+      }
+    },
+    "media_with_text_UJfJ6N": {
+      "type": "media-with-text",
+      "blocks": {
+        "content_wVndaH": {
+          "type": "content",
+          "settings": {
+            "image_first": true,
+            "image": "shopify://shop_images/Stills_3570b-11.jpg",
+            "video_url": "",
+            "video_autoplay": false,
+            "heading": "Vernon Distillery",
+            "heading_size": "h1",
+            "text": "<p>Home to North America’s tallest copper pot still, our original flagship distillery was relocated and redesigned in early 2015. Witness first-hand the magic of craft distilling in our 16,000 sq. ft. production facility where the gleaming copper-pots will immediately captivate as you walk through the door.<br/><br/>The sprawling tasting area was built to honour the Okanagan’s rich tree-fruit history. You’ll be greeted with a wall-size photograph of a crew picking apples at the Coldstream ranch in 1918 – look beyond to see a moonshiner shack motif built with reclaimed beams, originally from the long demolished Fruit Union packinghouse where Dyck family ancestors once worked.<br/><br/>Experience selections from our full product lineup at our 27-foot tasting bar. Even after multiple visits, you’ll always find something new with well over 40 award-winning products to choose from – each hand crafted with the guarantee that no artificial flavouring, colouring or essences have been added.<br/></p>",
+            "text_style": "body",
+            "mobile_text_style": "body--mobile",
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "box_color_scheme": "",
+            "desktop_content_position": "top",
+            "desktop_content_alignment": "left",
+            "content_layout": "no-overlap",
+            "mobile_content_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "content_wVndaH"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "color_scheme": "scheme-be262358-57ed-451e-b0f4-c952a25cb250",
+        "layout": "page-width",
+        "aspect_ratio": "square",
+        "desktop_image_width": "medium",
+        "slider_show_dots": true,
+        "slider_show_arrows": false,
+        "padding_top": 2,
+        "padding_bottom": 2,
+        "margin_bottom": 0
+      }
+    },
+    "multicolumn_MQ9C6D": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_y9Didt": {
+          "type": "column",
+          "settings": {
+            "color_scheme": "",
+            "image_overlay_opacity": 0,
+            "show_overlay_on_hover": false,
+            "title": "HOURS",
+            "heading_size": "h3",
+            "heading_size_mobile": "h3--mobile",
+            "text": "<p>Monday-Saturday 10am-6pm</p><p>Sunday 10am-5pm</p><p> </p><p>Winter hours in effect January 2nd thru May long weekend:<br/>Sunday-Wednesday 10am-5pm<br/>Thursday-Saturday 10am-6pm<br/>--<br/>Christmas eve: 10am-3pm | New Years eve: 10am-5pm<br/>Closed Easter Sunday, Christmas, Boxing Day & New Year’s Day<br/><br/></p>",
+            "text_style": "body",
+            "text_style_mobile": "body--mobile",
+            "link_label": "",
+            "link": "",
+            "show_link_as_button": false,
+            "card_padding": 0.5
+          }
+        },
+        "column_rdrcp7": {
+          "type": "column",
+          "settings": {
+            "color_scheme": "",
+            "image_overlay_opacity": 0,
+            "show_overlay_on_hover": false,
+            "title": "Location",
+            "heading_size": "h3",
+            "heading_size_mobile": "h3--mobile",
+            "text": "<p>5204 24th Street, Vernon, BC V1T 8X2, Canada<br/><br/></p>",
+            "text_style": "body",
+            "text_style_mobile": "body--mobile",
+            "link_label": "",
+            "link": "",
+            "show_link_as_button": false,
+            "card_padding": 0.5
+          }
+        },
+        "column_fHGf9h": {
+          "type": "column",
+          "settings": {
+            "color_scheme": "",
+            "image_overlay_opacity": 0,
+            "show_overlay_on_hover": false,
+            "title": "Contact",
+            "heading_size": "h3",
+            "heading_size_mobile": "h3--mobile",
+            "text": "<p><a href=\"tel:1-250-549-3120\">1-250-549-3120</a></p><p><a href=\"mailto:vernon@okanaganspirits.com\">vernon@okanaganspirits.com</a></p>",
+            "text_style": "body",
+            "text_style_mobile": "body--mobile",
+            "link_label": "",
+            "link": "",
+            "show_link_as_button": false,
+            "card_padding": 0.5
+          }
+        }
+      },
+      "block_order": [
+        "column_y9Didt",
+        "column_rdrcp7",
+        "column_fHGf9h"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "color_scheme": "scheme-be262358-57ed-451e-b0f4-c952a25cb250",
+        "layout": "page-width",
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "title": "",
+        "header_is_h1": false,
+        "visually_hide_header": false,
+        "heading_size": "h2",
+        "description": "",
+        "text_style": "body",
+        "mobile_text_style": "body--mobile",
+        "heading_alignment": "left",
+        "cta_text": "",
+        "cta_link": "",
+        "override_grid_gap": false,
+        "spacing_grid_horizontal": 8,
+        "spacing_grid_horizontal_mobile": 8,
+        "overlap": false,
+        "aspect_ratio": "landscape",
+        "override_image_size": false,
+        "image_width": 72,
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "columns_mobile": 1,
+        "swipe_on_mobile": false,
+        "slider_show_dots": true,
+        "slider_show_arrows": false,
+        "padding_top": 2,
+        "padding_bottom": 2,
+        "margin_bottom": 0
+      }
+    },
+    "media_with_text_LTpwrp": {
+      "type": "media-with-text",
+      "blocks": {
+        "content_7xyUNn": {
+          "type": "content",
+          "settings": {
+            "image_first": false,
+            "image": "shopify://shop_images/Stills_3570b-11.jpg",
+            "video_url": "",
+            "video_autoplay": false,
+            "heading": "Kelowna Distillery",
+            "heading_size": "h1",
+            "text": "<p>Join us at our Prohibition Edition boutique craft distillery and cocktail lounge in the heart of downtown Kelowna on Bernard Avenue.<br/><br/>With the introduction of prohibition in the 1920s, a shadowy, underground distilling industry sprang into existence. That prohibition spirit is still alive one hundred years later at BC’s Original Craft Distillery. Let our “Prohibition Edition” distillery take you back to where the western frontier’s small-batch farm-to-flask spirit production all began while you savour the spirits that ignited BC’s authentic distilling renaissance.<br/><br/>Our Kelowna distillery was constructed to tread softly on the environment while paying homage to the history of the local fruit industry. You’ll see reclaimed wood from the Laurel and Gellatly Bay fruit packing houses and our recycled spirits glass countertop is sure to catch your eye. The local terroir, our passion, and our family’s Okanagan heritage are expressed throughout our product lineup of whiskies, gins, fruit liqueurs and prebatched premium craft cocktails.</p>",
+            "text_style": "body",
+            "mobile_text_style": "body--mobile",
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "box_color_scheme": "",
+            "desktop_content_position": "top",
+            "desktop_content_alignment": "left",
+            "content_layout": "no-overlap",
+            "mobile_content_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "content_7xyUNn"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "color_scheme": "",
+        "layout": "page-width",
+        "aspect_ratio": "square",
+        "desktop_image_width": "medium",
+        "slider_show_dots": true,
+        "slider_show_arrows": false,
+        "padding_top": 2,
+        "padding_bottom": 2,
+        "margin_bottom": 0
+      }
+    },
+    "multicolumn_H7crQL": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_pEx8xX": {
+          "type": "column",
+          "settings": {
+            "color_scheme": "",
+            "image_overlay_opacity": 0,
+            "show_overlay_on_hover": false,
+            "title": "HOURS",
+            "heading_size": "h3",
+            "heading_size_mobile": "h3--mobile",
+            "text": "<p>Thursday-Saturday 10am-6pm</p><p>Sunday-Wednesday 12noon-6pm</p><p>Closed Easter Sunday, Christmas, Boxing Day & New Year's Day<br/><br/></p>",
+            "text_style": "body",
+            "text_style_mobile": "body--mobile",
+            "link_label": "",
+            "link": "",
+            "show_link_as_button": false,
+            "card_padding": 0.5
+          }
+        },
+        "column_EWK3Gc": {
+          "type": "column",
+          "settings": {
+            "color_scheme": "",
+            "image_overlay_opacity": 0,
+            "show_overlay_on_hover": false,
+            "title": "Location",
+            "heading_size": "h3",
+            "heading_size_mobile": "h3--mobile",
+            "text": "<p>267 Bernard Avenue, Kelowna, BC, Canada<br/><br/></p>",
+            "text_style": "body",
+            "text_style_mobile": "body--mobile",
+            "link_label": "",
+            "link": "",
+            "show_link_as_button": false,
+            "card_padding": 0.5
+          }
+        },
+        "column_jwhkjA": {
+          "type": "column",
+          "settings": {
+            "color_scheme": "",
+            "image_overlay_opacity": 0,
+            "show_overlay_on_hover": false,
+            "title": "Contact",
+            "heading_size": "h3",
+            "heading_size_mobile": "h3--mobile",
+            "text": "<p><a href=\"tel:1-778-484-5174\">1-778-484-5174</a></p><p><a href=\"mailto:kelowna@okanaganspirits.com\">kelowna@okanaganspirits.com</a></p>",
+            "text_style": "body",
+            "text_style_mobile": "body--mobile",
+            "link_label": "",
+            "link": "",
+            "show_link_as_button": false,
+            "card_padding": 0.5
+          }
+        }
+      },
+      "block_order": [
+        "column_pEx8xX",
+        "column_EWK3Gc",
+        "column_jwhkjA"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "color_scheme": "",
+        "layout": "page-width",
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "title": "",
+        "header_is_h1": false,
+        "visually_hide_header": false,
+        "heading_size": "h2",
+        "description": "",
+        "text_style": "body",
+        "mobile_text_style": "body--mobile",
+        "heading_alignment": "left",
+        "cta_text": "",
+        "cta_link": "",
+        "override_grid_gap": false,
+        "spacing_grid_horizontal": 8,
+        "spacing_grid_horizontal_mobile": 8,
+        "overlap": false,
+        "aspect_ratio": "landscape",
+        "override_image_size": false,
+        "image_width": 72,
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "columns_mobile": 1,
+        "swipe_on_mobile": false,
+        "slider_show_dots": true,
+        "slider_show_arrows": false,
+        "padding_top": 2,
+        "padding_bottom": 2,
+        "margin_bottom": 0
+      }
     }
   },
   "order": [
-    "contact_form_zfnTji"
+    "contact_form_zfnTji",
+    "banner_aHLtDL",
+    "media_with_text_UJfJ6N",
+    "multicolumn_MQ9C6D",
+    "media_with_text_LTpwrp",
+    "multicolumn_H7crQL"
   ]
 }

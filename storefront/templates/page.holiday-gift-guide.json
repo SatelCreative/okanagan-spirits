@@ -1,0 +1,465 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "page_RPfLw9": {
+      "type": "page",
+      "disabled": true,
+      "name": "t:sections.page.presets.name",
+      "settings": {
+        "page": "",
+        "heading_size": "h2",
+        "color_scheme": "",
+        "padding_top": 2,
+        "padding_bottom": 2,
+        "margin_bottom": 0
+      }
+    },
+    "banner_xCLEwV": {
+      "type": "banner",
+      "blocks": {
+        "media_hFKW6r": {
+          "type": "media",
+          "settings": {
+            "color_scheme_box": "scheme-1",
+            "transparent_box_desktop": true,
+            "transparent_box_mobile": true,
+            "image": "shopify://shop_images/b_OkanaganSpirits_DearSantaMulledRyeWhisky_adamDewar_Nov2025-4-1.jpg",
+            "image_mobile": "shopify://shop_images/b_OkanaganSpirits_DearSantaMulledRyeWhisky_adamDewar_Nov2025-4-1.jpg",
+            "image_link": "",
+            "image_overlay_opacity": 0,
+            "video_url": "",
+            "video_description": "",
+            "enable_video_autoplay": true,
+            "desktop_content_position": "middle-center",
+            "desktop_remove_extra_padding": false,
+            "desktop_content_alignment": "center",
+            "mobile_content_position": "middle",
+            "mobile_content_alignment": "center",
+            "heading": "HOLIDAY GIFT GUIDE",
+            "heading_size": "h0--desktop",
+            "heading_size_mobile": "h2--mobile",
+            "heading_letter_spacing": "",
+            "heading_shadow": "",
+            "heading_italic": false,
+            "is_h1": false,
+            "visually_hidden": false,
+            "text": "<h2><em>Santa may not deliver to adults, but we do</em></h2>",
+            "text_style": "body--desktop",
+            "mobile_text_style": "body--mobile",
+            "button_label_1": "",
+            "button_link_1": "",
+            "button_bold_1": false,
+            "button_style_1": "button",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_bold_2": false,
+            "button_style_2": "button"
+          }
+        }
+      },
+      "block_order": [
+        "media_hFKW6r"
+      ],
+      "name": "Media Banners",
+      "settings": {
+        "color_scheme": "",
+        "layout": "screen-width",
+        "layout_mobile": "screen-width",
+        "title": "",
+        "header_is_h1": false,
+        "visually_hide_header": false,
+        "heading_size": "h2",
+        "description": "",
+        "text_style": "body",
+        "mobile_text_style": "body--mobile",
+        "heading_alignment": "left",
+        "aspect_ratio": "small",
+        "aspect_ratio_mobile": "adapt",
+        "stack_images_on_mobile": true,
+        "slider_show_dots": true,
+        "slider_show_arrows": false,
+        "accessibility_info": "",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_bottom": 0
+      }
+    },
+    "rich_text_FQXBFp": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_aWwkMw": {
+          "type": "heading",
+          "settings": {
+            "heading": "Stocking Stuffers",
+            "heading_size": "h1"
+          }
+        },
+        "text_UbmGj6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Elevate your stocking stuffer game this holiday season with Okanagan Spirits boozy bites, mixes & syrups.</p><p><strong><br/>Looking to shake things up?</strong> Explore our <a href=\"/blogs/recipes\" target=\"_blank\" title=\"Recipes\">Cocktail Recipes</a>— and spark your inner mixologist.</p>",
+            "text_style": "body",
+            "mobile_text_style": "body--mobile"
+          }
+        }
+      },
+      "block_order": [
+        "heading_aWwkMw",
+        "text_UbmGj6"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "color_scheme": "",
+        "layout": "page-width",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "padding_top": 2,
+        "padding_bottom": 2,
+        "margin_bottom": 0
+      }
+    },
+    "featured_collection_Yxt6yV": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "layout": "page-width",
+        "title": "",
+        "header_is_h1": false,
+        "visually_hide_header": false,
+        "heading_size": "h2",
+        "description": "",
+        "text_style": "body",
+        "mobile_text_style": "body--mobile",
+        "heading_alignment": "left",
+        "product_position": "first",
+        "collection": "gift-packs",
+        "enable_featured_banner": true,
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "show_view_all": true,
+        "view_all_text": "Shop Stocking Stuffers",
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "card_color_scheme": "",
+        "columns_mobile": 1,
+        "swipe_on_mobile": true,
+        "full_width": false,
+        "slider_show_dots": true,
+        "slider_show_arrows": false,
+        "padding_top": 2,
+        "padding_bottom": 2,
+        "margin_bottom": 0
+      }
+    },
+    "media_with_text_xYJyxg": {
+      "type": "media-with-text",
+      "blocks": {
+        "content_PTMYzn": {
+          "type": "content",
+          "settings": {
+            "image_first": true,
+            "image": "shopify://shop_images/12-days-of-whisky-spirits-webpage-header-Facebook-Video.png",
+            "video_autoplay": false,
+            "heading": "Advent Calendars",
+            "heading_size": "h2",
+            "text": "<h3>12 Days, Endless Cheers</h3><h4>Whisky & Spirits Advent Calendars Return</h4><p><br/>Our highly sought after <a href=\"https://okanaganspirits.com/products/gift-packs/advent-calendars/12-days-whisky-advent-calendar/\" target=\"_blank\">12 Days of Whisky</a> and <a href=\"https://okanaganspirits.com/products/gift-packs/advent-calendars/12-days-spirits-advent-calendar/\" target=\"_blank\">12 Days of Spirits</a> Advent Calendars return for 2025.</p><p><br/>These aren’t date-specific, so you can sip your way through December—or start your countdown on Christmas Day.</p><h4><br/>✨ Quantities are limited, and they sell fast. Explore all our festive <a href=\"/collections/gift-packs\" target=\"_blank\" title=\"Gift Packs\">gift packs</a> today!<br/></h4>",
+            "text_style": "body",
+            "mobile_text_style": "body--mobile",
+            "button_label": "Shop 12 days of spirits",
+            "button_link": "",
+            "button_style_secondary": true,
+            "button_label_2": "Shop 12 days of whisky",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "box_color_scheme": "",
+            "desktop_content_position": "top",
+            "desktop_content_alignment": "left",
+            "content_layout": "no-overlap",
+            "mobile_content_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "content_PTMYzn"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "color_scheme": "",
+        "layout": "page-width",
+        "aspect_ratio": "square",
+        "desktop_image_width": "medium",
+        "slider_show_dots": true,
+        "slider_show_arrows": false,
+        "padding_top": 2,
+        "padding_bottom": 2,
+        "margin_bottom": 0
+      }
+    },
+    "collection_list_haWBRP": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_JLUMRw": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "staff-picks",
+            "title_override": ""
+          }
+        },
+        "featured_collection_FHVhUK": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "winter-blues",
+            "title_override": ""
+          }
+        },
+        "featured_collection_bKrifq": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "new-releases",
+            "title_override": ""
+          }
+        },
+        "featured_collection_V9Gm4w": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "liqueur",
+            "title_override": ""
+          }
+        },
+        "featured_collection_6hXeRG": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "gin",
+            "title_override": ""
+          }
+        },
+        "featured_collection_jXXVQ9": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "whisky",
+            "title_override": ""
+          }
+        },
+        "featured_collection_AdWepB": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "vodka",
+            "title_override": ""
+          }
+        },
+        "featured_collection_dQD9rB": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "world-spirits-awards-2025-winners",
+            "title_override": ""
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_JLUMRw",
+        "featured_collection_FHVhUK",
+        "featured_collection_bKrifq",
+        "featured_collection_V9Gm4w",
+        "featured_collection_6hXeRG",
+        "featured_collection_jXXVQ9",
+        "featured_collection_AdWepB",
+        "featured_collection_dQD9rB"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "color_scheme": "",
+        "color_scheme_card": "",
+        "layout": "page-width",
+        "title": "Explore Holiday Favourites 🍁",
+        "header_is_h1": false,
+        "visually_hide_header": false,
+        "heading_size": "h1",
+        "description": "",
+        "text_style": "body",
+        "mobile_text_style": "body--mobile",
+        "heading_alignment": "left",
+        "show_all": false,
+        "show_all_text": "View all",
+        "columns_desktop": 7.5,
+        "enable_desktop_slider": true,
+        "columns_mobile": 1,
+        "swipe_on_mobile": false,
+        "full_width": false,
+        "slider_show_dots": true,
+        "slider_show_arrows": false,
+        "padding_top": 2,
+        "padding_bottom": 2,
+        "margin_bottom": 0
+      }
+    },
+    "featured_collection_6LRrAk": {
+      "type": "featured-collection",
+      "blocks": {
+        "product_wWRVGx": {
+          "type": "product",
+          "settings": {
+            "product": "whisky-gift-pack-375"
+          }
+        },
+        "product_bdHAEb": {
+          "type": "product",
+          "settings": {
+            "product": "family-reserve-gift-pack-375ml"
+          }
+        },
+        "product_mFzzQG": {
+          "type": "product",
+          "settings": {
+            "product": "laird-of-fintry-gift-pack-375ml"
+          }
+        }
+      },
+      "block_order": [
+        "product_wWRVGx",
+        "product_bdHAEb",
+        "product_mFzzQG"
+      ],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "color_scheme": "",
+        "layout": "page-width",
+        "title": "Gift Packs",
+        "header_is_h1": false,
+        "visually_hide_header": false,
+        "heading_size": "h2",
+        "description": "",
+        "text_style": "body",
+        "mobile_text_style": "body--mobile",
+        "heading_alignment": "left",
+        "product_position": "first",
+        "collection": "",
+        "enable_featured_banner": true,
+        "products_to_show": 12,
+        "columns_desktop": 3,
+        "show_view_all": true,
+        "view_all_text": "SHOP GIFT PACKS",
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "card_color_scheme": "",
+        "columns_mobile": 1,
+        "swipe_on_mobile": false,
+        "full_width": false,
+        "slider_show_dots": true,
+        "slider_show_arrows": false,
+        "padding_top": 2,
+        "padding_bottom": 2,
+        "margin_bottom": 0
+      }
+    },
+    "media_with_text_QyVbkR": {
+      "type": "media-with-text",
+      "blocks": {
+        "content_DUYFy3": {
+          "type": "content",
+          "settings": {
+            "image_first": true,
+            "image": "shopify://shop_images/Copy-of-OKS-Syrup-Xmas-e1763058936132.png",
+            "video_autoplay": false,
+            "heading": "Cocktail Kits",
+            "heading_size": "h2",
+            "text": "<h3>Pre-wrapped for the ultimate gift convenience</h3><p><br/>Cocktail kits for every palate; these come in large and small format. All cocktail kits come pre-packaged and ready-to-gift. Also always available in-store for those last minute grab-and-go moments!<br/><br/></p>",
+            "text_style": "body",
+            "mobile_text_style": "body--mobile",
+            "button_label": "Shop Cocktails Kits",
+            "button_link": "shopify://collections/cocktail-kits",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "box_color_scheme": "",
+            "desktop_content_position": "top",
+            "desktop_content_alignment": "left",
+            "content_layout": "no-overlap",
+            "mobile_content_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "content_DUYFy3"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "color_scheme": "",
+        "layout": "page-width",
+        "aspect_ratio": "square",
+        "desktop_image_width": "medium",
+        "slider_show_dots": true,
+        "slider_show_arrows": false,
+        "padding_top": 2,
+        "padding_bottom": 2,
+        "margin_bottom": 0
+      }
+    },
+    "media_with_text_dWhxfC": {
+      "type": "media-with-text",
+      "blocks": {
+        "content_CErHhQ": {
+          "type": "content",
+          "settings": {
+            "image_first": false,
+            "image": "shopify://shop_images/farm-to-flask-christmas_91db1638-29fb-4910-83d8-790f94610512.jpg",
+            "video_autoplay": false,
+            "heading": "Gift an Experience",
+            "heading_size": "h2",
+            "text": "<p>Make an afternoon out of our signature Distillery Experiences. Pre-booked in advance, these experiences all include a distillery tour, followed by a guided tasting of spirits from different categories depending on the experience theme.</p>",
+            "text_style": "body",
+            "mobile_text_style": "body--mobile",
+            "button_label": "Browse Tours & Experiences",
+            "button_link": "shopify://pages/tours-experiences",
+            "button_style_secondary": true,
+            "button_label_2": "Distillery Experience Gift Cards",
+            "button_link_2": "shopify://collections/gift-experiences",
+            "button_style_secondary_2": false,
+            "box_color_scheme": "",
+            "desktop_content_position": "top",
+            "desktop_content_alignment": "left",
+            "content_layout": "no-overlap",
+            "mobile_content_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "content_CErHhQ"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "color_scheme": "",
+        "layout": "page-width",
+        "aspect_ratio": "square",
+        "desktop_image_width": "medium",
+        "slider_show_dots": true,
+        "slider_show_arrows": false,
+        "padding_top": 2,
+        "padding_bottom": 2,
+        "margin_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "page_RPfLw9",
+    "banner_xCLEwV",
+    "rich_text_FQXBFp",
+    "featured_collection_Yxt6yV",
+    "media_with_text_xYJyxg",
+    "collection_list_haWBRP",
+    "featured_collection_6LRrAk",
+    "media_with_text_QyVbkR",
+    "media_with_text_dWhxfC"
+  ]
+}

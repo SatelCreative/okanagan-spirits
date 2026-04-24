@@ -9,6 +9,77 @@
  */
 {
   "sections": {
+    "banner_mfWakP": {
+      "type": "banner",
+      "blocks": {
+        "media_QUYzX7": {
+          "type": "media",
+          "settings": {
+            "color_scheme_box": "",
+            "transparent_box_desktop": true,
+            "transparent_box_mobile": true,
+            "image": "shopify://shop_images/WDBGBarrel-Room-Dark-Grunge-edit2-1.jpg",
+            "image_mobile": "shopify://shop_images/WDBGBarrel-Room-Dark-Grunge-edit2-1.jpg",
+            "image_link": "",
+            "image_overlay_opacity": 0,
+            "video_description": "",
+            "enable_video_autoplay": true,
+            "desktop_content_position": "middle-center",
+            "desktop_remove_extra_padding": false,
+            "desktop_content_alignment": "center",
+            "mobile_content_position": "middle",
+            "mobile_content_alignment": "center",
+            "heading": "Your Name. Your Whisky.",
+            "heading_size": "h0--desktop",
+            "heading_size_mobile": "h2--mobile",
+            "heading_letter_spacing": "",
+            "heading_shadow": "",
+            "heading_italic": false,
+            "is_h1": false,
+            "visually_hidden": false,
+            "text": "<p><strong>Fill out the inquiry form below, and our team will contact you shortly to answer any questions you might have and to get your barrel rolling!</strong></p>",
+            "text_style": "body--desktop",
+            "mobile_text_style": "body--mobile",
+            "button_label_1": "",
+            "button_link_1": "",
+            "button_bold_1": false,
+            "button_style_1": "button",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_bold_2": false,
+            "button_style_2": "button"
+          }
+        }
+      },
+      "block_order": [
+        "media_QUYzX7"
+      ],
+      "name": "Media Banners",
+      "settings": {
+        "color_scheme": "",
+        "layout": "screen-width",
+        "layout_mobile": "screen-width",
+        "title": "",
+        "header_is_h1": false,
+        "visually_hide_header": false,
+        "heading_size": "h2",
+        "description": "",
+        "text_style": "body",
+        "mobile_text_style": "body--mobile",
+        "heading_alignment": "left",
+        "aspect_ratio": "small",
+        "aspect_ratio_mobile": "adapt",
+        "stack_images_on_mobile": true,
+        "slider_show_dots": true,
+        "slider_show_arrows": false,
+        "accessibility_info": "",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_bottom": 0
+      }
+    },
     "contact_form_zfnTji": {
       "type": "contact-form",
       "name": "t:sections.contact-form.presets.name",
@@ -29,9 +100,145 @@
         "padding_bottom": 2,
         "margin_bottom": 0
       }
+    },
+    "media_with_text_UAgXTz": {
+      "type": "media-with-text",
+      "blocks": {
+        "content_3dFknJ": {
+          "type": "content",
+          "settings": {
+            "image_first": true,
+            "video_url": "https://youtu.be/KCcc8n600oQ?si=7t-99E3hd0AB5Z5Q",
+            "video_autoplay": false,
+            "heading": "Whisky is What We Do.",
+            "heading_size": "h2",
+            "text": "<p>Okanagan Spirits has been crafting exceptional, award-winning whiskies for two decades. Who better to help you create your<strong> Private Label Custom Whisky</strong>.<br/><br/></p><ul><li>Corporate gifting</li><li>Organization/brand promotion</li><li>Special events</li><li>Fundraisers</li><li>Personalized gifting</li></ul>",
+            "text_style": "body",
+            "mobile_text_style": "body--mobile",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "box_color_scheme": "",
+            "desktop_content_position": "top",
+            "desktop_content_alignment": "left",
+            "content_layout": "no-overlap",
+            "mobile_content_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "content_3dFknJ"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "color_scheme": "",
+        "layout": "page-width",
+        "aspect_ratio": "square",
+        "desktop_image_width": "medium",
+        "slider_show_dots": true,
+        "slider_show_arrows": false,
+        "padding_top": 2,
+        "padding_bottom": 2,
+        "margin_bottom": 0
+      }
+    },
+    "media_with_text_cAEMJh": {
+      "type": "media-with-text",
+      "blocks": {
+        "content_AMADi9": {
+          "type": "content",
+          "settings": {
+            "image_first": true,
+            "image": "shopify://shop_images/2023-10-04_Ducky_5251-1-e1740636145611.jpg",
+            "video_autoplay": false,
+            "heading": "How it Works",
+            "heading_size": "h2",
+            "text": "<p><strong>1. Select your base product</strong> (Rye, Bourbon or Single-Malt).<br/>Our base whiskies are already aged 5 or more years & are ready for double-wood finishing.<strong><br/><br/>2. Choose a finishing cask</strong> (optional) for your perfect signature flavour profile.<strong><br/><br/>3. Design Your label</strong> with the help of our in house graphics design team.</p><p><em><br/>The whole process takes only 2-10 weeks at our Vernon distillery so you don’t have to wait years to enjoy your custom whisky.</em><em><strong><br/><br/>All Packages Include:</strong></em></p><ul><li>Double-Wood Finish (extra for luxury finishes)</li><li>Custom label & graphic design</li><li>LDB Registration</li><li>Bottling</li></ul><p><strong><br/>The Fine Print:</strong> Shipping, taxes & Bottle Deposits are billed extra.</p>",
+            "text_style": "body",
+            "mobile_text_style": "body--mobile",
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "box_color_scheme": "",
+            "desktop_content_position": "top",
+            "desktop_content_alignment": "left",
+            "content_layout": "no-overlap",
+            "mobile_content_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "content_AMADi9"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "color_scheme": "",
+        "layout": "page-width",
+        "aspect_ratio": "square",
+        "desktop_image_width": "small",
+        "slider_show_dots": true,
+        "slider_show_arrows": false,
+        "padding_top": 2,
+        "padding_bottom": 2,
+        "margin_bottom": 0
+      }
+    },
+    "media_with_text_a4X3LN": {
+      "type": "media-with-text",
+      "blocks": {
+        "content_HRy6dQ": {
+          "type": "content",
+          "settings": {
+            "image_first": false,
+            "image": "shopify://shop_images/2024-05-31_OKS2024_7747b-square-1-scaled-e1740632771278.jpg",
+            "video_autoplay": false,
+            "heading": "2025/2026 Pricing starts at:",
+            "heading_size": "h2",
+            "text": "<ul><li>$2700* for rye, based on our small casks which yields 36 bottles at standard 40% ABV strength.  Medium cask: 54 bottles or our full barrel: 300+ bottles.</li><li>$2988* for bourbon, based on our small casks which yields 36 bottles at standard 40% ABV strength.  Medium cask: 54 bottles or our full barrel: 300+ bottles.</li><li>$3420* for single-malt, based on our small casks which yields 36 bottles at standard 40% ABV strength.  Medium cask: 54 bottles or our full barrel: 300+ bottles.</li><li>OPTIONAL take home barrel with custom plaque adds $350.</li><li>OPTIONAL Custom back label adds $250</li><li>OPTIONAL Tasting Notes/Greeting Cards Adds $200</li></ul><p><br/>As BC’s original craft distillery, we offer the flexibility you need for your perfectly tailored whisky experience.</p><p><strong><br/>Ready to start? Place your order </strong><a href=\"https://okanaganspirits.com/products/whisky/private-label\"><strong>here.</strong></a></p><p><strong><br/>Have questions about our Private Label Whisky Program? Fill out the inquiry form below, and our team will contact you shortly to get the barrel rolling on your custom whisky dreams!</strong></p>",
+            "text_style": "body",
+            "mobile_text_style": "body--mobile",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "box_color_scheme": "",
+            "desktop_content_position": "top",
+            "desktop_content_alignment": "left",
+            "content_layout": "no-overlap",
+            "mobile_content_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "content_HRy6dQ"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "color_scheme": "",
+        "layout": "page-width",
+        "aspect_ratio": "square",
+        "desktop_image_width": "medium",
+        "slider_show_dots": true,
+        "slider_show_arrows": false,
+        "padding_top": 2,
+        "padding_bottom": 2,
+        "margin_bottom": 0
+      }
     }
   },
   "order": [
+    "banner_mfWakP",
+    "media_with_text_UAgXTz",
+    "media_with_text_cAEMJh",
+    "media_with_text_a4X3LN",
     "contact_form_zfnTji"
   ]
 }
