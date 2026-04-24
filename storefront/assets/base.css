@@ -3392,9 +3392,12 @@ slider-component.slider--full {
 }
 
 @media screen and (max-width: 749px) {
-  .slider-button--prev,
+  .slider-button--prev {
+    transform: translate(-25%, -50%);
+  }
+
   .slider-button--next {
-    transform: translate(0%, -50%);
+    transform: translate(25%, -50%);
   }
 }
 
@@ -3644,12 +3647,12 @@ body.verification-required .age-gate ~ * {
 .tabs-element {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 40px;
 }
 
 @media screen and (max-width: 749px) {
   .tabs-element {
-    gap: 30px;
+    gap: 20px;
   }
 }
 
@@ -3672,7 +3675,7 @@ body.verification-required .age-gate ~ * {
   color: rgb(var(--color-foreground));
   background: transparent;
   font-family: var(--font-heading-family);
-  font-size: 11px;
+  font-size: var(--font-body);
   font-weight: 700;
   letter-spacing: 2.5px;
   text-transform: uppercase;

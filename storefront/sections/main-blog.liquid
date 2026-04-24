@@ -16,6 +16,7 @@
     >
       {%- render 'section_header' -%}
 
+      {% comment %}
       {%- if section.settings.blog_handles != blank or section.settings.blog_navigation_title != blank -%}
         <div class="blog__navigation">
           {% assign blog_handles = section.settings.blog_handles | split: ',' %}
@@ -60,6 +61,7 @@
           {% endif %}
         </div>
       {%- endif -%}
+      {% endcomment %}
 
       {%- assign blog_count = 0 -%}
 

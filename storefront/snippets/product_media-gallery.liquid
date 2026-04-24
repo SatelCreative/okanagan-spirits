@@ -98,7 +98,7 @@
                   </span>
                 {% endif %}
 
-                <div class="media media--{{ section.settings.aspect_ratio }} {% if section.settings.display_thumbnails_as_dots %}hidden--mobile{% endif %}">
+                <div class="media media--contain media--{{ section.settings.aspect_ratio }} {% if section.settings.display_thumbnails_as_dots %}hidden--mobile{% endif %}">
                   {{
                     media.preview_image
                     | image_url: width: 416
@@ -129,7 +129,9 @@
         {%- endfor -%}
       </ul>
 
-      {%- render 'slider_controls', arrows: true -%}
+      {% if product.media.size > 1 %}
+        {%- render 'slider_controls', arrows: true -%}
+      {% endif %}
     </slider-component>
   </div>
 {%- endcapture -%}
@@ -167,6 +169,16 @@
     <span class='product__media-decoration product__media-decoration--2'>{{ decoration }}</span>
     <span class='product__media-decoration product__media-decoration--3'>{{ decoration }}</span>
     <span class='product__media-decoration product__media-decoration--4'>{{ decoration }}</span>
+
+    {% if product.metafields.custom.awards != blank %}
+      <div class="product__media-award">
+        {% render 'icon-diamond' %}
+        <span class="product__media-award-text">
+          {{ 'products.product.award_winning' | t }}
+        </span>
+        {% render 'icon-diamond' %}
+      </div>
+    {% endif %}
 
     <slider-component id="GalleryViewer-{{ section.id }}" class="media-gallery__images-slider">
       <ul
@@ -253,7 +265,9 @@
         {%- assign hide_mobile_carousel = false -%}
       {% endif %}
 
-      {%- render 'slider_controls', arrows: true, hide_desktop: hide_desktop_carousel, hide_mobile: hide_mobile_carousel -%}
+      {% if product.media.size > 1 %}
+        {%- render 'slider_controls', arrows: true, hide_desktop: hide_desktop_carousel, hide_mobile: hide_mobile_carousel -%}
+      {% endif %}
     </slider-component>
   </div>
 

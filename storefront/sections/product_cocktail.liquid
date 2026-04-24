@@ -19,8 +19,10 @@
    <div class='product__cocktail'>
     <div class='product__cocktail-image'>
       <div 
-        class='media media--adapt' 
+        class='media media--square media--contain' 
+        {% comment %}
         style='padding-bottom: {{ 1 | divided_by: product.metafields.custom.featured_cocktail.value.image.aspect_ratio | times: 100 }}%;'
+        {% endcomment %}
       >
         {{
           product.metafields.custom.featured_cocktail.value.image
@@ -38,10 +40,23 @@
         {{ product.metafields.custom.featured_cocktail.value.title }}
       </div>
 
-      <a class='product__cocktail-action'>
-        View Full Recipe
-        {% render 'icon-arrow-right' %}
-      </a>
+      <div class='product__cocktail-actions'>
+        <a
+          href="{{ product.metafields.custom.featured_cocktail.value.url }}"
+          class='button button--secondary product__cocktail-action'
+        >
+          {{ 'products.product.view_full_recipe' | t }}
+          {% render 'icon-arrow-right' %}
+        </a>
+
+        <a
+          href="/blogs/recipes/"
+          class='button button--secondary product__cocktail-action'
+        >
+          {{ 'products.product.view_all_recipes' | t }}
+          {% render 'icon-arrow-right' %}
+        </a>
+      </div>
     </div>
    </div>
   </div>

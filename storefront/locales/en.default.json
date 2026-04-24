@@ -141,9 +141,12 @@
   },
   "products": {
     "product": {
+      "view_full_recipe": "View full recipe",
+      "view_all_recipes": "Explore All Cocktail Recipes",
+      "award_winning": "Award Winning",
       "callouts": {
         "volume": "mL",
-        "alcohol_content": "% ALC/VOL"
+        "alcohol_content": "% ALC"
       },
       "view_full_details": "View full details",
       "size_guide": "Size help?",
