@@ -370,7 +370,8 @@
     "footer": {
       "payment": "Payment methods",
       "reservations": "Reservations",
-      "email": "Email"
+      "email": "Email",
+      "newsletter": "Subscribe to newsletter"
     },
     "featured_blog": {
       "view_all": "View all",

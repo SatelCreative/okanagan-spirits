@@ -76,6 +76,7 @@
                   id="MegaMenu-Content-{{ block.id }}"
                   class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce"
                   tabindex="-1"
+                  style="--logo-width: {{ settings.logo_width }}px;"
                 >
                   <ul class="mega-menu__list {{ section.settings.layout }}" role="list">
                     {%- for link in block.settings.menu.links -%}

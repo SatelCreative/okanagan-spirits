@@ -9,6 +9,10 @@
   id="{{ section.id }}"
   class="footer color-{{ section.settings.color_scheme }} gradient"
 >
+  <div class="footer__art-deco">
+    {% render 'art-deco_footer' %}
+  </div>
+
   <div
     class="page-width footer__blocks-wrapper {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
     {% if settings.animations_reveal_on_scroll %}
@@ -68,7 +72,69 @@
                       </a>
                     </div>
                   </div>
+
+                  <div class="footer__contact-item">
+                    <label for="NewsletterFooter" class="footer__contact-item-heading">
+                      {{ 'sections.footer.newsletter' | t }}
+                    </label>
+                    <div class="footer__contact-item-content">
+                      {%- form 'customer', class: 'newsletter-form' -%}
+                        <input type="hidden" name="contact[tags]" value="newsletter">
+                        <div class="field field--newsletter">
+                          <input
+                            id="NewsletterFooter"
+                            type="email"
+                            name="contact[email]"
+                            class="field__newsletter"
+                            value="{{ form.email }}"
+                            required="required"
+                            autocorrect="off"
+                            autocapitalize="off"
+                            autocomplete="email"
+                            {% if form.errors %}
+                              autofocus
+                              aria-invalid="true"
+                              aria-describedby="ContactFooter-error"
+                            {% elsif form.posted_successfully? %}
+                              aria-describedby="ContactFooter-success"
+                            {% endif %}
+                          >
+        
+                          <button
+                            type="submit"
+                            class="link link--text field__arrow"
+                            name="commit"
+                            id="Subscribe"
+                            aria-label="{{ 'newsletter.button_label' | t }}"
+                          >
+                            {% render 'icon-arrow' %}
+                          </button>
+                        </div>
+          
+                        {%- if form.errors -%}
+                          <small class="field__status" id="ContactFooter-error">
+                            {%- render 'icon-error' -%}
+                            {{- form.errors.translated_fields.email | capitalize }}
+                            {{ form.errors.messages.email -}}
+                          </small>
+                        {%- endif -%}
+          
+                        {%- if form.posted_successfully? -%}
+                          <small
+                            class="field__status"
+                            id="ContactFooter-success"
+                            tabindex="-1"
+                            autofocus
+                          >
+                            {% render 'icon-success' -%}
+                            {{- 'newsletter.success' | t }}
+                          </small>
+                        {%- endif -%}
+                      {%- endform -%}
+                    </div>
+                  </div>
                 </div>
+                
               </div>
           {%- endcase -%}
         </div>
@@ -132,14 +198,73 @@
                     </a>
                   </div>
                 </div>
+
+                <div class="footer__contact-item">
+                  <label for="NewsletterFooterMobile" class="footer__contact-item-heading">
+                    {{ 'sections.footer.newsletter' | t }}
+                  </label>
+                  <div class="footer__contact-item-content">
+                    {%- form 'customer', class: 'newsletter-form' -%}
+                      <input type="hidden" name="contact[tags]" value="newsletter">
+                      <div class="newsletter-form__field-wrapper">
+                        <div class="field field--newsletter">
+                          <input
+                            id="NewsletterFooterMobile"
+                            type="email"
+                            name="contact[email]"
+                            class="field__newsletter"
+                            value="{{ form.email }}"
+                            required="required"
+                            autocorrect="off"
+                            autocapitalize="off"
+                            autocomplete="email"
+                            {% if form.errors %}
+                              autofocus
+                              aria-invalid="true"
+                              aria-describedby="ContactFooter-error"
+                            {% elsif form.posted_successfully? %}
+                              aria-describedby="ContactFooter-success"
+                            {% endif %}
+                          >
+        
+                          <button
+                            type="submit"
+                            class="link field__arrow link--text"
+                            name="commit"
+                            id="Subscribe"
+                            aria-label="{{ 'newsletter.button_label' | t }}"
+                          >
+                            {% render 'icon-arrow' %}
+                          </button>
+                        </div>
+                      </div>
+        
+                      {%- if form.errors -%}
+                        <small class="field__status" id="ContactFooter-error">
+                          {%- render 'icon-error' -%}
+                          {{- form.errors.translated_fields.email | capitalize }}
+                          {{ form.errors.messages.email -}}
+                        </small>
+                      {%- endif -%}
+        
+                      {%- if form.posted_successfully? -%}
+                        <small
+                          class="field__status"
+                          id="ContactFooter-success"
+                          tabindex="-1"
+                          autofocus
+                        >
+                          {% render 'icon-success' -%}
+                          {{- 'newsletter.success' | t }}
+                        </small>
+                      {%- endif -%}
+                    {%- endform -%}
+                  </div>
+                </div>
               </div>
             </div>
         {%- endcase -%}
       {%- endfor -%}
-    </div>
-
-    <div class="footer__art-deco">
-      {% render 'art-deco_footer' %}
     </div>
   </div>
 

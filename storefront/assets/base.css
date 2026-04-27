@@ -1680,6 +1680,7 @@ button.shopify-payment-button__button--unbranded,
   -webkit-appearance: none;
   appearance: none;
 
+  color: inherit;
   font-family: var(--font-body-family);
   font-size: var(--font-body);
   font-style: var(--font-body-style);
@@ -1834,6 +1835,10 @@ button.shopify-payment-button__button--unbranded,
   top: 50%;
   right: 0rem;
   transform: translateY(-50%);
+}
+
+.field__arrow svg {
+  transform: rotate(180deg);
 }
 
 .field__checkbox {
@@ -2563,6 +2568,26 @@ menu-drawer details[open] > .drawer,
   transform: rotate(180deg);
 }
 
+.navigation-drawer__child {
+  display: flex;
+  width: 100%;
+  padding: 0 1rem;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 38px;
+}
+
+@media screen and (min-width: 750px) {
+  .navigation-drawer__child {
+    background-color: rgba(var(--color-foreground), 0.1);
+  }
+}
+
+.navigation-drawer__child > .icon-arrow {
+  transform: rotate(180deg);
+}
+
 /*
 .navigation-drawer__menu {
   margin-top: var(--row-spacing);
@@ -2574,7 +2599,7 @@ menu-drawer details[open] > .drawer,
 }
 
 .navigation-drawer__submenu {
-  padding: 0 1rem;
+  padding: 0 2rem;
 }
 
 .navigation-drawer__link {

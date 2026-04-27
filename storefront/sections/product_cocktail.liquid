@@ -2,65 +2,64 @@
 
 {%- render 'section_padding' %}
 
-{% if product.metafields.custom.featured_cocktail != blank %}
+{% if product.metafields.custom.featured_cocktail.value != blank %}
+  {%- assign widths = '165, 360, 535, 750, 1070, 1500' -%}
+  {%- capture sizes -%}
+    (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
+  {%- endcapture -%}
 
-{%- assign widths = '165, 360, 535, 750, 1070, 1500' -%}
-{%- capture sizes -%}
-  (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
-{%- endcapture -%}
+  <div
+    id="{{ section.id }}"
+    class="color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding isolate  gradient"
+  >
+    <div class="{{ section.settings.layout }}">
+      {%- render 'section_header' -%}
 
-<div
-  id="{{ section.id }}"
-  class="color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding isolate  gradient"
->
-  <div class="{{ section.settings.layout }}">
-    {%- render 'section_header' -%}
+    <div class='product__cocktail'>
+      <div class='product__cocktail-image'>
+        <div 
+          class='media media--square media--contain' 
+          {% comment %}
+          style='padding-bottom: {{ 1 | divided_by: product.metafields.custom.featured_cocktail.value.image.aspect_ratio | times: 100 }}%;'
+          {% endcomment %}
+        >
+          {{
+            product.metafields.custom.featured_cocktail.value.image
+            | image_url: width: 1500
+            | image_tag:
+              sizes: sizes,
+              widths: widths,
+              fetchpriority: 'auto',
+              lazy: true
+          }}
+        </div>
+      </div>
+      <div class='product__cocktail-content'>
+        <div class='product__cocktail-title'>
+          {{ product.metafields.custom.featured_cocktail.value.title }}
+        </div>
 
-   <div class='product__cocktail'>
-    <div class='product__cocktail-image'>
-      <div 
-        class='media media--square media--contain' 
-        {% comment %}
-        style='padding-bottom: {{ 1 | divided_by: product.metafields.custom.featured_cocktail.value.image.aspect_ratio | times: 100 }}%;'
-        {% endcomment %}
-      >
-        {{
-          product.metafields.custom.featured_cocktail.value.image
-          | image_url: width: 1500
-          | image_tag:
-            sizes: sizes,
-            widths: widths,
-            fetchpriority: 'auto',
-            lazy: true
-        }}
+        <div class='product__cocktail-actions'>
+          <a
+            href="{{ product.metafields.custom.featured_cocktail.value.url }}"
+            class='button button--secondary product__cocktail-action'
+          >
+            {{ 'products.product.view_full_recipe' | t }}
+            {% render 'icon-arrow-right' %}
+          </a>
+
+          <a
+            href="/blogs/recipes/"
+            class='button button--secondary product__cocktail-action'
+          >
+            {{ 'products.product.view_all_recipes' | t }}
+            {% render 'icon-arrow-right' %}
+          </a>
+        </div>
       </div>
     </div>
-    <div class='product__cocktail-content'>
-      <div class='product__cocktail-title'>
-        {{ product.metafields.custom.featured_cocktail.value.title }}
-      </div>
-
-      <div class='product__cocktail-actions'>
-        <a
-          href="{{ product.metafields.custom.featured_cocktail.value.url }}"
-          class='button button--secondary product__cocktail-action'
-        >
-          {{ 'products.product.view_full_recipe' | t }}
-          {% render 'icon-arrow-right' %}
-        </a>
-
-        <a
-          href="/blogs/recipes/"
-          class='button button--secondary product__cocktail-action'
-        >
-          {{ 'products.product.view_all_recipes' | t }}
-          {% render 'icon-arrow-right' %}
-        </a>
-      </div>
     </div>
-   </div>
   </div>
-</div>
 {% endif %}
 
 {% schema %}
