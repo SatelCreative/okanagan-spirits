@@ -44,11 +44,14 @@
             "show_installments": false
           }
         },
+        "description_VEEFNU": {
+          "type": "description",
+          "settings": {}
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
             "picker_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
-            "picker_type": "button",
             "siblings_title": "Colours",
             "siblings_swatches": true
           }
@@ -63,10 +66,7 @@
         },
         "seperator_U3AJjh": {
           "type": "seperator",
-          "settings": {}
-        },
-        "description_VEEFNU": {
-          "type": "description",
+          "disabled": true,
           "settings": {}
         },
         "seperator_B8BVLJ": {
@@ -105,10 +105,10 @@
         "title",
         "callouts_kzEmYX",
         "price_ymGdEt",
+        "description_VEEFNU",
         "variant_picker",
         "buy_buttons",
         "seperator_U3AJjh",
-        "description_VEEFNU",
         "seperator_B8BVLJ",
         "caption_D7Xne7",
         "caption_GkDBmq",
@@ -199,7 +199,7 @@
       "settings": {
         "color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
         "layout": "page-width",
-        "title": "GRAIN COMPOSITION",
+        "title": "MASHBILL",
         "header_is_h1": false,
         "visually_hide_header": false,
         "heading_size": "h2",

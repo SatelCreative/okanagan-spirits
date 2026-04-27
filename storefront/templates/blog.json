@@ -12,8 +12,24 @@
     "main": {
       "type": "main-blog",
       "settings": {
+        "color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
+        "layout": "page-width",
+        "title": "{{ blog.title }}",
+        "header_is_h1": false,
+        "visually_hide_header": false,
+        "heading_size": "h2",
+        "description": "",
+        "text_style": "body",
+        "mobile_text_style": "body--mobile",
+        "heading_alignment": "center",
+        "columns_desktop": 3,
+        "columns_mobile": 1,
+        "show_pagination": true,
+        "blog_navigation_title": "RECENT STORIES",
+        "blog_handles": "News",
         "padding_top": 2,
-        "padding_bottom": 2
+        "padding_bottom": 2,
+        "margin_bottom": 0
       }
     }
   },
