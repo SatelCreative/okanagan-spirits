@@ -15,6 +15,38 @@
       <div class="mashbill-container">
         <div class="mashbill-grid">
           {% for ingredient in product.metafields.custom.mashbill_ingredients.value %}
+            {% case ingredient.icon_handle %}
+              {% when 'corn' %}
+                {%- assign mashbill_ring_file = 'corn.png' -%}
+              {% when 'barley' %}
+                {%- assign mashbill_ring_file = 'malted-barley.png' -%}
+              {% when 'rye' %}
+                {%- assign mashbill_ring_file = 'rye.png' -%}
+              {% when 'wheat' %}
+                {%- assign mashbill_ring_file = 'wheat.png' -%}
+              {% when 'fruit' %}
+                {%- assign mashbill_ring_file = 'berries.png' -%}
+              {% when 'apple' %}
+                {%- assign mashbill_ring_file = 'apples.png' -%}
+              {% when 'pear' %}
+                {%- assign mashbill_ring_file = 'pears.png' -%}
+              {% when 'plum' %}
+                {%- assign mashbill_ring_file = 'plums.png' -%}
+              {% when 'raspberry' %}
+                {%- assign mashbill_ring_file = 'berries.png' -%}
+              {% when 'cherry' %}
+                {%- assign mashbill_ring_file = 'cherries.png' -%}
+              {% when 'grape' %}
+                {%- assign mashbill_ring_file = 'grapes-pinot.png' -%}
+              {% when 'blend' %}
+                {%- assign mashbill_ring_file = 'cranberries.png' -%}
+              {% else %}
+                {%- assign mashbill_ring_file = 'chocolate-barley.png' -%}
+            {% endcase %}
+            
+            {%- assign mashbill_ring_href = mashbill_ring_file | asset_url -%}
+            {%- assign mashbill_pattern_id = 'mashbill-ring-tex-' | append: section.id | append: '-' | append: forloop.index -%}
+
             <div class="mashbill-item">
               <div class="mashbill-icon">
                 {% case ingredient.icon_handle %}
@@ -50,15 +82,38 @@
               <div class="mashbill-grain">{{ ingredient.grain }}</div>
               
               <div class="mashbill-circle">
-                <svg viewBox="0 0 120 120">
+                <svg viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+                  <defs>
+                    <pattern
+                      id="{{ mashbill_pattern_id }}"
+                      patternUnits="userSpaceOnUse"
+                      patternContentUnits="userSpaceOnUse"
+                      x="0"
+                      y="0"
+                      width="120"
+                      height="120"
+                    >
+                      <image
+                        href="{{ mashbill_ring_href }}"
+                        xlink:href="{{ mashbill_ring_href }}"
+                        x="0"
+                        y="0"
+                        width="120"
+                        height="120"
+                        preserveAspectRatio="xMidYMid slice"
+                      ></image>
+                    </pattern>
+                  </defs>
                   <circle
                     cx="60"
                     cy="60"
                     r="45"
                     pathLength="100"
-                    stroke-width="12"
-                    stroke-dasharray="{{ ingredient.percentage }} 100"
                     fill="none"
+                    stroke="url(#{{ mashbill_pattern_id }})"
+                    stroke-width="12"
+                    stroke-linecap="round"
+                    stroke-dasharray="{{ ingredient.percentage }} 100"
                     class="mashbill-ring"
                   ></circle>
                 </svg>

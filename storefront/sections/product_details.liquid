@@ -30,6 +30,10 @@
           role="tablist"
         >
           {% for block in section.blocks %}
+            {% if block.settings.type == "awards" and product.metafields.custom.awards == blank %}
+              {% continue %}
+            {% endif %}
+
             <button
               class="body tab__item"
               type="button"
@@ -45,6 +49,10 @@
       </slider-component>
 
       {% for block in section.blocks %}
+        {% if block.settings.type == "awards" and product.metafields.custom.awards == blank %}
+          {% continue %}
+        {% endif %}
+
         <div
           class="panel"
           aria-labelledby="Tab-{{ section.id }}-{{ forloop.index }}"
@@ -79,8 +87,21 @@
                     {{ block.settings.content }}
                   </div>
                 {% when 'awards' %}
+                  
                   <div class="product-details__awards">
-                    {{ block.settings.content }}
+                    {% if block.settings.content != blank %}
+                      {{ block.settings.content }}
+                    {% endif %}
+
+                    <div class="product-details__awards-list">
+                      {% for award in product.metafields.custom.awards.value %}
+                        <div class="product-details__award-item">
+                          <div class="media media--square media--contain">
+                            {{ award.award_image | image_url: width: 1000 | image_tag: loading: 'lazy', alt: award.award_name }}
+                          </div>
+                        </div>
+                      {% endfor %}
+                    </div>
                   </div>
                 {% when 'custom' %}
                   <div class="product-details__custom">

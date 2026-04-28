@@ -1,0 +1,267 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "product_breadcrumbs_9xPfwD": {
+      "type": "product_breadcrumbs",
+      "settings": {
+        "color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
+        "padding_top": 2,
+        "padding_bottom": 2,
+        "margin_bottom": 0
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "caption_PWhDTd": {
+          "type": "caption",
+          "settings": {
+            "show_star": true,
+            "show_line": true,
+            "stylized_text": true,
+            "text": "{{ product.metafields.custom.product_caption.value }}"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "callouts_kzEmYX": {
+          "type": "callouts",
+          "settings": {}
+        },
+        "price_ymGdEt": {
+          "type": "price",
+          "settings": {
+            "show_installments": false
+          }
+        },
+        "description_VEEFNU": {
+          "type": "description",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
+            "siblings_title": "Colours",
+            "siblings_swatches": true
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_quantity_selector": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "seperator_U3AJjh": {
+          "type": "seperator",
+          "disabled": true,
+          "settings": {}
+        },
+        "seperator_B8BVLJ": {
+          "type": "seperator",
+          "settings": {}
+        },
+        "caption_D7Xne7": {
+          "type": "caption",
+          "settings": {
+            "show_star": true,
+            "show_line": false,
+            "stylized_text": false,
+            "text": "Proudly Canadian"
+          }
+        },
+        "caption_GkDBmq": {
+          "type": "caption",
+          "settings": {
+            "show_star": true,
+            "show_line": false,
+            "stylized_text": false,
+            "text": "Free shipping on orders $100+"
+          }
+        },
+        "seperator_ja4iJY": {
+          "type": "seperator",
+          "settings": {}
+        },
+        "share_3Ag3aH": {
+          "type": "share",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "caption_PWhDTd",
+        "title",
+        "callouts_kzEmYX",
+        "price_ymGdEt",
+        "description_VEEFNU",
+        "variant_picker",
+        "buy_buttons",
+        "seperator_U3AJjh",
+        "seperator_B8BVLJ",
+        "caption_D7Xne7",
+        "caption_GkDBmq",
+        "seperator_ja4iJY",
+        "share_3Ag3aH"
+      ],
+      "custom_css": [],
+      "settings": {
+        "color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
+        "layout": "page-width",
+        "layout_mobile": "full-width",
+        "gallery_width": 50,
+        "aspect_ratio": "square",
+        "gallery_type_desktop": "carousel",
+        "gallery_type_mobile": "carousel",
+        "only_variants_gallery": false,
+        "always_others_gallery": false,
+        "enable_video_looping": false,
+        "image_zoom": "none",
+        "gallery_grid_columns_desktop": 2,
+        "gallery_grid_columns_mobile": 2,
+        "display_thumbnails_desktop": false,
+        "display_thumbnails_mobile": false,
+        "display_thumbnails_as_dots": false,
+        "product_info_spacing": 1,
+        "enable_sticky_info": true,
+        "enable_sticky_add": false,
+        "header_is_sticky": false,
+        "sticky_color": "",
+        "padding_top": 0,
+        "padding_bottom": 2,
+        "margin_bottom": 0
+      }
+    },
+    "product_details_NjbyjL": {
+      "type": "product_details",
+      "blocks": {
+        "tab_FLwFpQ": {
+          "type": "tab",
+          "settings": {
+            "type": "description",
+            "heading": "Description",
+            "content": "{{ product.description }}"
+          }
+        },
+        "tab_hXCexD": {
+          "type": "tab",
+          "settings": {
+            "type": "reviews",
+            "heading": "Reviews",
+            "content": ""
+          }
+        },
+        "tab_hBNPBe": {
+          "type": "tab",
+          "settings": {
+            "type": "awards",
+            "heading": "Awards",
+            "content": "<p><em>🍁Gold Medal Winner at Canadian Whisky Awards 2022 where Okanagan Spirits also won Artisanal Distillery of the Year🍁</em></p>"
+          }
+        }
+      },
+      "block_order": [
+        "tab_FLwFpQ",
+        "tab_hXCexD",
+        "tab_hBNPBe"
+      ],
+      "name": "Product Details",
+      "settings": {
+        "color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
+        "layout": "page-width",
+        "title": "",
+        "header_is_h1": false,
+        "visually_hide_header": false,
+        "heading_size": "h2",
+        "description": "",
+        "text_style": "body",
+        "mobile_text_style": "body--mobile",
+        "heading_alignment": "left",
+        "padding_top": 2,
+        "padding_bottom": 2,
+        "margin_bottom": 0
+      }
+    },
+    "product_mashbill_76mfef": {
+      "type": "product_mashbill",
+      "name": "Product Mashbill",
+      "settings": {
+        "color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
+        "layout": "page-width",
+        "title": "MASHBILL",
+        "header_is_h1": false,
+        "visually_hide_header": false,
+        "heading_size": "h2",
+        "description": "",
+        "text_style": "body",
+        "mobile_text_style": "body--mobile",
+        "heading_alignment": "center",
+        "padding_top": 2,
+        "padding_bottom": 2,
+        "margin_bottom": 0
+      }
+    },
+    "related_products_acXrrg": {
+      "type": "related-products",
+      "name": "t:sections.related-products.name",
+      "settings": {
+        "color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
+        "layout": "page-width",
+        "title": "Featured Spirits",
+        "header_is_h1": false,
+        "visually_hide_header": false,
+        "heading_size": "h2",
+        "description": "",
+        "text_style": "body",
+        "mobile_text_style": "body--mobile",
+        "heading_alignment": "center",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "enable_desktop_slider": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 2,
+        "padding_bottom": 2,
+        "margin_bottom": 0
+      }
+    },
+    "product_cocktail_LzWD9x": {
+      "type": "product_cocktail",
+      "name": "Product Cocktail",
+      "settings": {
+        "color_scheme": "scheme-6ad9f6fa-0f88-42c3-a5a0-0319109c7bb7",
+        "layout": "page-width",
+        "title": "Signature cocktail",
+        "header_is_h1": false,
+        "visually_hide_header": false,
+        "heading_size": "h2",
+        "description": "",
+        "text_style": "body",
+        "mobile_text_style": "body--mobile",
+        "heading_alignment": "center",
+        "padding_top": 0.5,
+        "padding_bottom": 2,
+        "margin_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "product_breadcrumbs_9xPfwD",
+    "main",
+    "product_details_NjbyjL",
+    "product_mashbill_76mfef",
+    "related_products_acXrrg",
+    "product_cocktail_LzWD9x"
+  ]
+}

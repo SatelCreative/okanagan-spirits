@@ -71,3 +71,25 @@
   line-height: 162.5%;
   letter-spacing: -0.312px;
 }
+
+.product-details__awards {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.product-details__awards-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+@media screen and (max-width: 749px) {
+  .product-details__awards-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.product-details__award-item img {
+  border: 0;
+}

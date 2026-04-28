@@ -135,7 +135,7 @@
         "layout": "full-width",
         "hamburger_desktop": false,
         "header_type": "logo-menu_left-icons",
-        "header_type_mobile": "menu-logo_center-icons",
+        "header_type_mobile": "menu-logo_left-icons",
         "sticky_header_type": "on-scroll-up",
         "sticky_header_apply_desktop": false,
         "sticky_header_apply_mobile": true,
