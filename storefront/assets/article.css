@@ -1,25 +1,17 @@
 .article__header {
   position: relative;
+  margin-bottom: 48px;
 }
 
-.article__header-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+@media screen and (max-width: 749px) {
+  .article__header {
+    margin-bottom: 24px;
+  }
 }
 
-.article__header-content .section__title {
-  font-size: 38px;
-  letter-spacing: 1px;
-  line-height: 42px;
-  font-weight: 900;
-  max-width: 500px;
-  color: rgb(var(--color-background));
-}
-
-.article__content {
-  margin-top: 2rem;
+.article__block img {
+  width: auto;
+  max-width: 100%;
 }
 
 .article__block--social {

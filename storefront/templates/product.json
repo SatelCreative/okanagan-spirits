@@ -64,11 +64,6 @@
             "show_gift_card_recipient": true
           }
         },
-        "seperator_U3AJjh": {
-          "type": "seperator",
-          "disabled": true,
-          "settings": {}
-        },
         "seperator_B8BVLJ": {
           "type": "seperator",
           "settings": {}
@@ -108,7 +103,6 @@
         "description_VEEFNU",
         "variant_picker",
         "buy_buttons",
-        "seperator_U3AJjh",
         "seperator_B8BVLJ",
         "caption_D7Xne7",
         "caption_GkDBmq",
@@ -154,26 +148,17 @@
             "content": "{{ product.description }}"
           }
         },
-        "tab_hXCexD": {
-          "type": "tab",
-          "settings": {
-            "type": "reviews",
-            "heading": "Reviews",
-            "content": ""
-          }
-        },
         "tab_hBNPBe": {
           "type": "tab",
           "settings": {
             "type": "awards",
             "heading": "Awards",
-            "content": "<p><em>🍁Gold Medal Winner at Canadian Whisky Awards 2022 where Okanagan Spirits also won Artisanal Distillery of the Year🍁</em></p>"
+            "content": ""
           }
         }
       },
       "block_order": [
         "tab_FLwFpQ",
-        "tab_hXCexD",
         "tab_hBNPBe"
       ],
       "name": "Product Details",
